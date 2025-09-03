@@ -1,0 +1,7 @@
+{
+  "parent": "wlgyl:block/agrume_leaves_base",
+  "textures": {
+    "all": "minecraft:block/oak_leaves",
+    "agrume": "wlgyl:block/lemon_leaves_fruits"
+  }
+}

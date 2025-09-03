@@ -1,6 +1,7 @@
 package com.kalyptien.wlgyl.item;
 
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
+import com.kalyptien.wlgyl.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,6 +21,15 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.LEMON);
                         output.accept(ModItems.ORANGE);
+
+                        output.accept(ModItems.LEMON_JUICE);
+                        output.accept(ModItems.ORANGE_JUICE);
+
+                        output.accept(ModItems.LEMON_LEMONADE);
+                        output.accept(ModItems.ORANGE_LEMONADE);
+
+                        output.accept(ModBlocks.LEMON_LEAVES);
+                        output.accept(ModBlocks.LEMON_SAPLING);
                     }).build());
 
 

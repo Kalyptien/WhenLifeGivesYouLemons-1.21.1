@@ -2,5 +2,15 @@
   "item.wlgyl.lemon": "Lemon",
   "item.wlgyl.orange": "Orange",
 
-  "creativetab.wlgyl.mod_tab": "When Life Gives You Lemons"
+  "item.wlgyl.lemon_juice": "Lemon Juice",
+  "item.wlgyl.orange_juice": "Orange Juice",
+
+  "item.wlgyl.lemon_lemonade": "Lemonade",
+  "item.wlgyl.orange_lemonade": "Orangade",
+
+
+  "block.wlgyl.lemon_leaves": "Lemon Leaves",
+  "block.wlgyl.lemon_sapling": "Lemon Sapling",
+
+  "creativetab.wlgyl.mod_tab": "W.L.G.Y.L."
 }
