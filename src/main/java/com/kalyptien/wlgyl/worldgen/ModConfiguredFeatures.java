@@ -26,10 +26,10 @@ public class ModConfiguredFeatures {
 
         register(context, LEMON_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.OAK_LOG),
-                new ForkingTrunkPlacer(1, 4, 3),
+                new ForkingTrunkPlacer(1, 2, 2),
 
                 BlockStateProvider.simple(ModBlocks.LEMON_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 

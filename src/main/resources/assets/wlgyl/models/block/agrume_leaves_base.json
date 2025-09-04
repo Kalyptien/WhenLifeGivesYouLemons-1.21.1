@@ -1,6 +1,6 @@
 {
   "credit": "Croptopia",
-  "render_type": "minecraft:cutout_mipped",
+  "render_type": "minecraft:cutout",
   "parent": "block/block",
   "textures": {
     "particle": "#all"

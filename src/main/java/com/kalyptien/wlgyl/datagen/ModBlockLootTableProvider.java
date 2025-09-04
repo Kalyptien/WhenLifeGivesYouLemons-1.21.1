@@ -19,8 +19,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+
+        dropSelf(ModBlocks.LEMON_SAPLING.get());
+
         add(ModBlocks.LEMON_LEAVES.get(),
-                block -> createLeavesDrops(ModBlocks.LEMON_LEAVES.get(), ModBlocks.LEMON_SAPLING.get(), 0.2f));
+                block -> createLeavesDrops(ModBlocks.LEMON_LEAVES.get(), ModBlocks.LEMON_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override
