@@ -1,7 +1,0 @@
-{
-  "parent": "wlgyl:block/agrume_leaves_base",
-  "textures": {
-    "all": "wlgyl:block/agrumes_leaves",
-    "agrume": "wlgyl:block/lemon_leaves_fruits"
-  }
-}

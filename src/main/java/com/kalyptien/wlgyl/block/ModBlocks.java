@@ -1,7 +1,7 @@
 package com.kalyptien.wlgyl.block;
 
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
-import com.kalyptien.wlgyl.block.custom.LemonLeavesBlock;
+import com.kalyptien.wlgyl.block.custom.*;
 import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.worldgen.tree.ModTreeGrowers;
 import net.minecraft.world.item.BlockItem;
@@ -24,9 +24,33 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> LEMON_LEAVES = registerBlock("lemon_leaves",
             () -> new LemonLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> ORANGE_LEAVES = registerBlock("orange_leaves",
+            () -> new OrangeLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> LIME_LEAVES = registerBlock("lime_leaves",
+            () -> new LimeLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> GRAPEFRUIT_LEAVES = registerBlock("grapefruit_leaves",
+            () -> new GrapefruitLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> CAVIAR_LEMON_LEAVES = registerBlock("caviar_lemon_leaves",
+            () -> new CaviarLemonLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> BOUDDHA_HAND_LEAVES = registerBlock("bouddha_hand_leaves",
+            () -> new BouddhaHandLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> BLOOD_ORANGE_LEAVES = registerBlock("blood_orange_leaves",
+            () -> new BloodOrangeLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
 
     public static final DeferredBlock<Block> LEMON_SAPLING = registerBlock("lemon_sapling",
             () -> new SaplingBlock(ModTreeGrowers.LEMON_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> ORANGE_SAPLING = registerBlock("orange_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.ORANGE_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> BLOOD_ORANGE_SAPLING = registerBlock("blood_orange_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.BLOOD_ORANGE_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> BOUDDHA_HAND_SAPLING = registerBlock("bouddha_hand_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.BOUDDHA_HAND_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> LIME_SAPLING = registerBlock("lime_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.LIME_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> GRAPEFRUIT_SAPLING = registerBlock("grapefruit_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.GRAPEFRUIT_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> CAVIAR_LEMON_SAPLING = registerBlock("caviar_lemon_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.CAVIAR_LEMON_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

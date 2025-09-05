@@ -15,6 +15,12 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_TREE_LEMON_TREE = registerKey("add_tree_lemon_tree");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_ORANGE_TREE = registerKey("add_tree_orange_tree");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_CAVIAR_LEMON_TREE = registerKey("add_tree_caviar_lemon_tree");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_GRAPEFRUIT_TREE = registerKey("add_tree_grapefruit_tree");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_BLOOD_ORANGE_TREE = registerKey("add_tree_blood_orange_tree");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_LIME_TREE = registerKey("add_tree_lime_tree");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_BOUDDHA_HAND_TREE = registerKey("add_tree_bouddha_hand_tree");
     
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         // CF -> PF -> BM
@@ -24,6 +30,36 @@ public class ModBiomeModifiers {
         context.register(ADD_TREE_LEMON_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.FLOWER_FOREST)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LEMON_TREE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_ORANGE_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.FLOWER_FOREST)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ORANGE_TREE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_BLOOD_ORANGE_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.BADLANDS), biomes.getOrThrow(Biomes.DARK_FOREST)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BLOOD_ORANGE_TREE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_BOUDDHA_HAND_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.CHERRY_GROVE)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BOUDDHA_HAND_TREE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_LIME_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.FLOWER_FOREST)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LIME_TREE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_GRAPEFRUIT_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.DESERT), biomes.getOrThrow(Biomes.SAVANNA)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GRAPEFRUIT_TREE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_CAVIAR_LEMON_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.MANGROVE_SWAMP), biomes.getOrThrow(Biomes.SWAMP)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CAVIAR_LEMON_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 

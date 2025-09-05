@@ -38,7 +38,7 @@ import javax.annotation.Nullable;
 
 public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock {
 
-    public static final int MAX_AGE = 7;
+    public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE;
 
     public AgrumeLeavesBlock(Properties properties) {
@@ -67,16 +67,16 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
         return !flag && stack.is(Items.BONE_MEAL) ? ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION : super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
 
-    protected IntegerProperty getAgeProperty() {
+    public IntegerProperty getAgeProperty() {
         return AGE;
     }
 
-    protected ItemLike getAgrumeProperty() {
+    public ItemLike getAgrumeProperty() {
         return null;
     }
 
     public int getMaxAge() {
-        return 7;
+        return 3;
     }
 
     public int getAge(BlockState state) {
@@ -99,7 +99,7 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
         if (level.isAreaLoaded(pos, 1)) {
             int i = this.getAge(state);
             if (i < this.getMaxAge()) {
-                float f = 1.0F; //GrowSpeed
+                float f = 0.1F; //GrowSpeed
                 if (CommonHooks.canCropGrow(level, pos, state, random.nextInt((int)(25.0F / f) + 1) == 0)) {
                     level.setBlock(pos, this.getStateForAge(i + 1), 2);
                     CommonHooks.fireCropGrowPost(level, pos, state);
@@ -139,6 +139,6 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
     }
 
     static {
-        AGE = BlockStateProperties.AGE_7;
+        AGE = BlockStateProperties.AGE_3;
     }
 }
