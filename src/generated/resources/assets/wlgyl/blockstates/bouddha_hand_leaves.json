@@ -1,0 +1,340 @@
+{
+  "variants": {
+    "age=0,distance=1,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=1,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=1,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=1,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=2,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=2,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=2,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=2,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=3,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=3,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=3,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=3,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=4,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=4,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=4,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=4,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=5,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=5,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=5,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=5,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=6,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=6,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=6,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=6,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=7,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=7,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=7,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=0,distance=7,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage0"
+    },
+    "age=1,distance=1,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=1,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=1,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=1,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=2,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=2,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=2,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=2,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=3,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=3,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=3,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=3,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=4,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=4,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=4,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=4,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=5,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=5,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=5,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=5,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=6,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=6,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=6,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=6,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=7,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=7,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=7,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=1,distance=7,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage1"
+    },
+    "age=2,distance=1,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=1,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=1,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=1,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=2,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=2,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=2,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=2,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=3,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=3,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=3,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=3,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=4,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=4,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=4,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=4,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=5,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=5,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=5,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=5,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=6,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=6,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=6,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=6,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=7,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=7,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=7,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=2,distance=7,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage2"
+    },
+    "age=3,distance=1,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=1,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=1,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=1,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=2,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=2,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=2,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=2,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=3,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=3,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=3,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=3,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=4,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=4,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=4,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=4,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=5,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=5,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=5,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=5,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=6,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=6,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=6,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=6,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=7,persistent=false,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=7,persistent=false,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=7,persistent=true,waterlogged=false": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    },
+    "age=3,distance=7,persistent=true,waterlogged=true": {
+      "model": "wlgyl:block/bouddha_hand_leaves_stage3"
+    }
+  }
+}

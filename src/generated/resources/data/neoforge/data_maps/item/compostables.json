@@ -1,0 +1,25 @@
+{
+  "values": {
+    "wlgyl:blood_orange": {
+      "chance": 0.5
+    },
+    "wlgyl:bouddha_hand": {
+      "chance": 0.5
+    },
+    "wlgyl:caviar_lemon": {
+      "chance": 0.5
+    },
+    "wlgyl:grapefruit": {
+      "chance": 0.5
+    },
+    "wlgyl:lemon": {
+      "chance": 0.5
+    },
+    "wlgyl:lime": {
+      "chance": 0.5
+    },
+    "wlgyl:orange": {
+      "chance": 0.5
+    }
+  }
+}

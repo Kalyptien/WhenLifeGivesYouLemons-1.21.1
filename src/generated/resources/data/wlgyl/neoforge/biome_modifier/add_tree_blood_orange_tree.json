@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:badlands",
+    "minecraft:dark_forest"
+  ],
+  "features": "wlgyl:blood_orange_tree_placed",
+  "step": "vegetal_decoration"
+}

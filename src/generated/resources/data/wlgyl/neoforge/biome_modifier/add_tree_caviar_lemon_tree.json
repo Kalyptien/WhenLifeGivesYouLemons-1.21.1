@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:mangrove_swamp",
+    "minecraft:swamp"
+  ],
+  "features": "wlgyl:caviar_lemon_tree_placed",
+  "step": "vegetal_decoration"
+}

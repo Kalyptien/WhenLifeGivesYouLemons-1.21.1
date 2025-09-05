@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:desert",
+    "minecraft:savanna"
+  ],
+  "features": "wlgyl:grapefruit_tree_placed",
+  "step": "vegetal_decoration"
+}
