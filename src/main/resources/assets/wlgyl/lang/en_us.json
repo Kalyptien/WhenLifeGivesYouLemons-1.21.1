@@ -1,16 +1,43 @@
 {
   "item.wlgyl.lemon": "Lemon",
   "item.wlgyl.orange": "Orange",
+  "item.wlgyl.blood_orange": "Blood Orange",
+  "item.wlgyl.grapefruit": "Grapefruit",
+  "item.wlgyl.caviar_lemon": "Caviar Lemon",
+  "item.wlgyl.lime": "Lime",
+  "item.wlgyl.bouddha_hand": "Bouddha's Hand",
 
   "item.wlgyl.lemon_juice": "Lemon Juice",
   "item.wlgyl.orange_juice": "Orange Juice",
+  "item.wlgyl.blood_orange_juice": "Blood Orange Juice",
+  "item.wlgyl.grapefruit_juice": "Grapefruit Juice",
+  "item.wlgyl.caviar_lemon_juice": "Caviar Lemon Juice",
+  "item.wlgyl.lime_juice": "Lime Juice",
+  "item.wlgyl.bouddha_hand_juice": "Bouddha's Juice",
 
   "item.wlgyl.lemon_lemonade": "Lemonade",
   "item.wlgyl.orange_lemonade": "Orangade",
-
+  "item.wlgyl.blood_orange_lemonade": "Blood Orangade",
+  "item.wlgyl.grapefruit_lemonade": "Grapefruitade",
+  "item.wlgyl.caviar_lemon_lemonade": "Caviar Lemonade",
+  "item.wlgyl.lime_lemonade": "Limeonade",
+  "item.wlgyl.bouddha_hand_lemonade": "Bouddha's Limonade",
 
   "block.wlgyl.lemon_leaves": "Lemon Leaves",
+  "block.wlgyl.orange_leaves": "Orange Leaves",
+  "block.wlgyl.blood_orange_leaves": "Blood Orange Leaves",
+  "block.wlgyl.grapefruit_leaves": "Grapefruit Leaves",
+  "block.wlgyl.caviar_lemon_leaves": "Caviar Lemon Leaves",
+  "block.wlgyl.lime_leaves": "Lime Leaves",
+  "block.wlgyl.bouddha_hand_leaves": "Bouddha's Hand Leaves",
+
   "block.wlgyl.lemon_sapling": "Lemon Sapling",
+  "block.wlgyl.blood_orange_sapling": "Blood Orange Sapling",
+  "block.wlgyl.orange_sapling": "Orange Sapling",
+  "block.wlgyl.grapefruit_sapling": "Grapefruit Sapling",
+  "block.wlgyl.caviar_lemon_sapling": "Caviar Lemon Sapling",
+  "block.wlgyl.lime_sapling": "Lime Sapling",
+  "block.wlgyl.bouddha_hand_sapling": "Bouddha's Hand Sapling",
 
   "creativetab.wlgyl.mod_tab": "W.L.G.Y.L."
 }
