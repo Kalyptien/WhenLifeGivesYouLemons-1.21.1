@@ -63,6 +63,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.LIME_LEAVES);
                         output.accept(ModBlocks.LIME_SAPLING);
+
+                        output.accept(ModBlocks.SQUEEZER);
                     }).build());
 
 

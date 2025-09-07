@@ -20,6 +20,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
 
+        dropSelf(ModBlocks.SQUEEZER.get());
+
         dropSelf(ModBlocks.LEMON_SAPLING.get());
         dropSelf(ModBlocks.ORANGE_SAPLING.get());
         dropSelf(ModBlocks.BLOOD_ORANGE_SAPLING.get());

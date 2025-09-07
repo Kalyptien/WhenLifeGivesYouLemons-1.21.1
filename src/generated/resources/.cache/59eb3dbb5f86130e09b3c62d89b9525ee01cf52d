@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-05T21:29:36.5174319	Loot Tables
+// 1.21.1	2025-09-07T18:15:27.1726706	Loot Tables
 f4a1f4c0994d1d7786340a236dc680908bdcf5f0 data/wlgyl/loot_table/blocks/blood_orange_leaves.json
 aba6f328ecbe81884610eae5187602256f48a401 data/wlgyl/loot_table/blocks/blood_orange_sapling.json
 10383f4771bf5769d996439f6bf7ad0d1d64f8ec data/wlgyl/loot_table/blocks/bouddha_hand_leaves.json
@@ -13,3 +13,4 @@ aa85f5e0e16828464592379ea034178959246cb2 data/wlgyl/loot_table/blocks/lime_leave
 6835efad55d1f19b71612fd81732d48f36bba0db data/wlgyl/loot_table/blocks/lime_sapling.json
 ca2e320c8256d238553cf05cee340105098268cb data/wlgyl/loot_table/blocks/orange_leaves.json
 d954dec89690e700adca9974f3fd39a8a029fd6b data/wlgyl/loot_table/blocks/orange_sapling.json
+793f1ee30e4dfc8edb1d8c95a640b22378834045 data/wlgyl/loot_table/blocks/squeezer.json

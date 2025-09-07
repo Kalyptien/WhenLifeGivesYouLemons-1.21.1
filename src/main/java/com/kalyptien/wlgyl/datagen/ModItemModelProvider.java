@@ -36,6 +36,9 @@ public class ModItemModelProvider  extends ItemModelProvider {
         bottleItem(ModItems.CAVRIAR_LEMON_JUICE.get());
         bottleItem(ModItems.LIME_JUICE.get());
         bottleItem(ModItems.GRAPEFRUIT_JUICE.get());
+        bottleItem(ModItems.APPLE_JUICE.get());
+        bottleItem(ModItems.SWEET_BERRIES_JUICE.get());
+        bottleItem(ModItems.GLOW_BERRIES_JUICE.get());
 
         bottleItem(ModItems.LEMON_LEMONADE.get());
         bottleItem(ModItems.ORANGE_LEMONADE.get());

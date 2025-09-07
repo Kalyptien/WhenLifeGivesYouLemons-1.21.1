@@ -1,6 +1,7 @@
 package com.kalyptien.wlgyl;
 
 import com.kalyptien.wlgyl.block.ModBlocks;
+import com.kalyptien.wlgyl.block.entity.ModBlockEntities;
 import com.kalyptien.wlgyl.item.ModCreativeModeTabs;
 import com.kalyptien.wlgyl.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -33,6 +34,7 @@ public class WhenLifeGivesYouLemonsMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 

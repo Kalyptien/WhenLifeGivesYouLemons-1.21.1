@@ -52,6 +52,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CAVIAR_LEMON_SAPLING = registerBlock("caviar_lemon_sapling",
             () -> new SaplingBlock(ModTreeGrowers.CAVIAR_LEMON_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
+    public static final DeferredBlock<Block> SQUEEZER = registerBlock("squeezer",
+            () -> new SqueezerBlock(BlockBehaviour.Properties.of().noOcclusion()));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

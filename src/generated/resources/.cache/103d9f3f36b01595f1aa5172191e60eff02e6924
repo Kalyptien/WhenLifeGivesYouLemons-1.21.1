@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-05T21:57:55.7227881	Registries
+// 1.21.1	2025-09-07T18:15:27.1736712	Registries
 5b3a47d6c27a371c51a085831c509e4f99d27151 data/wlgyl/neoforge/biome_modifier/add_tree_blood_orange_tree.json
 f71b4320768dd48dfbfe7534a2a24d613f2b9bac data/wlgyl/neoforge/biome_modifier/add_tree_bouddha_hand_tree.json
 cd531eaf37141dd5545d2db895da9cb198da6981 data/wlgyl/neoforge/biome_modifier/add_tree_caviar_lemon_tree.json
@@ -14,8 +14,8 @@ bdb82d36f3ca9a642127dbe641cae2291d45459e data/wlgyl/worldgen/configured_feature/
 e9599f649565b8620d5ac49ce3aa6c1f0f779fdc data/wlgyl/worldgen/configured_feature/lime_tree.json
 1c8ea53a8e9778fdd3bb2110edeb0aea7d20b7f4 data/wlgyl/worldgen/configured_feature/orange_tree.json
 51796001c91439e522eb2bdc75d674fe256f6979 data/wlgyl/worldgen/placed_feature/blood_orange_tree_placed.json
-04ddefa8610b57590611e09202f77cc078aa4e38 data/wlgyl/worldgen/placed_feature/bouddha_hand_tree_placed.json
-17010e59ab976c24456e338ba3f2fa9091053c1f data/wlgyl/worldgen/placed_feature/caviar_lemon_tree_placed.json
+7c952373bc7354a9363c88108f41768a0a9edd3a data/wlgyl/worldgen/placed_feature/bouddha_hand_tree_placed.json
+088459542d37bab90b19c0ecbf65984ba2ddc610 data/wlgyl/worldgen/placed_feature/caviar_lemon_tree_placed.json
 2e77d823e797768838e71df6f9eaa9374ef31e8f data/wlgyl/worldgen/placed_feature/grapefruit_tree_placed.json
 229e0de5d2a334b6bee196851b053c4660cdfb4d data/wlgyl/worldgen/placed_feature/lemon_tree_placed.json
 9988c7bf7d7aaa881ceea1471bff490f85a0a69c data/wlgyl/worldgen/placed_feature/lime_tree_placed.json

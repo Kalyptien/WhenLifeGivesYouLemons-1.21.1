@@ -40,6 +40,14 @@ public class ModItems {
     public static final DeferredItem<Item> BOUDDHA_HAND_JUICE = ITEMS.register("bouddha_hand_juice",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
 
+    public static final DeferredItem<Item> APPLE_JUICE = ITEMS.register("apple_juice",
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
+    public static final DeferredItem<Item> GLOW_BERRIES_JUICE = ITEMS.register("glow_berries_juice",
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
+    public static final DeferredItem<Item> SWEET_BERRIES_JUICE = ITEMS.register("sweet_berries_juice",
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
+
+
     public static final DeferredItem<Item> LEMON_LEMONADE = ITEMS.register("lemon_lemonade",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16)));
     public static final DeferredItem<Item> ORANGE_LEMONADE = ITEMS.register("orange_lemonade",
