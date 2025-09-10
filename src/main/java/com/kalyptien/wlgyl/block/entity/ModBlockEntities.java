@@ -17,6 +17,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("squeezer_be", () -> BlockEntityType.Builder.of(
                     SqueezerBlockEntity::new, ModBlocks.SQUEEZER.get()).build(null));
 
+    public static final Supplier<BlockEntityType<BrewingBarrelBlockEntity>> BREWING_BARREL_BE =
+            BLOCK_ENTITIES.register("brewing_barrel_be", () -> BlockEntityType.Builder.of(
+                    BrewingBarrelBlockEntity::new, ModBlocks.BREWING_BARREL.get()).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

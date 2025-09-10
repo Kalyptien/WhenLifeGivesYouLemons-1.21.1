@@ -8,6 +8,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -22,6 +23,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
+        blockWithItem(ModBlocks.BREWING_BARREL);
+
+        logBlock((RotatedPillarBlock) ModBlocks.BREWING_BARREL.get());
+        axisBlock((RotatedPillarBlock) ModBlocks.BREWING_BARREL.get());
 
         saplingBlock(ModBlocks.LEMON_SAPLING);
         saplingBlock(ModBlocks.ORANGE_SAPLING);
@@ -38,6 +44,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.LIME_LEAVES.get()), "lime_leaves_stage", "lime_leaves_stage");
         makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.CAVIAR_LEMON_LEAVES.get()), "caviar_lemon_leaves_stage", "caviar_lemon_leaves_stage");
         makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.BOUDDHA_HAND_LEAVES.get()), "bouddha_hand_leaves_stage", "bouddha_hand_leaves_stage");
+    }
+
+    private void blockWithItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {

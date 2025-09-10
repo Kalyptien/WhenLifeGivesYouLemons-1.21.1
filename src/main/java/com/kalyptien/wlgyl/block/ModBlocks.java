@@ -55,6 +55,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SQUEEZER = registerBlock("squeezer",
             () -> new SqueezerBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
+    public static final DeferredBlock<Block> BREWING_BARREL = registerBlock("brewing_barrel",
+            () -> new BrewingBarrelBlock(BlockBehaviour.Properties.of()));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

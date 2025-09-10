@@ -65,6 +65,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LIME_SAPLING);
 
                         output.accept(ModBlocks.SQUEEZER);
+                        output.accept(ModBlocks.BREWING_BARREL);
                     }).build());
 
 

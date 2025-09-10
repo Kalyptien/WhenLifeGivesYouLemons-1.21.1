@@ -78,6 +78,9 @@ public class SqueezerBlockEntity extends BlockEntity {
         else if(currentItem == ModItems.ORANGE.get()){
             itemToReturn = ModItems.ORANGE_JUICE.get();
         }
+        else if(currentItem == ModItems.CAVRIAR_LEMON.get()){
+            itemToReturn = ModItems.CAVRIAR_LEMON_JUICE.get();
+        }
         else if(currentItem == ModItems.BLOOD_ORANGE.get()){
             itemToReturn = ModItems.BLOOD_ORANGE_JUICE.get();
         }

@@ -1,10 +1,17 @@
 package com.kalyptien.wlgyl;
 
 import com.kalyptien.wlgyl.block.ModBlocks;
+import com.kalyptien.wlgyl.block.entity.BrewingBarrelBlockEntity;
 import com.kalyptien.wlgyl.block.entity.ModBlockEntities;
 import com.kalyptien.wlgyl.item.ModCreativeModeTabs;
 import com.kalyptien.wlgyl.item.ModItems;
+import com.kalyptien.wlgyl.recipe.ModRecipes;
+import com.kalyptien.wlgyl.screen.ModMenuTypes;
+import com.kalyptien.wlgyl.screen.custom.BrewingBarrelScreen;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -36,6 +43,9 @@ public class WhenLifeGivesYouLemonsMod {
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
 
+        ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -54,5 +64,15 @@ public class WhenLifeGivesYouLemonsMod {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
+    }
+
+    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    @EventBusSubscriber(modid = MOD_ID, value = Dist.CLIENT)
+    public static class ClientModEvents {
+
+        @SubscribeEvent
+        public static void registerScreens(RegisterMenuScreensEvent event) {
+            event.register(ModMenuTypes.BREWING_BARREL_MENU.get(), BrewingBarrelScreen::new);
+        }
     }
 }
