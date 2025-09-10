@@ -5,6 +5,7 @@ import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipe;
 import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipeInput;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
 import com.kalyptien.wlgyl.screen.custom.BrewingBarrelMenu;
+import com.kalyptien.wlgyl.screen.custom.IndustrialBrewingBarrelMenu;
 import com.kalyptien.wlgyl.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -23,7 +24,6 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -33,7 +33,7 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import javax.annotation.Nullable;
 import java.util.Optional;
 
-public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvider {
+public class IndustrialBrewingBarrelBlockEntity extends BlockEntity implements MenuProvider {
 
     public final ItemStackHandler itemHandler = new ItemStackHandler(5) {
         @Override
@@ -75,22 +75,22 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 6000;
+    private int maxProgress = 120;
     private int water = 0;
-    private int maxWater = 4;
+    private int maxWater = 16;
     private int lemonadeType = 0;
 
-    public BrewingBarrelBlockEntity(BlockPos pos, BlockState blockState) {
-        super(ModBlockEntities.BREWING_BARREL_BE.get(), pos, blockState);
+    public IndustrialBrewingBarrelBlockEntity(BlockPos pos, BlockState blockState) {
+        super(ModBlockEntities.INDUSTRIAL_BREWING_BARREL_BE.get(), pos, blockState);
         data = new ContainerData() {
             @Override
             public int get(int i) {
                 return switch (i) {
-                    case 0 -> BrewingBarrelBlockEntity.this.progress;
-                    case 1 -> BrewingBarrelBlockEntity.this.maxProgress;
-                    case 2 -> BrewingBarrelBlockEntity.this.water;
-                    case 3 -> BrewingBarrelBlockEntity.this.maxWater;
-                    case 4 -> BrewingBarrelBlockEntity.this.lemonadeType;
+                    case 0 -> IndustrialBrewingBarrelBlockEntity.this.progress;
+                    case 1 -> IndustrialBrewingBarrelBlockEntity.this.maxProgress;
+                    case 2 -> IndustrialBrewingBarrelBlockEntity.this.water;
+                    case 3 -> IndustrialBrewingBarrelBlockEntity.this.maxWater;
+                    case 4 -> IndustrialBrewingBarrelBlockEntity.this.lemonadeType;
                     default -> 0;
                 };
             }
@@ -98,11 +98,11 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
             @Override
             public void set(int i, int value) {
                 switch (i) {
-                    case 0: BrewingBarrelBlockEntity.this.progress = value;
-                    case 1: BrewingBarrelBlockEntity.this.maxProgress = value;
-                    case 2: BrewingBarrelBlockEntity.this.water = value;
-                    case 3: BrewingBarrelBlockEntity.this.maxWater = value;
-                    case 4: BrewingBarrelBlockEntity.this.lemonadeType = value;
+                    case 0: IndustrialBrewingBarrelBlockEntity.this.progress = value;
+                    case 1: IndustrialBrewingBarrelBlockEntity.this.maxProgress = value;
+                    case 2: IndustrialBrewingBarrelBlockEntity.this.water = value;
+                    case 3: IndustrialBrewingBarrelBlockEntity.this.maxWater = value;
+                    case 4: IndustrialBrewingBarrelBlockEntity.this.lemonadeType = value;
                 }
             }
 
@@ -115,13 +115,13 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.wlgyl.brewing_barrel");
+        return Component.translatable("block.wlgyl.industrial_brewing_barrel");
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
-        return new BrewingBarrelMenu(i, inventory, this, this.data);
+        return new IndustrialBrewingBarrelMenu(i, inventory, this, this.data);
     }
 
     public void drops() {
@@ -136,11 +136,11 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
     @Override
     protected void saveAdditional(CompoundTag pTag, HolderLookup.Provider pRegistries) {
         pTag.put("inventory", itemHandler.serializeNBT(pRegistries));
-        pTag.putInt("brewing_barrel.progress", progress);
-        pTag.putInt("brewing_barrel.max_progress", maxProgress);
-        pTag.putInt("brewing_barrel.water", water);
-        pTag.putInt("brewing_barrel.max_water", maxWater);
-        pTag.putInt("brewing_barrel.lemonade_type", lemonadeType);
+        pTag.putInt("industrial_brewing_barrel.progress", progress);
+        pTag.putInt("industrial_brewing_barrel.max_progress", maxProgress);
+        pTag.putInt("industrial_brewing_barrel.water", water);
+        pTag.putInt("industrial_brewing_barrel.max_water", maxWater);
+        pTag.putInt("industrial_brewing_barrel.lemonade_type", lemonadeType);
 
         super.saveAdditional(pTag, pRegistries);
     }
@@ -150,11 +150,11 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
         super.loadAdditional(pTag, pRegistries);
 
         itemHandler.deserializeNBT(pRegistries, pTag.getCompound("inventory"));
-        progress = pTag.getInt("brewing_barrel.progress");
-        maxProgress = pTag.getInt("brewing_barrel.max_progress");
-        water = pTag.getInt("brewing_barrel.water");
-        maxWater = pTag.getInt("brewing_barrel.max_water");
-        lemonadeType = pTag.getInt("brewing_barrel.lemonade_type");
+        progress = pTag.getInt("industrial_brewing_barrel.progress");
+        maxProgress = pTag.getInt("industrial_brewing_barrel.max_progress");
+        water = pTag.getInt("industrial_brewing_barrel.water");
+        maxWater = pTag.getInt("industrial_brewing_barrel.max_water");
+        lemonadeType = pTag.getInt("industrial_brewing_barrel.lemonade_type");
     }
 
     public void tick(Level level, BlockPos blockPos, BlockState blockState) {
@@ -192,8 +192,8 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
         Optional<RecipeHolder<BrewingBarrelRecipe>> recipe = getCurrentRecipe();
         ItemStack output = recipe.get().value().output();
 
-        itemHandler.extractItem(INPUT_SLOT_SUGAR, 4, false);
-        itemHandler.extractItem(INPUT_SLOT_AGRUMES, 4, false);
+        itemHandler.extractItem(INPUT_SLOT_SUGAR, 16, false);
+        itemHandler.extractItem(INPUT_SLOT_AGRUMES, 16, false);
 
         this.lemonadeType = this.getLemonadeType(output);
     }
@@ -254,7 +254,7 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
 
     private void resetProgress() {
         progress = 0;
-        maxProgress = 6000;
+        maxProgress = 120;
     }
 
     private boolean hasCraftingFinished() {
@@ -274,8 +274,8 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
 
         return this.lemonadeType == 0
                 && this.water == this.maxWater
-                && itemHandler.getStackInSlot(INPUT_SLOT_AGRUMES).getCount() >= 4
-                && itemHandler.getStackInSlot(INPUT_SLOT_SUGAR).getCount() >= 4;
+                && itemHandler.getStackInSlot(INPUT_SLOT_AGRUMES).getCount() >= 16
+                && itemHandler.getStackInSlot(INPUT_SLOT_SUGAR).getCount() >= 16;
     }
 
     private Optional<RecipeHolder<BrewingBarrelRecipe>> getCurrentRecipe() {

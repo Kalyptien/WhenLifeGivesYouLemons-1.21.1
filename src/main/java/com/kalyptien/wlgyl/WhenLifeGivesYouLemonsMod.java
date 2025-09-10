@@ -8,6 +8,7 @@ import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
 import com.kalyptien.wlgyl.screen.ModMenuTypes;
 import com.kalyptien.wlgyl.screen.custom.BrewingBarrelScreen;
+import com.kalyptien.wlgyl.screen.custom.IndustrialBrewingBarrelScreen;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -73,6 +74,7 @@ public class WhenLifeGivesYouLemonsMod {
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.BREWING_BARREL_MENU.get(), BrewingBarrelScreen::new);
+            event.register(ModMenuTypes.INDUSTRIAL_BREWING_BARREL_MENU.get(), IndustrialBrewingBarrelScreen::new);
         }
     }
 }

@@ -57,6 +57,8 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BREWING_BARREL = registerBlock("brewing_barrel",
             () -> new BrewingBarrelBlock(BlockBehaviour.Properties.of()));
+    public static final DeferredBlock<Block> INDUSTRIAL_BREWING_BARREL = registerBlock("industrial_brewing_barrel",
+            () -> new IndustrialBrewingBarrelBlock(BlockBehaviour.Properties.of()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
