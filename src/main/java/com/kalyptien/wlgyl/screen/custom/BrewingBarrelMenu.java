@@ -30,11 +30,11 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 0, 26, 19));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 1, 26, 55));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 2, 134, 19));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 4, 134, 37));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 3, 134, 55));
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 0, 26, 17));
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 1, 26, 53));
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 2, 134, 17));
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 4, 134, 35));
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 3, 134, 53));
 
         addDataSlots(data);
     }
@@ -46,7 +46,7 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
     public int getScaledArrowProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);
-        int arrowPixelSize = 29;
+        int arrowPixelSize = 17;
 
         return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
     }
@@ -91,7 +91,7 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 2;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 5;  // must be the number of slots you have!
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);

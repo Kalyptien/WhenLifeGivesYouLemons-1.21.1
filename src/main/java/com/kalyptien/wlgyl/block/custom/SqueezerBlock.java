@@ -75,7 +75,7 @@ public class SqueezerBlock extends BaseEntityBlock {
                 }
 
                 if(stack.is(ModTags.Items.BERRYS)){
-                    if(Math.random() <= 0.5){
+                    if(Math.random() <= 0.75){
                         stack.shrink(1);
                         return ItemInteractionResult.CONSUME;
                     }

@@ -1,0 +1,12 @@
+{
+  "type": "wlgyl:brewing_barrel",
+  "sugar": {
+    "item": "minecraft:sugar"
+  },
+  "agrume": {
+    "item": "wlgyl:lime"
+  },
+  "result": {
+    "id": "wlgyl:lime_lemonade"
+  }
+}

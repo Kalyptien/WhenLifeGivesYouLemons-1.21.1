@@ -12,8 +12,8 @@ import net.minecraft.world.entity.player.Inventory;
 public class BrewingBarrelScreen extends AbstractContainerScreen<BrewingBarrelMenu> {
     private static final ResourceLocation GUI_TEXTURE =
             ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/brewing_barrel_gui.png");
-    private static final ResourceLocation BUBBLES_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/bubbles.png");
+    private static final ResourceLocation PROGRESS_TEXTURE =
+            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/progress_bar.png");
 
     private ResourceLocation LIMONADES_TEXTURE =
             ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/water.png");
@@ -40,12 +40,12 @@ public class BrewingBarrelScreen extends AbstractContainerScreen<BrewingBarrelMe
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(BUBBLES_TEXTURE,x + 119, y + 32, 0, 0, 12, menu.getScaledArrowProgress(), 12, 29);
+            guiGraphics.blit(PROGRESS_TEXTURE,x + 40, y + 41, 0, 0, menu.getScaledArrowProgress(), 4, 17, 4);
         }
     }
 
     private void renderLimonade(GuiGraphics guiGraphics, int x, int y) {
-        guiGraphics.blit(LIMONADES_TEXTURE,x + 62, y + 19, 0, 0, 52, menu.getLimonadeProgress(), 52, 52);
+        guiGraphics.blit(LIMONADES_TEXTURE,x + 62, y + 17 + (52 - menu.getLimonadeProgress()), 0, 0, 52, menu.getLimonadeProgress(), 52, 52);
     }
 
     private void updateLimonade(){

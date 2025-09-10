@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "wlgyl:block/brewing_barrel_bottom",
+    "side": "wlgyl:block/brewing_barrel_side",
+    "top": "wlgyl:block/brewing_barrel_top"
+  }
+}

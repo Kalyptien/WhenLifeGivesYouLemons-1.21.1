@@ -5,6 +5,7 @@ import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipe;
 import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipeInput;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
 import com.kalyptien.wlgyl.screen.custom.BrewingBarrelMenu;
+import com.kalyptien.wlgyl.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -42,6 +43,28 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
                 level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 6);
             }
         }
+
+        @Override
+        public boolean isItemValid(int slot, ItemStack stack) {
+            if(slot == 0) {
+                return stack.is(ModTags.Items.AGRUMES);
+            }
+            if(slot == 1) {
+                return stack.getItem() == Items.SUGAR;
+            }
+            if(slot == 2) {
+                return stack.getItem() == Items.WATER_BUCKET;
+            }
+            if(slot == 3) {
+                return true;
+            }
+            if(slot == 4) {
+                return stack.getItem() == Items.GLASS_BOTTLE;
+            }
+            else{
+                return true;
+            }
+        }
     };
 
     private static final int INPUT_SLOT_AGRUMES = 0;
@@ -52,7 +75,7 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 12;
+    private int maxProgress = 150;
     private int water = 0;
     private int maxWater = 4;
     private int lemonadeType = 0;
@@ -146,6 +169,10 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
             itemHandler.insertItem(OUTPUT_SLOT_BOTTLE, new ItemStack(itemToGive, 1), false);
             itemHandler.extractItem(INPUT_SLOT_BOTTLE, 1, false);
             this.water--;
+
+            if(water == 0){
+                this.lemonadeType = 0;
+            }
         }
 
         if(hasRecipe()) {
@@ -227,7 +254,7 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
 
     private void resetProgress() {
         progress = 0;
-        maxProgress = 12;
+        maxProgress = 150;
     }
 
     private boolean hasCraftingFinished() {
@@ -247,13 +274,13 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
 
         return this.lemonadeType == 0
                 && this.water == this.maxWater
-                && itemHandler.getStackInSlot(INPUT_SLOT_AGRUMES).getCount() <= 4
-                && itemHandler.getStackInSlot(INPUT_SLOT_SUGAR).getCount() <= 4;
+                && itemHandler.getStackInSlot(INPUT_SLOT_AGRUMES).getCount() >= 4
+                && itemHandler.getStackInSlot(INPUT_SLOT_SUGAR).getCount() >= 4;
     }
 
     private Optional<RecipeHolder<BrewingBarrelRecipe>> getCurrentRecipe() {
         return this.level.getRecipeManager()
-                .getRecipeFor(ModRecipes.BREWING_BARREL_TYPE.get(), new BrewingBarrelRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT_SUGAR), itemHandler.getStackInSlot(INPUT_SLOT_AGRUMES)), level);
+                .getRecipeFor(ModRecipes.BREWING_BARREL_TYPE.get(), new BrewingBarrelRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT_AGRUMES), itemHandler.getStackInSlot(INPUT_SLOT_SUGAR)), level);
     }
 
     @Override

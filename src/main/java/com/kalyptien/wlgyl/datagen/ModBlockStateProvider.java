@@ -24,11 +24,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        blockWithItem(ModBlocks.BREWING_BARREL);
-
-        logBlock((RotatedPillarBlock) ModBlocks.BREWING_BARREL.get());
-        axisBlock((RotatedPillarBlock) ModBlocks.BREWING_BARREL.get());
-
         saplingBlock(ModBlocks.LEMON_SAPLING);
         saplingBlock(ModBlocks.ORANGE_SAPLING);
         saplingBlock(ModBlocks.BLOOD_ORANGE_SAPLING);
@@ -48,6 +43,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
+    }
+
+    private void blockItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("wlgyl:block/" + deferredBlock.getId().getPath()));
+    }
+
+    private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("wlgyl:block/" + deferredBlock.getId().getPath() + appendix));
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
