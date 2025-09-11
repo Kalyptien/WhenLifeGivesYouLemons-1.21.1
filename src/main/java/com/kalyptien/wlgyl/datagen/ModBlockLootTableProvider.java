@@ -22,6 +22,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.SQUEEZER.get());
         dropSelf(ModBlocks.BREWING_BARREL.get());
+        dropSelf(ModBlocks.INDUSTRIAL_BREWING_BARREL.get());
 
         dropSelf(ModBlocks.LEMON_SAPLING.get());
         dropSelf(ModBlocks.ORANGE_SAPLING.get());
