@@ -43,5 +43,10 @@
   "block.wlgyl.brewing_barrel": "Brewing Barrel",
   "block.wlgyl.industrial_brewing_barrel": "Industrial Brewing Barrel",
 
+  "effect.wlgyl.bouddha": "Benediction",
+  "effect.wlgyl.clarity": "Clarity",
+  "effect.wlgyl.lich": "Lich",
+  "effect.wlgyl.acid": "Acid",
+
   "creativetab.wlgyl.mod_tab": "W.L.G.Y.L."
 }

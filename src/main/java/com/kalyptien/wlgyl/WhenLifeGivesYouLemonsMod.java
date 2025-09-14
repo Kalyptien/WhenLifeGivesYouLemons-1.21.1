@@ -3,6 +3,7 @@ package com.kalyptien.wlgyl;
 import com.kalyptien.wlgyl.block.ModBlocks;
 import com.kalyptien.wlgyl.block.entity.BrewingBarrelBlockEntity;
 import com.kalyptien.wlgyl.block.entity.ModBlockEntities;
+import com.kalyptien.wlgyl.effect.ModEffects;
 import com.kalyptien.wlgyl.item.ModCreativeModeTabs;
 import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
@@ -46,6 +47,8 @@ public class WhenLifeGivesYouLemonsMod {
 
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
