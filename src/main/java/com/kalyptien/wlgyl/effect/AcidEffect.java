@@ -26,7 +26,7 @@ public class AcidEffect extends MobEffect {
                 float dmgOriginal = event.getOriginalDamage();
                 float dmgNew = event.getNewDamage();
                 if(dmgOriginal != dmgNew){
-                    float dmgAcid = (dmgOriginal * player.getEffect(ModEffects.ACID_EFFECT).getAmplifier() / 5.0f);
+                    float dmgAcid = (dmgOriginal * player.getEffect(ModEffects.ACID_EFFECT).getAmplifier() / 4.0f);
                     if(dmgNew + dmgAcid > dmgOriginal){
                         event.setNewDamage(dmgOriginal);
                     }

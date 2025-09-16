@@ -17,6 +17,9 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
     private final Level level;
     private final ContainerData data;
 
+    private int bubbleProgress = 0;
+    private int bubbleProgressMax = 48;
+
     public BrewingBarrelMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
         this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(5));
     }
@@ -49,6 +52,24 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
         int arrowPixelSize = 17;
 
         return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
+    }
+
+    public int getScaledBubbleProgress() {
+        this.bubbleProgress = this.bubbleProgress + 1;
+
+        if(bubbleProgress > bubbleProgressMax){
+            bubbleProgress = 0;
+        }
+
+        if(bubbleProgress % 2 == 0){
+            return this.bubbleProgress / 2;
+        }
+        else if(bubbleProgress >= 3){
+            return (this.bubbleProgress - 1) / 2;
+        }
+        else{
+            return 0;
+        }
     }
 
     public int getLimonadeProgress() {

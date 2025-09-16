@@ -18,6 +18,9 @@ public class IndustrialBrewingBarrelMenu extends AbstractContainerMenu {
     private final Level level;
     private final ContainerData data;
 
+    private int bubbleProgress = 0;
+    private int bubbleProgressMax = 23;
+
     public IndustrialBrewingBarrelMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
         this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(5));
     }
@@ -58,6 +61,16 @@ public class IndustrialBrewingBarrelMenu extends AbstractContainerMenu {
         int arrowPixelSize = 52;
 
         return maxWater != 0 && water != 0 ? water * arrowPixelSize / maxWater : 0;
+    }
+
+    public int getScaledBubbleProgress() {
+        this.bubbleProgress = this.bubbleProgress + 1;
+
+        if(bubbleProgress > bubbleProgressMax){
+            bubbleProgress = 0;
+        }
+
+        return this.bubbleProgress;
     }
 
     public String getCurrentLimonade() {

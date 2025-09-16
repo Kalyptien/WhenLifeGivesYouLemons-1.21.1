@@ -77,6 +77,7 @@ public class SqueezerBlock extends BaseEntityBlock {
                 if(stack.is(ModTags.Items.BERRYS)){
                     if(Math.random() <= 0.75){
                         stack.shrink(1);
+                        level.playSound(player, pos, SoundEvents.COW_MILK, SoundSource.BLOCKS, 1f, 1f);
                         return ItemInteractionResult.CONSUME;
                     }
                 }
@@ -84,7 +85,7 @@ public class SqueezerBlock extends BaseEntityBlock {
                 int i = squeezerBlockEntity.getLastInventoryAvailable();
                 squeezerBlockEntity.inventory.insertItem(i, stack.copy(), false);
                 stack.shrink(1);
-                level.playSound(player, pos, SoundEvents.COW_MILK, SoundSource.BLOCKS, 1f, 1f);
+                level.playSound(player, pos, SoundEvents.COW_MILK, SoundSource.BLOCKS, 1f, 2f);
 
             } else if(stack.getItem() == Items.GLASS_BOTTLE && !squeezerBlockEntity.inventory.getStackInSlot(3).isEmpty()) {
 

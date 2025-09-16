@@ -14,6 +14,8 @@ public class BrewingBarrelScreen extends AbstractContainerScreen<BrewingBarrelMe
             ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/brewing_barrel_gui.png");
     private static final ResourceLocation PROGRESS_TEXTURE =
             ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/progress_bar.png");
+    private static final ResourceLocation BUBBLE_TEXTURE =
+            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/bubble_progress.png");
 
     private ResourceLocation LIMONADES_TEXTURE =
             ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/water.png");
@@ -34,13 +36,20 @@ public class BrewingBarrelScreen extends AbstractContainerScreen<BrewingBarrelMe
         guiGraphics.blit(GUI_TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         updateLimonade();
-        renderProgressArrow(guiGraphics, x, y);
         renderLimonade(guiGraphics, x, y);
+        renderProgressArrow(guiGraphics, x, y);
+        renderProgressBubble(guiGraphics, x, y);
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
             guiGraphics.blit(PROGRESS_TEXTURE,x + 40, y + 41, 0, 0, menu.getScaledArrowProgress(), 4, 17, 4);
+        }
+    }
+
+    private void renderProgressBubble(GuiGraphics guiGraphics, int x, int y) {
+        if(menu.isCrafting()) {
+            guiGraphics.blit(BUBBLE_TEXTURE,x + 62, y + 36, 0, 0, menu.getScaledBubbleProgress(), 15, 23, 15);
         }
     }
 

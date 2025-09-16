@@ -38,30 +38,30 @@ public class ModItems {
     public static final DeferredItem<Item> CAVRIAR_LEMON_JUICE = ITEMS.register("caviar_lemon_juice",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
     public static final DeferredItem<Item> BOUDDHA_HAND_JUICE = ITEMS.register("bouddha_hand_juice",
-            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE_CLARITY).stacksTo(16)));
 
     public static final DeferredItem<Item> APPLE_JUICE = ITEMS.register("apple_juice",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
     public static final DeferredItem<Item> GLOW_BERRIES_JUICE = ITEMS.register("glow_berries_juice",
-            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE_GLOW).stacksTo(16)));
     public static final DeferredItem<Item> SWEET_BERRIES_JUICE = ITEMS.register("sweet_berries_juice",
-            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE_SWEET).stacksTo(16)));
 
 
     public static final DeferredItem<Item> LEMON_LEMONADE = ITEMS.register("lemon_lemonade",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16)));
     public static final DeferredItem<Item> ORANGE_LEMONADE = ITEMS.register("orange_lemonade",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16)));
-    public static final DeferredItem<Item> BLOOD_ORANGE_LEMONADE = ITEMS.register("blood_orange_lemonade",
-            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16)));
-    public static final DeferredItem<Item> GRAPEFRUIT_LEMONADE = ITEMS.register("grapefruit_lemonade",
-            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16)));
     public static final DeferredItem<Item> LIME_LEMONADE = ITEMS.register("lime_lemonade",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16)));
+    public static final DeferredItem<Item> BLOOD_ORANGE_LEMONADE = ITEMS.register("blood_orange_lemonade",
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_LEECH).stacksTo(16)));
+    public static final DeferredItem<Item> GRAPEFRUIT_LEMONADE = ITEMS.register("grapefruit_lemonade",
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_ACID).stacksTo(16)));
     public static final DeferredItem<Item> CAVRIAR_LEMON_LEMONADE = ITEMS.register("caviar_lemon_lemonade",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16)));
     public static final DeferredItem<Item> BOUDDHA_HAND_LEMONADE = ITEMS.register("bouddha_hand_lemonade",
-            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16)));
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BENEDICTION).stacksTo(16)));
 
 
     public static void register(IEventBus eventBus) {

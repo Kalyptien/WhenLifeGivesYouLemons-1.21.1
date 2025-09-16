@@ -12,17 +12,17 @@ public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS =
             DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, WhenLifeGivesYouLemonsMod.MOD_ID);
 
-    public static final Holder<MobEffect> BOUDDHA_EFFECT = MOB_EFFECTS.register("bouddha",
-            () -> new BouddhaEffect(MobEffectCategory.BENEFICIAL, 0xfeffeb));
+    public static final Holder<MobEffect> BENEDICTION_EFFECT = MOB_EFFECTS.register("benediction",
+            () -> new BenedictionEffect(MobEffectCategory.BENEFICIAL, 0xc48a25));
 
     public static final Holder<MobEffect> CLARITY_EFFECT = MOB_EFFECTS.register("clarity",
-            () -> new ClarityEffect(MobEffectCategory.NEUTRAL, 0xfeffeb));
+            () -> new ClarityEffect(MobEffectCategory.NEUTRAL, 0x424242));
 
-    public static final Holder<MobEffect> LICH_EFFECT = MOB_EFFECTS.register("lich",
-            () -> new LichEffect(MobEffectCategory.BENEFICIAL, 0xff0000));
+    public static final Holder<MobEffect> LEECH_EFFECT = MOB_EFFECTS.register("leech",
+            () -> new LeechEffect(MobEffectCategory.BENEFICIAL, 0x520000));
 
     public static final Holder<MobEffect> ACID_EFFECT = MOB_EFFECTS.register("acid",
-            () -> new AcidEffect(MobEffectCategory.BENEFICIAL, 0x00ff00));
+            () -> new AcidEffect(MobEffectCategory.BENEFICIAL, 0x8fc425));
 
 
     public static void register(IEventBus eventBus) {

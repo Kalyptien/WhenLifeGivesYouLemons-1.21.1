@@ -35,6 +35,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GRAPEFRUIT_JUICE);
                         output.accept(ModItems.CAVRIAR_LEMON_JUICE);
 
+                        output.accept(ModItems.APPLE_JUICE);
+                        output.accept(ModItems.GLOW_BERRIES_JUICE);
+                        output.accept(ModItems.SWEET_BERRIES_JUICE);
+
                         output.accept(ModItems.LEMON_LEMONADE);
                         output.accept(ModItems.ORANGE_LEMONADE);
                         output.accept(ModItems.BLOOD_ORANGE_LEMONADE);

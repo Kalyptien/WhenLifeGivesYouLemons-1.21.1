@@ -5,12 +5,10 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
-public class BouddhaEffect extends MobEffect {
-    public BouddhaEffect(MobEffectCategory category, int color) {
+public class BenedictionEffect extends MobEffect {
+    public BenedictionEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
 
@@ -22,7 +20,7 @@ public class BouddhaEffect extends MobEffect {
         if(!currentCollection.isEmpty()){
             for (int i = 0; i < currentCollection.size(); i++) {
                 MobEffectInstance currentEffect = currentCollection.get(i);
-                if(currentEffect.getEffect() != ModEffects.BOUDDHA_EFFECT && currentEffect.getAmplifier() < amplifier){
+                if(currentEffect.getEffect() != ModEffects.BENEDICTION_EFFECT && currentEffect.getAmplifier() < amplifier){
                     livingEntity.addEffect(new MobEffectInstance(currentEffect.getEffect(),
                             currentEffect.getDuration(),
                             currentEffect.getAmplifier() + amplifier,

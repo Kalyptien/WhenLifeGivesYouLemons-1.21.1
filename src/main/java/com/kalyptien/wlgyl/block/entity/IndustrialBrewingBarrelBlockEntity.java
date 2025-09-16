@@ -14,6 +14,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -75,7 +77,7 @@ public class IndustrialBrewingBarrelBlockEntity extends BlockEntity implements M
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 120;
+    private int maxProgress = 10100;
     private int water = 0;
     private int maxWater = 16;
     private int lemonadeType = 0;
@@ -162,6 +164,7 @@ public class IndustrialBrewingBarrelBlockEntity extends BlockEntity implements M
         if(itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem() == Items.WATER_BUCKET && this.water != this.maxWater && lemonadeType == 0){
             this.water = this.water + 4;
             itemHandler.setStackInSlot(INPUT_SLOT_WATER, new ItemStack(Items.BUCKET, 1));
+            level.playSound(null, blockPos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1f, 1f);
         }
 
         if(itemHandler.getStackInSlot(INPUT_SLOT_BOTTLE).getItem() == Items.GLASS_BOTTLE && water > 0 && lemonadeType != 0){
@@ -169,6 +172,7 @@ public class IndustrialBrewingBarrelBlockEntity extends BlockEntity implements M
             itemHandler.insertItem(OUTPUT_SLOT_BOTTLE, new ItemStack(itemToGive, 1), false);
             itemHandler.extractItem(INPUT_SLOT_BOTTLE, 1, false);
             this.water--;
+            level.playSound(null, blockPos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 0.5f, 1f);
 
             if(water == 0){
                 this.lemonadeType = 0;
@@ -182,6 +186,7 @@ public class IndustrialBrewingBarrelBlockEntity extends BlockEntity implements M
             if(hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
+                level.playSound(null, blockPos, SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1f, 1f);
             }
         } else {
             resetProgress();
@@ -254,7 +259,7 @@ public class IndustrialBrewingBarrelBlockEntity extends BlockEntity implements M
 
     private void resetProgress() {
         progress = 0;
-        maxProgress = 120;
+        maxProgress = 10100;
     }
 
     private boolean hasCraftingFinished() {
