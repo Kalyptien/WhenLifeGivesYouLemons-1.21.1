@@ -63,6 +63,8 @@ public class ModItemModelProvider  extends ItemModelProvider {
         leavesItem(ModBlocks.GRAPEFRUIT_LEAVES);
         leavesItem(ModBlocks.LIME_LEAVES);
         leavesItem(ModBlocks.CAVIAR_LEMON_LEAVES);
+
+        withExistingParent(ModItems.KIWI_NORMAL_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {

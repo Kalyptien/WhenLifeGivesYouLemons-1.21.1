@@ -71,6 +71,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SQUEEZER);
                         output.accept(ModBlocks.BREWING_BARREL);
                         output.accept(ModBlocks.INDUSTRIAL_BREWING_BARREL);
+
+                        output.accept(ModItems.KIWI_NORMAL_SPAWN_EGG);
                     }).build());
 
 

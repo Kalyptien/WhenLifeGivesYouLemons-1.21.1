@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-07T18:15:27.1716695	Item Models: wlgyl
+// 1.21.1	2025-09-17T21:03:36.4000616	Item Models: wlgyl
 bace782fb4d44dadecd6a1f85fb4583bb2d4a065 assets/wlgyl/models/item/apple_juice.json
 96fe2b9b815855f02b8897ebc08ae7251b9440a0 assets/wlgyl/models/item/blood_orange.json
 f03f8218a95491780618f966fd856907956336fc assets/wlgyl/models/item/blood_orange_juice.json
@@ -21,6 +21,7 @@ e2d4d1f8d7aa45344a65f139ada5b2a970be391b assets/wlgyl/models/item/grapefruit.jso
 b6d2ffb351cea36bbb38ae770edfd65cc91890e5 assets/wlgyl/models/item/grapefruit_leaves.json
 f0331ea7411315423a24ab15d7b8ee069ff5c63a assets/wlgyl/models/item/grapefruit_lemonade.json
 8a54bc6dea5ebbcdd53376c75508e8e332d2d9cf assets/wlgyl/models/item/grapefruit_sapling.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/wlgyl/models/item/kiwi_normal_spawn_egg.json
 705f81bd14a1efedae2a6144b1f5e02bbd0dce5b assets/wlgyl/models/item/lemon.json
 b0faa19a96e388a6b008369681ac7c5a2b5a9e03 assets/wlgyl/models/item/lemon_juice.json
 2c9a6feaf7af6bee4dd902a714ac9f42d29f2538 assets/wlgyl/models/item/lemon_leaves.json

@@ -15,6 +15,10 @@
   "item.wlgyl.lime_juice": "Lime Juice",
   "item.wlgyl.bouddha_hand_juice": "Bouddha's Juice",
 
+  "item.wlgyl.apple_juice": "Apple Juice",
+  "item.wlgyl.glow_berries_juice": "Glow Berries Juice",
+  "item.wlgyl.sweet_berries_juice": "Sweet Berries Juice",
+
   "item.wlgyl.lemon_lemonade": "Lemonade",
   "item.wlgyl.orange_lemonade": "Orangade",
   "item.wlgyl.blood_orange_lemonade": "Blood Orangade",
@@ -47,6 +51,10 @@
   "effect.wlgyl.clarity": "Clarity",
   "effect.wlgyl.leech": "Leech",
   "effect.wlgyl.acid": "Acid",
+
+  "item.wlgyl.kiwi_normal_spawn_egg": "Kiwi Spawn Egg",
+
+  "entity.mccourse.kiwi_normal": "Lemon",
 
   "creativetab.wlgyl.mod_tab": "W.L.G.Y.L."
 }

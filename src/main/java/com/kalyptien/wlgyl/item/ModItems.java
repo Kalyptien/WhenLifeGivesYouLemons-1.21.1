@@ -1,9 +1,11 @@
 package com.kalyptien.wlgyl.item;
 
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
+import com.kalyptien.wlgyl.entity.ModEntities;
 import com.kalyptien.wlgyl.item.custom.JuiceBottleItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -62,6 +64,10 @@ public class ModItems {
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16)));
     public static final DeferredItem<Item> BOUDDHA_HAND_LEMONADE = ITEMS.register("bouddha_hand_lemonade",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BENEDICTION).stacksTo(16)));
+
+    public static final DeferredItem<Item> KIWI_NORMAL_SPAWN_EGG = ITEMS.register("kiwi_normal_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.KIWI_NORMAL, 0xdfff12, 0x6efc58,
+                    new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
