@@ -52,9 +52,9 @@
   "effect.wlgyl.leech": "Leech",
   "effect.wlgyl.acid": "Acid",
 
-  "item.wlgyl.kiwi_normal_spawn_egg": "Kiwi Spawn Egg",
+  "item.wlgyl.kiwi_normal_spawn_egg": "Agrume Bird Spawn Egg",
 
-  "entity.mccourse.kiwi_normal": "Lemon",
+  "entity.mccourse.kiwi": "Agrume Bird",
 
   "creativetab.wlgyl.mod_tab": "W.L.G.Y.L."
 }

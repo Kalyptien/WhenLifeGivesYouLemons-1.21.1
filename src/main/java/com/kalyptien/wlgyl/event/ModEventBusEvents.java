@@ -2,7 +2,7 @@ package com.kalyptien.wlgyl.event;
 
 import com.kalyptien.wlgyl.entity.ModEntities;
 import com.kalyptien.wlgyl.entity.client.KiwiModel;
-import com.kalyptien.wlgyl.entity.custom.KiwiNormalEntity;
+import com.kalyptien.wlgyl.entity.custom.KiwiEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
@@ -19,6 +19,6 @@ public class ModEventBusEvents {
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
-        event.put(ModEntities.KIWI_NORMAL.get(), KiwiNormalEntity.createAttributes().build());
+        event.put(ModEntities.KIWI_NORMAL.get(), KiwiEntity.createAttributes().build());
     }
 }

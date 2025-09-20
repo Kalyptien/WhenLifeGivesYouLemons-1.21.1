@@ -1,7 +1,7 @@
 package com.kalyptien.wlgyl.entity.client;
 
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
-import com.kalyptien.wlgyl.entity.custom.KiwiNormalEntity;
+import com.kalyptien.wlgyl.entity.custom.KiwiEntity;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -12,11 +12,11 @@ import net.minecraft.util.Mth;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 
-public class KiwiModel<T extends KiwiNormalEntity> extends HierarchicalModel<T> {
+public class KiwiModel<T extends KiwiEntity> extends HierarchicalModel<T> {
 
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION =
-            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "kiwi_normal"), "main");
+            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "kiwi"), "main");
 
     private final ModelPart Kiwi;
     private final ModelPart Head;
@@ -54,7 +54,7 @@ public class KiwiModel<T extends KiwiNormalEntity> extends HierarchicalModel<T> 
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.applyHeadRotation(netHeadYaw, headPitch);
 
-        this.animateWalk(KiwiAnimation.KIWI_NORMAL_WALK, limbSwing, limbSwingAmount, 1f, 2.5f);
+        this.animateWalk(KiwiAnimation.KIWI_NORMAL_WALK, limbSwing, limbSwingAmount, 10f, 10f);
         this.animate(entity.sitAnimationState, KiwiAnimation.KIWI_NORMAL_SIT, ageInTicks, 1f);
     }
 
