@@ -1,6 +1,7 @@
 package com.kalyptien.wlgyl.block.custom;
 
 import com.kalyptien.wlgyl.block.entity.SqueezerBlockEntity;
+import com.kalyptien.wlgyl.sound.ModSounds;
 import com.kalyptien.wlgyl.util.ModTags;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -77,7 +78,7 @@ public class SqueezerBlock extends BaseEntityBlock {
                 if(stack.is(ModTags.Items.BERRYS)){
                     if(Math.random() <= 0.75){
                         stack.shrink(1);
-                        level.playSound(player, pos, SoundEvents.COW_MILK, SoundSource.BLOCKS, 1f, 1f);
+                        level.playSound(player, pos, ModSounds.SQUEEZER_FILL.get(), SoundSource.BLOCKS, 1f, 1f);
                         return ItemInteractionResult.CONSUME;
                     }
                 }
@@ -85,7 +86,7 @@ public class SqueezerBlock extends BaseEntityBlock {
                 int i = squeezerBlockEntity.getLastInventoryAvailable();
                 squeezerBlockEntity.inventory.insertItem(i, stack.copy(), false);
                 stack.shrink(1);
-                level.playSound(player, pos, SoundEvents.COW_MILK, SoundSource.BLOCKS, 1f, 2f);
+                level.playSound(player, pos, ModSounds.SQUEEZER_FILL.get(), SoundSource.BLOCKS, 1f, 2f);
 
             } else if(stack.getItem() == Items.GLASS_BOTTLE && !squeezerBlockEntity.inventory.getStackInSlot(3).isEmpty()) {
 
@@ -95,9 +96,9 @@ public class SqueezerBlock extends BaseEntityBlock {
                 squeezerBlockEntity.clearContents();
                 level.playSound(player, pos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1f, 1f);
 
-            } else if(stack.isEmpty() && player.isCrouching()){
+            } else if(stack.isEmpty() && player.isCrouching() && !squeezerBlockEntity.inventory.getStackInSlot(0).isEmpty()){
                 squeezerBlockEntity.clearContents();
-                level.playSound(player, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1f, 1.5f);
+                level.playSound(player, pos, ModSounds.SQUEEZER_EMPTY.get(), SoundSource.BLOCKS, 0.8f, 2f);
             }
         }
 

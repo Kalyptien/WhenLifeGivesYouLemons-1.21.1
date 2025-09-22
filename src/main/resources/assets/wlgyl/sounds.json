@@ -1,0 +1,66 @@
+{
+
+  "kiwi_death": {
+    "subtitle": "sounds.wlgyl.kiwi_death",
+    "sounds": [
+      "wlgyl:kiwi_death"
+    ]
+  },
+  "kiwi_hurt": {
+    "subtitle": "sounds.wlgyl.kiwi_hurt",
+    "sounds": [
+      "wlgyl:kiwi_hurt"
+    ]
+  },
+  "kiwi_ambient": {
+    "subtitle": "sounds.wlgyl.kiwi_ambient",
+    "sounds": [
+      "wlgyl:kiwi_ambient_1",
+      "wlgyl:kiwi_ambient_2"
+    ]
+  },
+  "leaves_forage": {
+    "subtitle": "sounds.wlgyl.leaves_forage",
+    "sounds": [
+      "block/cave_vines/break1",
+      "block/cave_vines/break2",
+      "block/cave_vines/break3",
+      "block/cave_vines/break4",
+      "block/cave_vines/break5"
+    ]
+  },
+  "barrel_bubble": {
+    "subtitle": "sounds.wlgyl.barrel_bubble",
+    "sounds": [
+      "block/bubble_column/upwards_ambient1",
+      "block/bubble_column/upwards_ambient2",
+      "block/bubble_column/upwards_ambient3",
+      "block/bubble_column/upwards_ambient4",
+      "block/bubble_column/upwards_ambient5"
+    ]
+  },
+  "barrel_finish": {
+    "subtitle": "sounds.wlgyl.barrel_finish",
+    "sounds": [
+      "block/brewing_stand/brew1",
+      "block/brewing_stand/brew2"
+    ]
+  },
+  "squeezer_fill": {
+    "subtitle": "sounds.wlgyl.squeezer_fill",
+    "sounds": [
+      "mob/frog/tongue1",
+      "mob/frog/tongue2",
+      "mob/frog/tongue3",
+      "mob/frog/tongue4"
+    ]
+  },
+  "squeezer_empty": {
+    "subtitle": "sounds.wlgyl.squeezer_empty",
+    "sounds": [
+      "item/bucket/empty1",
+      "item/bucket/empty2",
+      "item/bucket/empty3"
+    ]
+  }
+}

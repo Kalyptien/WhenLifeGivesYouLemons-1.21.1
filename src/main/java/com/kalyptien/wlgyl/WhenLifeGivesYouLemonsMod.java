@@ -12,6 +12,7 @@ import com.kalyptien.wlgyl.recipe.ModRecipes;
 import com.kalyptien.wlgyl.screen.ModMenuTypes;
 import com.kalyptien.wlgyl.screen.custom.BrewingBarrelScreen;
 import com.kalyptien.wlgyl.screen.custom.IndustrialBrewingBarrelScreen;
+import com.kalyptien.wlgyl.sound.ModSounds;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
@@ -53,6 +54,8 @@ public class WhenLifeGivesYouLemonsMod {
         ModRecipes.register(modEventBus);
 
         ModEntities.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
         ModEffects.register(modEventBus);
 

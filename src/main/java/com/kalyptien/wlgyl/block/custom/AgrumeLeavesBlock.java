@@ -3,6 +3,7 @@ package com.kalyptien.wlgyl.block.custom;
 import com.kalyptien.wlgyl.entity.KiwiVariant;
 import com.kalyptien.wlgyl.entity.ModEntities;
 import com.kalyptien.wlgyl.entity.custom.KiwiEntity;
+import com.kalyptien.wlgyl.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -41,7 +42,7 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if ((Integer)state.getValue(AGE) == MAX_AGE) {
 
-            if(Math.random() > 0.95){
+            if(Math.random() > 0.99){
                 KiwiEntity kiwi = new KiwiEntity(ModEntities.KIWI_NORMAL.get(), level);
                 kiwi.setVariant(this.getVariant());
 
@@ -73,7 +74,7 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
                 int j = 1 + level.random.nextInt(4);
                 popResource(level, pos, new ItemStack(this.getAgrumeProperty(), j));
             }
-            level.playSound((Player)null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+            level.playSound((Player)null, pos, ModSounds.LEAVES_FORAGE.get(), SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             BlockState blockstate = (BlockState)state.setValue(AGE, 0);
             level.setBlock(pos, blockstate, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, blockstate));

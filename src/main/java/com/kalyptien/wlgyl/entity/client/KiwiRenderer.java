@@ -23,6 +23,13 @@ public class KiwiRenderer extends MobRenderer<KiwiEntity, KiwiModel<KiwiEntity>>
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_orange.png"));
                 map.put(KiwiVariant.LIME,
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_lime.png"));
+                map.put(KiwiVariant.BLOOD_ORANGE,
+                        ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_blood_orange.png"));
+                map.put(KiwiVariant.GRAPEFRUIT,
+                        ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_grapefruit.png"));
+                map.put(KiwiVariant.BUDDHA_HAND,
+                        ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_buddha_hand.png"));
+
             });
 
     public KiwiRenderer(EntityRendererProvider.Context context) {

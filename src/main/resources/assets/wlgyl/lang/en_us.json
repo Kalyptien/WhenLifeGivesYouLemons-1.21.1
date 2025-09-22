@@ -22,10 +22,10 @@
   "item.wlgyl.lemon_lemonade": "Lemonade",
   "item.wlgyl.orange_lemonade": "Orangade",
   "item.wlgyl.blood_orange_lemonade": "Blood Orangade",
-  "item.wlgyl.grapefruit_lemonade": "Grapefruitade",
+  "item.wlgyl.grapefruit_lemonade": "Sour Orangade",
   "item.wlgyl.caviar_lemon_lemonade": "Caviar Lemonade",
-  "item.wlgyl.lime_lemonade": "Limeonade",
-  "item.wlgyl.bouddha_hand_lemonade": "Bouddha's Limonade",
+  "item.wlgyl.lime_lemonade": "Limonade",
+  "item.wlgyl.bouddha_hand_lemonade": "Bouddha's Lemonade",
 
   "block.wlgyl.lemon_leaves": "Lemon Leaves",
   "block.wlgyl.orange_leaves": "Orange Leaves",
@@ -55,6 +55,18 @@
   "item.wlgyl.kiwi_normal_spawn_egg": "Agrume Bird Spawn Egg",
 
   "entity.mccourse.kiwi": "Agrume Bird",
+
+  "sounds.wlgyl.kiwi_death" : "Agrume Bird Death",
+  "sounds.wlgyl.kiwi_hurt" : "Agrume Bird Hurt",
+  "sounds.wlgyl.kiwi_ambient" : "Agrume Bird Death",
+
+  "sounds.wlgyl.leaves_forage" : "Leaves Foraging",
+
+  "sounds.wlgyl.barrel_bubble" : "Brewing Barrel Bubble",
+  "sounds.wlgyl.barrel_finish" : "Brewing Barrel Brew",
+
+  "sounds.wlgyl.squeezer_fill" : "Squeezer Fill",
+  "sounds.wlgyl.squeezer_empty" : "Squeezer Empty",
 
   "creativetab.wlgyl.mod_tab": "W.L.G.Y.L."
 }

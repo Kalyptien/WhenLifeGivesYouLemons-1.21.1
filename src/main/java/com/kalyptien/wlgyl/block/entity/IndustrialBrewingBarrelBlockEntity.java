@@ -6,6 +6,7 @@ import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipeInput;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
 import com.kalyptien.wlgyl.screen.custom.BrewingBarrelMenu;
 import com.kalyptien.wlgyl.screen.custom.IndustrialBrewingBarrelMenu;
+import com.kalyptien.wlgyl.sound.ModSounds;
 import com.kalyptien.wlgyl.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -183,10 +184,14 @@ public class IndustrialBrewingBarrelBlockEntity extends BlockEntity implements M
             increaseCraftingProgress();
             setChanged(level, blockPos, blockState);
 
+            if(Math.random() < 0.005){
+                level.playSound(null, blockPos, ModSounds.BARREL_BUBBLE.get(), SoundSource.BLOCKS, 0.5f, 2f);
+            }
+
             if(hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
-                level.playSound(null, blockPos, SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1f, 1f);
+                level.playSound(null, blockPos, ModSounds.BARREL_FINISH.get(), SoundSource.BLOCKS, 1f, 0.5f);
             }
         } else {
             resetProgress();

@@ -5,6 +5,7 @@ import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipe;
 import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipeInput;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
 import com.kalyptien.wlgyl.screen.custom.BrewingBarrelMenu;
+import com.kalyptien.wlgyl.sound.ModSounds;
 import com.kalyptien.wlgyl.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -172,7 +173,7 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
             itemHandler.insertItem(OUTPUT_SLOT_BOTTLE, new ItemStack(itemToGive, 1), false);
             itemHandler.extractItem(INPUT_SLOT_BOTTLE, 1, false);
             this.water--;
-            level.playSound(null, blockPos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 0.5f, 1f);
+            level.playSound(null, blockPos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1f, 1f);
 
             if(water == 0){
                 this.lemonadeType = 0;
@@ -183,10 +184,14 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
             increaseCraftingProgress();
             setChanged(level, blockPos, blockState);
 
+            if(Math.random() < 0.005){
+                level.playSound(null, blockPos, ModSounds.BARREL_BUBBLE.get(), SoundSource.BLOCKS, 0.5f, 2f);
+            }
+
             if(hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
-                level.playSound(null, blockPos, SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 1f, 1f);
+                level.playSound(null, blockPos, ModSounds.BARREL_FINISH.get(), SoundSource.BLOCKS, 1f, 0.5f);
             }
         } else {
             resetProgress();

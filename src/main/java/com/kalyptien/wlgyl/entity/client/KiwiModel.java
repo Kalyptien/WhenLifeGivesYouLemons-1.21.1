@@ -54,8 +54,9 @@ public class KiwiModel<T extends KiwiEntity> extends HierarchicalModel<T> {
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.applyHeadRotation(netHeadYaw, headPitch);
 
-        this.animateWalk(KiwiAnimation.KIWI_NORMAL_WALK, limbSwing, limbSwingAmount, 10f, 10f);
-        this.animate(entity.sitAnimationState, KiwiAnimation.KIWI_NORMAL_SIT, ageInTicks, 1f);
+        this.animateWalk(KiwiAnimation.KIWI_WALK, limbSwing, limbSwingAmount, 10f, 10f);
+        this.animate(entity.sitAnimationState, KiwiAnimation.KIWI_SIT, ageInTicks, 1f);
+        this.animate(entity.idleAnimationState, KiwiAnimation.KIWI_IDLE, ageInTicks, 1f);
     }
 
 
