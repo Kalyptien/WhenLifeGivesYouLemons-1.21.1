@@ -23,7 +23,7 @@ public class ClarityEffect extends MobEffect {
                 if(currentEffect.getEffect() != ModEffects.CLARITY_EFFECT){
                     livingEntity.addEffect(new MobEffectInstance(
                             currentEffect.getEffect(),
-                            0,
+                            1,
                             currentEffect.getAmplifier() + 1,
                             currentEffect.isAmbient(),
                             currentEffect.isVisible(),
