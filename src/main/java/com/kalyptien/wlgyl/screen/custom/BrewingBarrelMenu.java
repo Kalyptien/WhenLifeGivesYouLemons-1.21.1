@@ -89,7 +89,7 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
             case 2: return "orange";
             case 3: return "blood_orange";
             case 4: return "caviar_lemon";
-            case 5: return "bouddha_hand";
+            case 5: return "buddha_hand";
             case 6: return "grapefruit";
             case 7: return "lime";
             default: return "water";

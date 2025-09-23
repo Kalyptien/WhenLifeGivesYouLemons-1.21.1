@@ -11,7 +11,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 
@@ -78,14 +77,14 @@ public class SqueezerBlockEntity extends BlockEntity {
         else if(currentItem == ModItems.ORANGE.get()){
             itemToReturn = ModItems.ORANGE_JUICE.get();
         }
-        else if(currentItem == ModItems.CAVRIAR_LEMON.get()){
-            itemToReturn = ModItems.CAVRIAR_LEMON_JUICE.get();
+        else if(currentItem == ModItems.CAVIAR_LEMON.get()){
+            itemToReturn = ModItems.CAVIAR_LEMON_JUICE.get();
         }
         else if(currentItem == ModItems.BLOOD_ORANGE.get()){
             itemToReturn = ModItems.BLOOD_ORANGE_JUICE.get();
         }
-        else if(currentItem == ModItems.BOUDDHA_HAND.get()){
-            itemToReturn = ModItems.BOUDDHA_HAND_JUICE.get();
+        else if(currentItem == ModItems.BUDDHA_HAND.get()){
+            itemToReturn = ModItems.BUDDHA_HAND_JUICE.get();
         }
         else if(currentItem == Items.APPLE){
             itemToReturn = ModItems.APPLE_JUICE.get();

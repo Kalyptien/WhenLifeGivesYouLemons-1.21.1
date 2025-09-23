@@ -20,7 +20,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_GRAPEFRUIT_TREE = registerKey("add_tree_grapefruit_tree");
     public static final ResourceKey<BiomeModifier> ADD_TREE_BLOOD_ORANGE_TREE = registerKey("add_tree_blood_orange_tree");
     public static final ResourceKey<BiomeModifier> ADD_TREE_LIME_TREE = registerKey("add_tree_lime_tree");
-    public static final ResourceKey<BiomeModifier> ADD_TREE_BOUDDHA_HAND_TREE = registerKey("add_tree_bouddha_hand_tree");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_BUDDHA_HAND_TREE = registerKey("add_tree_buddha_hand_tree");
     
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         // CF -> PF -> BM
@@ -42,9 +42,9 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BLOOD_ORANGE_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_BOUDDHA_HAND_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_BUDDHA_HAND_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.CHERRY_GROVE)),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BOUDDHA_HAND_TREE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BUDDHA_HAND_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_TREE_LIME_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(

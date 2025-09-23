@@ -4,14 +4,14 @@ import com.kalyptien.wlgyl.entity.KiwiVariant;
 import com.kalyptien.wlgyl.item.ModItems;
 import net.minecraft.world.level.ItemLike;
 
-public class BouddhaHandLeavesBlock extends  AgrumeLeavesBlock{
+public class BuddhaHandLeavesBlock extends  AgrumeLeavesBlock{
 
-    public BouddhaHandLeavesBlock(Properties properties) {
+    public BuddhaHandLeavesBlock(Properties properties) {
         super(properties);
     }
 
     public ItemLike getAgrumeProperty() {
-        return ModItems.BOUDDHA_HAND;
+        return ModItems.BUDDHA_HAND;
     }
 
     public KiwiVariant getVariant(){

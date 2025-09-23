@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "wlgyl:item/bouddha_hand"
+    "layer0": "wlgyl:item/buddha_hand"
   }
 }

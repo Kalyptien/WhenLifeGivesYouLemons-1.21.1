@@ -11,7 +11,7 @@ public class CaviarLemonLeavesBlock extends  AgrumeLeavesBlock{
     }
 
     public ItemLike getAgrumeProperty() {
-        return ModItems.CAVRIAR_LEMON;
+        return ModItems.CAVIAR_LEMON;
     }
 
     public KiwiVariant getVariant(){

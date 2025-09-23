@@ -2,7 +2,7 @@
   "parent": "wlgyl:block/agrume_leaves_base",
   "render_type": "minecraft:cutout",
   "textures": {
-    "agrume": "wlgyl:block/bouddha_hand_leaves_stage2",
+    "agrume": "wlgyl:block/buddha_hand_leaves_stage2",
     "all": "wlgyl:block/agrumes_leaves"
   }
 }

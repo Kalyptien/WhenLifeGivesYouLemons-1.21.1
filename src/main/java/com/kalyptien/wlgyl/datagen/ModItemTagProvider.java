@@ -1,14 +1,11 @@
 package com.kalyptien.wlgyl.datagen;
 
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
-import com.kalyptien.wlgyl.block.ModBlocks;
 import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -31,8 +28,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.ORANGE.get())
                 .add(ModItems.BLOOD_ORANGE.get())
                 .add(ModItems.GRAPEFRUIT.get())
-                .add(ModItems.CAVRIAR_LEMON.get())
-                .add(ModItems.BOUDDHA_HAND.get());
+                .add(ModItems.CAVIAR_LEMON.get())
+                .add(ModItems.BUDDHA_HAND.get());
 
         tag(ModTags.Items.FRUITS)
                 .add(Items.APPLE)
@@ -43,8 +40,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.ORANGE.get())
                 .add(ModItems.BLOOD_ORANGE.get())
                 .add(ModItems.GRAPEFRUIT.get())
-                .add(ModItems.CAVRIAR_LEMON.get())
-                .add(ModItems.BOUDDHA_HAND.get());
+                .add(ModItems.CAVIAR_LEMON.get())
+                .add(ModItems.BUDDHA_HAND.get());
 
         tag(ModTags.Items.BERRYS)
                 .add(Items.GLOW_BERRIES)

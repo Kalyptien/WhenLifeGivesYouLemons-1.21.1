@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "minecraft:item/potion",
-    "layer1": "wlgyl:item/bouddha_hand_juice"
+    "layer1": "wlgyl:item/buddha_hand_lemonade"
   }
 }

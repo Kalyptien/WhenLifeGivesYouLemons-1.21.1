@@ -26,7 +26,6 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -222,13 +221,13 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
         else if(currentItem.getItem() == ModItems.ORANGE_LEMONADE.get()){
             return 2;
         }
-        else if(currentItem.getItem() == ModItems.CAVRIAR_LEMON_LEMONADE.get()){
+        else if(currentItem.getItem() == ModItems.CAVIAR_LEMON_LEMONADE.get()){
             return 4;
         }
         else if(currentItem.getItem() == ModItems.BLOOD_ORANGE_LEMONADE.get()){
             return 3;
         }
-        else if(currentItem.getItem() == ModItems.BOUDDHA_HAND_LEMONADE.get()){
+        else if(currentItem.getItem() == ModItems.BUDDHA_HAND_LEMONADE.get()){
             return 5;
         }
 
@@ -250,13 +249,13 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
             return ModItems.ORANGE_LEMONADE.get();
         }
         else if(currentLemonadeType == 4){
-            return ModItems.CAVRIAR_LEMON_LEMONADE.get();
+            return ModItems.CAVIAR_LEMON_LEMONADE.get();
         }
         else if(currentLemonadeType == 3){
             return ModItems.BLOOD_ORANGE_LEMONADE.get();
         }
         else if(currentLemonadeType == 5){
-            return ModItems.BOUDDHA_HAND_LEMONADE.get();
+            return ModItems.BUDDHA_HAND_LEMONADE.get();
         }
 
         return ModItems.LEMON_LEMONADE.get();

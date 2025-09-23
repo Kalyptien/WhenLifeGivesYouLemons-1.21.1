@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "wlgyl:block/bouddha_hand_sapling"
+    "cross": "wlgyl:block/buddha_hand_sapling"
   }
 }

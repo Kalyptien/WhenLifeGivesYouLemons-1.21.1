@@ -5,7 +5,7 @@
   "item.wlgyl.grapefruit": "Grapefruit",
   "item.wlgyl.caviar_lemon": "Caviar Lemon",
   "item.wlgyl.lime": "Lime",
-  "item.wlgyl.bouddha_hand": "Bouddha's Hand",
+  "item.wlgyl.buddha_hand": "Buddha's Hand",
 
   "item.wlgyl.lemon_juice": "Lemon Juice",
   "item.wlgyl.orange_juice": "Orange Juice",
@@ -13,7 +13,7 @@
   "item.wlgyl.grapefruit_juice": "Grapefruit Juice",
   "item.wlgyl.caviar_lemon_juice": "Caviar Lemon Juice",
   "item.wlgyl.lime_juice": "Lime Juice",
-  "item.wlgyl.bouddha_hand_juice": "Bouddha's Juice",
+  "item.wlgyl.buddha_hand_juice": "Buddha's Juice",
 
   "item.wlgyl.apple_juice": "Apple Juice",
   "item.wlgyl.glow_berries_juice": "Glow Berries Juice",
@@ -25,7 +25,7 @@
   "item.wlgyl.grapefruit_lemonade": "Sour Orangade",
   "item.wlgyl.caviar_lemon_lemonade": "Caviar Lemonade",
   "item.wlgyl.lime_lemonade": "Limonade",
-  "item.wlgyl.bouddha_hand_lemonade": "Bouddha's Lemonade",
+  "item.wlgyl.buddha_hand_lemonade": "Buddha's Lemonade",
 
   "block.wlgyl.lemon_leaves": "Lemon Leaves",
   "block.wlgyl.orange_leaves": "Orange Leaves",
@@ -33,7 +33,7 @@
   "block.wlgyl.grapefruit_leaves": "Grapefruit Leaves",
   "block.wlgyl.caviar_lemon_leaves": "Caviar Lemon Leaves",
   "block.wlgyl.lime_leaves": "Lime Leaves",
-  "block.wlgyl.bouddha_hand_leaves": "Bouddha's Hand Leaves",
+  "block.wlgyl.buddha_hand_leaves": "Buddha's Hand Leaves",
 
   "block.wlgyl.lemon_sapling": "Lemon Sapling",
   "block.wlgyl.blood_orange_sapling": "Blood Orange Sapling",
@@ -41,7 +41,7 @@
   "block.wlgyl.grapefruit_sapling": "Grapefruit Sapling",
   "block.wlgyl.caviar_lemon_sapling": "Caviar Lemon Sapling",
   "block.wlgyl.lime_sapling": "Lime Sapling",
-  "block.wlgyl.bouddha_hand_sapling": "Bouddha's Hand Sapling",
+  "block.wlgyl.buddha_hand_sapling": "Buddha's Hand Sapling",
 
   "block.wlgyl.squeezer": "Squeezer",
   "block.wlgyl.brewing_barrel": "Brewing Barrel",
@@ -51,6 +51,7 @@
   "effect.wlgyl.clarity": "Clarity",
   "effect.wlgyl.leech": "Leech",
   "effect.wlgyl.acid": "Acid",
+  "effect.wlgyl.greed": "Greed",
 
   "item.wlgyl.kiwi_normal_spawn_egg": "Agrume Bird Spawn Egg",
 
@@ -68,5 +69,12 @@
   "sounds.wlgyl.squeezer_fill" : "Squeezer Fill",
   "sounds.wlgyl.squeezer_empty" : "Squeezer Empty",
 
-  "creativetab.wlgyl.mod_tab": "W.L.G.Y.L."
+  "creativetab.wlgyl.mod_tab": "W.L.G.Y.L.",
+
+  "tooltip.wlgyl.buddha_hand_lemonade.tooltip": "§9Benediction II (2:00)§r",
+  "tooltip.wlgyl.blood_orange_lemonade.tooltip": "§9Leech I (2:00)§r",
+  "tooltip.wlgyl.grapefruit_lemonade.tooltip": "§9Acid I (2:00)§r",
+  "tooltip.wlgyl.buddha_hand_juice.tooltip": "§9Clarity (2:00)§r",
+  "tooltip.wlgyl.glow_berries_juice.tooltip": "§9Glow (0:20)§r",
+  "tooltip.wlgyl.caviar_lemon_lemonade.tooltip": "§9Greed I (2:00)§r"
 }

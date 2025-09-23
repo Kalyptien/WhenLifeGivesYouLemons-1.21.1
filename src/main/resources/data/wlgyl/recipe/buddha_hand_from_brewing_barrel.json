@@ -4,9 +4,9 @@
     "item": "minecraft:sugar"
   },
   "agrume": {
-    "item": "wlgyl:bouddha_hand"
+    "item": "wlgyl:buddha_hand"
   },
   "result": {
-    "id": "wlgyl:bouddha_hand_lemonade"
+    "id": "wlgyl:buddha_hand_lemonade"
   }
 }

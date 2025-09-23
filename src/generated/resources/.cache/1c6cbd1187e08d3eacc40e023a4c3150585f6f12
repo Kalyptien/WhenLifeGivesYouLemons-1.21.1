@@ -1,15 +1,15 @@
-// 1.21.1	2025-09-17T21:03:36.4000616	Item Models: wlgyl
+// 1.21.1	2025-09-23T21:39:39.3125698	Item Models: wlgyl
 bace782fb4d44dadecd6a1f85fb4583bb2d4a065 assets/wlgyl/models/item/apple_juice.json
 96fe2b9b815855f02b8897ebc08ae7251b9440a0 assets/wlgyl/models/item/blood_orange.json
 f03f8218a95491780618f966fd856907956336fc assets/wlgyl/models/item/blood_orange_juice.json
 10938185c391f866610f625cd448cf543970455d assets/wlgyl/models/item/blood_orange_leaves.json
 f7e065439f464b4cacf7f5bcc7f6ea1369c6d1e5 assets/wlgyl/models/item/blood_orange_lemonade.json
 8546329ec0f352cba975bc3f952b157b581dc963 assets/wlgyl/models/item/blood_orange_sapling.json
-af1f0e1dad7db8e7b2872b8949171d1a97111fcc assets/wlgyl/models/item/bouddha_hand.json
-51dd5c52aa26b87d5ebe1cb1df896d54ec0d6a68 assets/wlgyl/models/item/bouddha_hand_juice.json
-102064e5bcbcfdbd8c9cfb70a088ea2a742a18a9 assets/wlgyl/models/item/bouddha_hand_leaves.json
-bf252d8681393a716117c1ebd56b08ae8d7ed779 assets/wlgyl/models/item/bouddha_hand_lemonade.json
-2df3bbd9ef6189de139ff3f6dbe29be1517fab46 assets/wlgyl/models/item/bouddha_hand_sapling.json
+b11004ac2cb997f2343d22976d6852150aa82f0e assets/wlgyl/models/item/buddha_hand.json
+2d268af18bd48fcd55b267ae84eb9920007cccd7 assets/wlgyl/models/item/buddha_hand_juice.json
+9319b8bf4574d0113cfb979a03713359eb64bb9e assets/wlgyl/models/item/buddha_hand_leaves.json
+c288e5310340f6509f70d768c60e50927ec79345 assets/wlgyl/models/item/buddha_hand_lemonade.json
+bcddb202746e8173e471f11af6c985bb07258185 assets/wlgyl/models/item/buddha_hand_sapling.json
 17e6a6fc63b54619c0360d95c7519740b5743af0 assets/wlgyl/models/item/caviar_lemon.json
 fdd84bbe885e97248454a5d8c8404cff814eba7e assets/wlgyl/models/item/caviar_lemon_juice.json
 662fc504df30ea543b745ee43913e98febb0f067 assets/wlgyl/models/item/caviar_lemon_leaves.json

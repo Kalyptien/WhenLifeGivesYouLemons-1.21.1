@@ -4,7 +4,6 @@ import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipe;
 import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipeInput;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
-import com.kalyptien.wlgyl.screen.custom.BrewingBarrelMenu;
 import com.kalyptien.wlgyl.screen.custom.IndustrialBrewingBarrelMenu;
 import com.kalyptien.wlgyl.sound.ModSounds;
 import com.kalyptien.wlgyl.util.ModTags;
@@ -222,13 +221,13 @@ public class IndustrialBrewingBarrelBlockEntity extends BlockEntity implements M
         else if(currentItem.getItem() == ModItems.ORANGE_LEMONADE.get()){
             return 2;
         }
-        else if(currentItem.getItem() == ModItems.CAVRIAR_LEMON_LEMONADE.get()){
+        else if(currentItem.getItem() == ModItems.CAVIAR_LEMON_LEMONADE.get()){
             return 4;
         }
         else if(currentItem.getItem() == ModItems.BLOOD_ORANGE_LEMONADE.get()){
             return 3;
         }
-        else if(currentItem.getItem() == ModItems.BOUDDHA_HAND_LEMONADE.get()){
+        else if(currentItem.getItem() == ModItems.BUDDHA_HAND_LEMONADE.get()){
             return 5;
         }
 
@@ -250,13 +249,13 @@ public class IndustrialBrewingBarrelBlockEntity extends BlockEntity implements M
             return ModItems.ORANGE_LEMONADE.get();
         }
         else if(currentLemonadeType == 4){
-            return ModItems.CAVRIAR_LEMON_LEMONADE.get();
+            return ModItems.CAVIAR_LEMON_LEMONADE.get();
         }
         else if(currentLemonadeType == 3){
             return ModItems.BLOOD_ORANGE_LEMONADE.get();
         }
         else if(currentLemonadeType == 5){
-            return ModItems.BOUDDHA_HAND_LEMONADE.get();
+            return ModItems.BUDDHA_HAND_LEMONADE.get();
         }
 
         return ModItems.LEMON_LEMONADE.get();

@@ -23,7 +23,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> CAVIAR_LEMON_TREE_PLACED_KEY = registerKey("caviar_lemon_tree_placed");
     public static final ResourceKey<PlacedFeature> GRAPEFRUIT_TREE_PLACED_KEY = registerKey("grapefruit_tree_placed");
     public static final ResourceKey<PlacedFeature> LIME_TREE_PLACED_KEY = registerKey("lime_tree_placed");
-    public static final ResourceKey<PlacedFeature> BOUDDHA_HAND_TREE_PLACED_KEY = registerKey("bouddha_hand_tree_placed");
+    public static final ResourceKey<PlacedFeature> BUDDHA_HAND_TREE_PLACED_KEY = registerKey("buddha_hand_tree_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -58,7 +58,7 @@ public class ModPlacedFeatures {
                         InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()}).toList());
 
-        register(context, BOUDDHA_HAND_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BOUDDHA_HAND_TREE_KEY),
+        register(context, BUDDHA_HAND_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUDDHA_HAND_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
                         RarityFilter.onAverageOnceEvery(200),
                         InSquarePlacement.spread(),

@@ -22,7 +22,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.LEAVES)
                 .add(ModBlocks.ORANGE_LEAVES.get())
                 .add(ModBlocks.BLOOD_ORANGE_LEAVES.get())
-                .add(ModBlocks.BOUDDHA_HAND_LEAVES.get())
+                .add(ModBlocks.BUDDHA_HAND_LEAVES.get())
                 .add(ModBlocks.CAVIAR_LEMON_LEAVES.get())
                 .add(ModBlocks.GRAPEFRUIT_LEAVES.get())
                 .add(ModBlocks.LIME_LEAVES.get())
@@ -32,7 +32,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.LEMON_SAPLING.get())
                 .add(ModBlocks.ORANGE_LEAVES.get())
                 .add(ModBlocks.BLOOD_ORANGE_SAPLING.get())
-                .add(ModBlocks.BOUDDHA_HAND_SAPLING.get())
+                .add(ModBlocks.BUDDHA_HAND_SAPLING.get())
                 .add(ModBlocks.LIME_SAPLING.get())
                 .add(ModBlocks.CAVIAR_LEMON_SAPLING.get())
                 .add(ModBlocks.GRAPEFRUIT_SAPLING.get());

@@ -8,10 +8,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -32,8 +30,8 @@ public class ModBlocks {
             () -> new GrapefruitLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<Block> CAVIAR_LEMON_LEAVES = registerBlock("caviar_lemon_leaves",
             () -> new CaviarLemonLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
-    public static final DeferredBlock<Block> BOUDDHA_HAND_LEAVES = registerBlock("bouddha_hand_leaves",
-            () -> new BouddhaHandLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> BUDDHA_HAND_LEAVES = registerBlock("buddha_hand_leaves",
+            () -> new BuddhaHandLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<Block> BLOOD_ORANGE_LEAVES = registerBlock("blood_orange_leaves",
             () -> new BloodOrangeLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
 
@@ -43,8 +41,8 @@ public class ModBlocks {
             () -> new SaplingBlock(ModTreeGrowers.ORANGE_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<Block> BLOOD_ORANGE_SAPLING = registerBlock("blood_orange_sapling",
             () -> new SaplingBlock(ModTreeGrowers.BLOOD_ORANGE_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
-    public static final DeferredBlock<Block> BOUDDHA_HAND_SAPLING = registerBlock("bouddha_hand_sapling",
-            () -> new SaplingBlock(ModTreeGrowers.BOUDDHA_HAND_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> BUDDHA_HAND_SAPLING = registerBlock("buddha_hand_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.BUDDHA_HAND_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<Block> LIME_SAPLING = registerBlock("lime_sapling",
             () -> new SaplingBlock(ModTreeGrowers.LIME_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<Block> GRAPEFRUIT_SAPLING = registerBlock("grapefruit_sapling",

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "wlgyl:block/bouddha_hand_sapling"
+    "layer0": "wlgyl:block/buddha_hand_sapling"
   }
 }

@@ -23,17 +23,17 @@ public class ModItemModelProvider  extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.LEMON.get());
         basicItem(ModItems.ORANGE.get());
-        basicItem(ModItems.BOUDDHA_HAND.get());
+        basicItem(ModItems.BUDDHA_HAND.get());
         basicItem(ModItems.LIME.get());
         basicItem(ModItems.BLOOD_ORANGE.get());
-        basicItem(ModItems.CAVRIAR_LEMON.get());
+        basicItem(ModItems.CAVIAR_LEMON.get());
         basicItem(ModItems.GRAPEFRUIT.get());
 
         bottleItem(ModItems.LEMON_JUICE.get());
         bottleItem(ModItems.ORANGE_JUICE.get());
         bottleItem(ModItems.BLOOD_ORANGE_JUICE.get());
-        bottleItem(ModItems.BOUDDHA_HAND_JUICE.get());
-        bottleItem(ModItems.CAVRIAR_LEMON_JUICE.get());
+        bottleItem(ModItems.BUDDHA_HAND_JUICE.get());
+        bottleItem(ModItems.CAVIAR_LEMON_JUICE.get());
         bottleItem(ModItems.LIME_JUICE.get());
         bottleItem(ModItems.GRAPEFRUIT_JUICE.get());
         bottleItem(ModItems.APPLE_JUICE.get());
@@ -43,23 +43,23 @@ public class ModItemModelProvider  extends ItemModelProvider {
         bottleItem(ModItems.LEMON_LEMONADE.get());
         bottleItem(ModItems.ORANGE_LEMONADE.get());
         bottleItem(ModItems.BLOOD_ORANGE_LEMONADE.get());
-        bottleItem(ModItems.BOUDDHA_HAND_LEMONADE.get());
+        bottleItem(ModItems.BUDDHA_HAND_LEMONADE.get());
         bottleItem(ModItems.GRAPEFRUIT_LEMONADE.get());
         bottleItem(ModItems.LIME_LEMONADE.get());
-        bottleItem(ModItems.CAVRIAR_LEMON_LEMONADE.get());
+        bottleItem(ModItems.CAVIAR_LEMON_LEMONADE.get());
 
         saplingItem(ModBlocks.LEMON_SAPLING);
         saplingItem(ModBlocks.ORANGE_SAPLING);
         saplingItem(ModBlocks.BLOOD_ORANGE_SAPLING);
         saplingItem(ModBlocks.GRAPEFRUIT_SAPLING);
-        saplingItem(ModBlocks.BOUDDHA_HAND_SAPLING);
+        saplingItem(ModBlocks.BUDDHA_HAND_SAPLING);
         saplingItem(ModBlocks.CAVIAR_LEMON_SAPLING);
         saplingItem(ModBlocks.LIME_SAPLING);
 
         leavesItem(ModBlocks.LEMON_LEAVES);
         leavesItem(ModBlocks.ORANGE_LEAVES);
         leavesItem(ModBlocks.BLOOD_ORANGE_LEAVES);
-        leavesItem(ModBlocks.BOUDDHA_HAND_LEAVES);
+        leavesItem(ModBlocks.BUDDHA_HAND_LEAVES);
         leavesItem(ModBlocks.GRAPEFRUIT_LEAVES);
         leavesItem(ModBlocks.LIME_LEAVES);
         leavesItem(ModBlocks.CAVIAR_LEMON_LEAVES);

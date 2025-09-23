@@ -8,7 +8,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -27,7 +26,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         saplingBlock(ModBlocks.LEMON_SAPLING);
         saplingBlock(ModBlocks.ORANGE_SAPLING);
         saplingBlock(ModBlocks.BLOOD_ORANGE_SAPLING);
-        saplingBlock(ModBlocks.BOUDDHA_HAND_SAPLING);
+        saplingBlock(ModBlocks.BUDDHA_HAND_SAPLING);
         saplingBlock(ModBlocks.LIME_SAPLING);
         saplingBlock(ModBlocks.GRAPEFRUIT_SAPLING);
         saplingBlock(ModBlocks.CAVIAR_LEMON_SAPLING);
@@ -38,7 +37,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.BLOOD_ORANGE_LEAVES.get()), "blood_orange_leaves_stage", "blood_orange_leaves_stage");
         makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.LIME_LEAVES.get()), "lime_leaves_stage", "lime_leaves_stage");
         makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.CAVIAR_LEMON_LEAVES.get()), "caviar_lemon_leaves_stage", "caviar_lemon_leaves_stage");
-        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.BOUDDHA_HAND_LEAVES.get()), "bouddha_hand_leaves_stage", "bouddha_hand_leaves_stage");
+        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.BUDDHA_HAND_LEAVES.get()), "buddha_hand_leaves_stage", "buddha_hand_leaves_stage");
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

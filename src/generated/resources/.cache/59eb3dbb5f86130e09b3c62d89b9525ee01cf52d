@@ -1,9 +1,9 @@
-// 1.21.1	2025-09-11T13:37:55.7200678	Loot Tables
+// 1.21.1	2025-09-23T21:39:39.3135706	Loot Tables
 f4a1f4c0994d1d7786340a236dc680908bdcf5f0 data/wlgyl/loot_table/blocks/blood_orange_leaves.json
 aba6f328ecbe81884610eae5187602256f48a401 data/wlgyl/loot_table/blocks/blood_orange_sapling.json
-10383f4771bf5769d996439f6bf7ad0d1d64f8ec data/wlgyl/loot_table/blocks/bouddha_hand_leaves.json
-35018a454612b6f067a676461ab0ad830642672a data/wlgyl/loot_table/blocks/bouddha_hand_sapling.json
 928eba24456d4ae3f7c757873d7e0ef9d4807ffe data/wlgyl/loot_table/blocks/brewing_barrel.json
+5588b87fbe590b3c56a17f3069171c069116b7c4 data/wlgyl/loot_table/blocks/buddha_hand_leaves.json
+a1c6cc136e0f67cac3d9534777194229fcf6bc16 data/wlgyl/loot_table/blocks/buddha_hand_sapling.json
 43544d95d62b2e576ceb6a83e302c1e1c3669af3 data/wlgyl/loot_table/blocks/caviar_lemon_leaves.json
 08ea70f382ea0462f3d322c5457ee75786f9cf22 data/wlgyl/loot_table/blocks/caviar_lemon_sapling.json
 7a666061fba6b095e9cc91de22c63659a0f32c06 data/wlgyl/loot_table/blocks/grapefruit_leaves.json

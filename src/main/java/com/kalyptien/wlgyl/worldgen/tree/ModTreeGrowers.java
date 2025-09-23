@@ -22,8 +22,8 @@ public class ModTreeGrowers {
     public static final TreeGrower GRAPEFRUIT_TREE = new TreeGrower(WhenLifeGivesYouLemonsMod.MOD_ID + ":grapefruit_tree",
             Optional.empty(), Optional.of(ModConfiguredFeatures.GRAPEFRUIT_TREE_KEY), Optional.empty());
 
-    public static final TreeGrower BOUDDHA_HAND_TREE = new TreeGrower(WhenLifeGivesYouLemonsMod.MOD_ID + ":bouddha_hand_tree",
-            Optional.empty(), Optional.of(ModConfiguredFeatures.BOUDDHA_HAND_TREE_KEY), Optional.empty());
+    public static final TreeGrower BUDDHA_HAND_TREE = new TreeGrower(WhenLifeGivesYouLemonsMod.MOD_ID + ":buddha_hand_tree",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.BUDDHA_HAND_TREE_KEY), Optional.empty());
 
     public static final TreeGrower LIME_TREE = new TreeGrower(WhenLifeGivesYouLemonsMod.MOD_ID + ":lime_tree",
             Optional.empty(), Optional.of(ModConfiguredFeatures.LIME_TREE_KEY), Optional.empty());
