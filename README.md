@@ -1,7 +1,7 @@
 
 ![Logo](readme/title.png)
 
-# When Life Gives You Lemons - 1.21.1
+# When Life Gives You Lemons - 1.21.1 - 1.0
 
 ![GitHub all releases](https://img.shields.io/github/downloads/Kalyptien/WhenLifeGivesYouLemons-1.21.1/total)
 ![GitHub all stars](https://img.shields.io/github/stars/Kalyptien/WhenLifeGivesYouLemons-1.21.1)

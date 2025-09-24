@@ -7,8 +7,8 @@ import net.minecraft.world.entity.LivingEntity;
 
 import java.util.List;
 
-public class ClarityEffect extends MobEffect {
-    public ClarityEffect(MobEffectCategory category, int color) {
+public class ImmutableEffect extends MobEffect {
+    public ImmutableEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
 
@@ -20,7 +20,7 @@ public class ClarityEffect extends MobEffect {
         if(currentCollection.size() > 1){
             for (int i = 0; i < currentCollection.size(); i++) {
                 MobEffectInstance currentEffect = currentCollection.get(i);
-                if(currentEffect.getEffect() != ModEffects.CLARITY_EFFECT){
+                if(currentEffect.getEffect() != ModEffects.IMMUTABLE_EFFECT){
                     livingEntity.addEffect(new MobEffectInstance(
                             currentEffect.getEffect(),
                             1,

@@ -15,14 +15,17 @@ public class ModEffects {
     public static final Holder<MobEffect> BENEDICTION_EFFECT = MOB_EFFECTS.register("benediction",
             () -> new BenedictionEffect(MobEffectCategory.BENEFICIAL, 0xc48a25));
 
-    public static final Holder<MobEffect> CLARITY_EFFECT = MOB_EFFECTS.register("clarity",
-            () -> new ClarityEffect(MobEffectCategory.NEUTRAL, 0x424242));
+    public static final Holder<MobEffect> IMMUTABLE_EFFECT = MOB_EFFECTS.register("immutable",
+            () -> new ImmutableEffect(MobEffectCategory.NEUTRAL, 0x424242));
 
     public static final Holder<MobEffect> LEECH_EFFECT = MOB_EFFECTS.register("leech",
             () -> new LeechEffect(MobEffectCategory.BENEFICIAL, 0x520000));
 
     public static final Holder<MobEffect> ACID_EFFECT = MOB_EFFECTS.register("acid",
             () -> new AcidEffect(MobEffectCategory.BENEFICIAL, 0x8fc425));
+
+    public static final Holder<MobEffect> BUBBLY_EFFECT = MOB_EFFECTS.register("bubbly",
+            () -> new BubblyEffect(MobEffectCategory.NEUTRAL, 0x09cc2ff));
 
 
     public static void register(IEventBus eventBus) {

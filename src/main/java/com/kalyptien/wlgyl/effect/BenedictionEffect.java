@@ -3,6 +3,7 @@ package com.kalyptien.wlgyl.effect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
 import java.util.List;
@@ -15,11 +16,11 @@ public class BenedictionEffect extends MobEffect {
     @Override
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
 
-        List<MobEffectInstance> currentCollection = livingEntity.getActiveEffects().stream().toList();
+        List<MobEffectInstance> effectList = livingEntity.getActiveEffects().stream().toList();
 
-        if(!currentCollection.isEmpty()){
-            for (int i = 0; i < currentCollection.size(); i++) {
-                MobEffectInstance currentEffect = currentCollection.get(i);
+        if(!effectList.isEmpty() && effectList.size() > 1){
+            for (int i = 0; i < effectList.size(); i++) {
+                MobEffectInstance currentEffect = effectList.get(i);
                 if(currentEffect.getEffect() != ModEffects.BENEDICTION_EFFECT && currentEffect.getAmplifier() < amplifier){
                     livingEntity.addEffect(new MobEffectInstance(currentEffect.getEffect(),
                             currentEffect.getDuration(),
@@ -32,6 +33,25 @@ public class BenedictionEffect extends MobEffect {
         }
 
         return super.applyEffectTick(livingEntity, amplifier);
+    }
+
+    @Override
+    public void onMobRemoved(LivingEntity livingEntity, int amplifier, Entity.RemovalReason reason) {
+        List<MobEffectInstance> effectList = livingEntity.getActiveEffects().stream().toList();
+
+        if(!effectList.isEmpty() && effectList.size() > 1){
+            for (int i = 0; i < effectList.size(); i++) {
+                MobEffectInstance currentEffect = effectList.get(i);
+                if(currentEffect.getEffect() != ModEffects.BENEDICTION_EFFECT && currentEffect.getAmplifier() < amplifier){
+                    livingEntity.addEffect(new MobEffectInstance(currentEffect.getEffect(),
+                            currentEffect.getDuration(),
+                            currentEffect.getAmplifier() - amplifier,
+                            currentEffect.isAmbient(),
+                            currentEffect.isVisible(),
+                            currentEffect.showIcon()));
+                }
+            }
+        }
     }
 
     @Override

@@ -29,6 +29,8 @@ public class KiwiRenderer extends MobRenderer<KiwiEntity, KiwiModel<KiwiEntity>>
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_grapefruit.png"));
                 map.put(KiwiVariant.BUDDHA_HAND,
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_buddha_hand.png"));
+                map.put(KiwiVariant.CAVIAR_LEMON,
+                        ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_caviar_lemon.png"));
 
             });
 

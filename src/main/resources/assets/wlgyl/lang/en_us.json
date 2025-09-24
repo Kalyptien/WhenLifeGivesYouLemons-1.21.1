@@ -48,10 +48,10 @@
   "block.wlgyl.industrial_brewing_barrel": "Industrial Brewing Barrel",
 
   "effect.wlgyl.benediction": "Benediction",
-  "effect.wlgyl.clarity": "Clarity",
+  "effect.wlgyl.immutable": "Immutable",
   "effect.wlgyl.leech": "Leech",
   "effect.wlgyl.acid": "Acid",
-  "effect.wlgyl.greed": "Greed",
+  "effect.wlgyl.bubbly": "Bubbly",
 
   "item.wlgyl.kiwi_normal_spawn_egg": "Agrume Bird Spawn Egg",
 
@@ -59,7 +59,7 @@
 
   "sounds.wlgyl.kiwi_death" : "Agrume Bird Death",
   "sounds.wlgyl.kiwi_hurt" : "Agrume Bird Hurt",
-  "sounds.wlgyl.kiwi_ambient" : "Agrume Bird Death",
+  "sounds.wlgyl.kiwi_ambient" : "Agrume Bird Ambient",
 
   "sounds.wlgyl.leaves_forage" : "Leaves Foraging",
 
@@ -71,10 +71,10 @@
 
   "creativetab.wlgyl.mod_tab": "W.L.G.Y.L.",
 
-  "tooltip.wlgyl.buddha_hand_lemonade.tooltip": "§9Benediction II (2:00)§r",
-  "tooltip.wlgyl.blood_orange_lemonade.tooltip": "§9Leech I (2:00)§r",
-  "tooltip.wlgyl.grapefruit_lemonade.tooltip": "§9Acid I (2:00)§r",
-  "tooltip.wlgyl.buddha_hand_juice.tooltip": "§9Clarity (2:00)§r",
-  "tooltip.wlgyl.glow_berries_juice.tooltip": "§9Glow (0:20)§r",
-  "tooltip.wlgyl.caviar_lemon_lemonade.tooltip": "§9Greed I (2:00)§r"
+  "tooltip.wlgyl.buddha_hand_lemonade.tooltip": "§9Benediction II (0:30)§r",
+  "tooltip.wlgyl.blood_orange_lemonade.tooltip": "§9Leech I (1:00)§r",
+  "tooltip.wlgyl.grapefruit_lemonade.tooltip": "§9Acid I (1:00)§r",
+  "tooltip.wlgyl.buddha_hand_juice.tooltip": "§Immutable (1:00)§r",
+  "tooltip.wlgyl.glow_berries_juice.tooltip": "§9Glow (0:30)§r",
+  "tooltip.wlgyl.caviar_lemon_lemonade.tooltip": "§9Bubbly I (1:00)§r"
 }

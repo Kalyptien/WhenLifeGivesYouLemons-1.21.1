@@ -89,7 +89,7 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> CAVIAR_LEMON_LEMONADE = ITEMS.register("caviar_lemon_lemonade",
-            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16)){
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BUBBLY).stacksTo(16)){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.caviar_lemon_lemonade.tooltip"));
