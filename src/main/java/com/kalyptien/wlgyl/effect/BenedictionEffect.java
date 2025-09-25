@@ -21,7 +21,7 @@ public class BenedictionEffect extends MobEffect {
         if(!effectList.isEmpty() && effectList.size() > 1){
             for (int i = 0; i < effectList.size(); i++) {
                 MobEffectInstance currentEffect = effectList.get(i);
-                if(currentEffect.getEffect() != ModEffects.BENEDICTION_EFFECT && currentEffect.getAmplifier() < amplifier){
+                if(currentEffect.getEffect().getKey() != ModEffects.BENEDICTION_EFFECT.getKey() && currentEffect.getAmplifier() < amplifier){
                     livingEntity.addEffect(new MobEffectInstance(currentEffect.getEffect(),
                             currentEffect.getDuration(),
                             currentEffect.getAmplifier() + amplifier,

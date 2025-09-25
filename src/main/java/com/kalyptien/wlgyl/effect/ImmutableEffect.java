@@ -20,14 +20,8 @@ public class ImmutableEffect extends MobEffect {
         if(currentCollection.size() > 1){
             for (int i = 0; i < currentCollection.size(); i++) {
                 MobEffectInstance currentEffect = currentCollection.get(i);
-                if(currentEffect.getEffect() != ModEffects.IMMUTABLE_EFFECT){
-                    livingEntity.addEffect(new MobEffectInstance(
-                            currentEffect.getEffect(),
-                            1,
-                            currentEffect.getAmplifier() + 1,
-                            currentEffect.isAmbient(),
-                            currentEffect.isVisible(),
-                            currentEffect.showIcon()));
+                if(currentEffect.getEffect().getKey() != ModEffects.IMMUTABLE_EFFECT.getKey()){
+                    livingEntity.removeEffect(currentEffect.getEffect());
                 }
             }
         }

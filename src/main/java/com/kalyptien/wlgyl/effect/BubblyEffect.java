@@ -40,9 +40,9 @@ public class BubblyEffect extends MobEffect {
                     for (int j = 0; j < effectList.size(); j++) {
                         MobEffectInstance currentEffect = effectList.get(j);
 
-                        if(currentEffect.getEffect() != ModEffects.BUBBLY_EFFECT){
+                        if(currentEffect.getEffect().getKey() != ModEffects.BUBBLY_EFFECT.getKey()){
                             currentEntity.addEffect(new MobEffectInstance(currentEffect.getEffect(),
-                                    currentEffect.getDuration() / (4/amplifier),
+                                    currentEffect.getDuration() / (4/(amplifier + 1)),
                                     currentEffect.getAmplifier(),
                                     currentEffect.isAmbient(),
                                     currentEffect.isVisible(),
