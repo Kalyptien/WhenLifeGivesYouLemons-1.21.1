@@ -1,5 +1,6 @@
 package com.kalyptien.wlgyl.recipe;
 
+import com.kalyptien.wlgyl.block.ModBlocks;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.HolderLookup;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 
 public record BrewingBarrelRecipe(Ingredient sugarItem, Ingredient agrumeItem, ItemStack output) implements Recipe<BrewingBarrelRecipeInput> {
     // inputItem & output ==> Read From JSON File!
@@ -57,6 +59,11 @@ public record BrewingBarrelRecipe(Ingredient sugarItem, Ingredient agrumeItem, I
     @Override
     public RecipeType<?> getType() {
         return ModRecipes.BREWING_BARREL_TYPE.get();
+    }
+
+    @Override
+    public ItemStack getToastSymbol() {
+        return new ItemStack(ModBlocks.BREWING_BARREL);
     }
 
     public static class Serializer implements RecipeSerializer<BrewingBarrelRecipe> {

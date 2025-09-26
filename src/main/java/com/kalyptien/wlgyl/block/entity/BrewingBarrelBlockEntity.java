@@ -33,6 +33,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 
 import javax.annotation.Nullable;
+import java.util.Arrays;
 import java.util.Optional;
 
 public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvider {
