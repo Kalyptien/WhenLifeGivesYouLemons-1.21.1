@@ -43,6 +43,23 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.CAVIAR_LEMON.get())
                 .add(ModItems.BUDDHA_HAND.get());
 
+        tag(ModTags.Items.LEMONADES)
+                .add(ModItems.LEMON_LEMONADE.get())
+                .add(ModItems.ORANGE_LEMONADE.get())
+                .add(ModItems.LIME_LEMONADE.get())
+                .add(ModItems.GRAPEFRUIT_LEMONADE.get())
+                .add(ModItems.GRAPEFRUIT_LEMONADE_STRONG.get())
+                .add(ModItems.GRAPEFRUIT_LEMONADE_LONG.get())
+                .add(ModItems.BLOOD_ORANGE_LEMONADE.get())
+                .add(ModItems.BLOOD_ORANGE_LEMONADE_STRONG.get())
+                .add(ModItems.BLOOD_ORANGE_LEMONADE_LONG.get())
+                .add(ModItems.CAVIAR_LEMON_LEMONADE.get())
+                .add(ModItems.CAVIAR_LEMON_LEMONADE_STRONG.get())
+                .add(ModItems.CAVIAR_LEMON_LEMONADE_LONG.get())
+                .add(ModItems.BUDDHA_HAND_LEMONADE.get())
+                .add(ModItems.BUDDHA_HAND_LEMONADE_STRONG.get())
+                .add(ModItems.BUDDHA_HAND_LEMONADE_LONG.get());
+
         tag(ModTags.Items.BERRYS)
                 .add(Items.GLOW_BERRIES)
                 .add(Items.SWEET_BERRIES);

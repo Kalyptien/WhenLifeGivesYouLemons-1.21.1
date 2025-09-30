@@ -1,7 +1,5 @@
-// 1.21.1	2025-09-17T21:03:36.4020555	Recipes
+// 1.21.1	2025-09-29T21:36:43.5197007	Recipes
 ad8fe6fef8301f7d22235d71e3144584528880ed data/wlgyl/advancement/recipes/misc/brewing_barrel.json
-db2783135911ed2daede91033c45e5802b5ae3be data/wlgyl/advancement/recipes/misc/industrial_brewing_barrel.json
 c23a6d08a53b7a3e654de34265dd144638448281 data/wlgyl/advancement/recipes/misc/squeezer.json
 781dc052daafe6c2a98d738712cc00a5db35079d data/wlgyl/recipe/brewing_barrel.json
-90e05f0505ee8bb2a4f7ab725a95491ea282719d data/wlgyl/recipe/industrial_brewing_barrel.json
 f29602c5d5301e5d9a9082edf6bc2103c0f29ff6 data/wlgyl/recipe/squeezer.json

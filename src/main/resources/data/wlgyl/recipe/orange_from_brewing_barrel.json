@@ -6,6 +6,9 @@
   "agrume": {
     "item": "wlgyl:orange"
   },
+  "water": {
+    "item": "minecraft:water_bucket"
+  },
   "result": {
     "id": "wlgyl:orange_lemonade"
   }

@@ -42,11 +42,21 @@ public class ModItemModelProvider  extends ItemModelProvider {
 
         bottleItem(ModItems.LEMON_LEMONADE.get());
         bottleItem(ModItems.ORANGE_LEMONADE.get());
+        bottleItem(ModItems.LIME_LEMONADE.get());
         bottleItem(ModItems.BLOOD_ORANGE_LEMONADE.get());
         bottleItem(ModItems.BUDDHA_HAND_LEMONADE.get());
         bottleItem(ModItems.GRAPEFRUIT_LEMONADE.get());
-        bottleItem(ModItems.LIME_LEMONADE.get());
         bottleItem(ModItems.CAVIAR_LEMON_LEMONADE.get());
+
+        bottleItem(ModItems.BLOOD_ORANGE_LEMONADE_STRONG.get());
+        bottleItem(ModItems.BUDDHA_HAND_LEMONADE_STRONG.get());
+        bottleItem(ModItems.GRAPEFRUIT_LEMONADE_STRONG.get());
+        bottleItem(ModItems.CAVIAR_LEMON_LEMONADE_STRONG.get());
+
+        bottleItem(ModItems.BLOOD_ORANGE_LEMONADE_LONG.get());
+        bottleItem(ModItems.BUDDHA_HAND_LEMONADE_LONG.get());
+        bottleItem(ModItems.GRAPEFRUIT_LEMONADE_LONG.get());
+        bottleItem(ModItems.CAVIAR_LEMON_LEMONADE_LONG.get());
 
         saplingItem(ModBlocks.LEMON_SAPLING);
         saplingItem(ModBlocks.ORANGE_SAPLING);
@@ -83,7 +93,7 @@ public class ModItemModelProvider  extends ItemModelProvider {
                 this.getBuilder(item.toString())).parent(
                         new ModelFile.UncheckedModelFile("item/generated")))
                             .texture("layer0", ResourceLocation.fromNamespaceAndPath("minecraft", "item/potion"))
-                            .texture("layer1", ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "item/" + BuiltInRegistries.ITEM.getKey(item).toString().replace(WhenLifeGivesYouLemonsMod.MOD_ID + ":", ""))
+                            .texture("layer1", ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "item/" + BuiltInRegistries.ITEM.getKey(item).toString().replace(WhenLifeGivesYouLemonsMod.MOD_ID + ":", "").replace("_long", "").replace("_strong", ""))
                         );
     }
 }

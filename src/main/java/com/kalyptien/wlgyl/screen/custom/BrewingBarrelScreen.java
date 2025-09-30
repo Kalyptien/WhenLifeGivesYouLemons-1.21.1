@@ -16,9 +16,10 @@ public class BrewingBarrelScreen extends AbstractContainerScreen<BrewingBarrelMe
             ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/progress_bar.png");
     private static final ResourceLocation BUBBLE_TEXTURE =
             ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/bubble_progress.png");
-
     private ResourceLocation LIMONADES_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/water.png");
+            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/waters/water.png");
+    private ResourceLocation EFFECTS_TEXTURE =
+            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/effects/none.png");
 
     public BrewingBarrelScreen(BrewingBarrelMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
@@ -36,7 +37,9 @@ public class BrewingBarrelScreen extends AbstractContainerScreen<BrewingBarrelMe
         guiGraphics.blit(GUI_TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         updateLimonade();
+        updateEffects();
         renderLimonade(guiGraphics, x, y);
+        renderEffects(guiGraphics, x, y);
         renderProgressArrow(guiGraphics, x, y);
         renderProgressBubble(guiGraphics, x, y);
     }
@@ -54,11 +57,19 @@ public class BrewingBarrelScreen extends AbstractContainerScreen<BrewingBarrelMe
     }
 
     private void renderLimonade(GuiGraphics guiGraphics, int x, int y) {
-        guiGraphics.blit(LIMONADES_TEXTURE,x + 62, y + 17 + (52 - menu.getLimonadeProgress()), 0, 0, 52, menu.getLimonadeProgress(), 52, 52);
+        guiGraphics.blit(LIMONADES_TEXTURE,x + 62, y + 17 + (52 - menu.getLimonadeProgress()), 0, (52 - menu.getLimonadeProgress()), 52, menu.getLimonadeProgress(), 52, 52);
+    }
+
+    private void renderEffects(GuiGraphics guiGraphics, int x, int y) {
+        guiGraphics.blit(EFFECTS_TEXTURE,x + 62, y + 17 + (52 - menu.getLimonadeProgress()), 0, (52 - menu.getLimonadeProgress()), 52, menu.getLimonadeProgress(), 52, 52);
     }
 
     private void updateLimonade(){
-        this.LIMONADES_TEXTURE = ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/lemonades/" + menu.getCurrentLimonade()  + ".png");
+        this.LIMONADES_TEXTURE = ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/waters/" + menu.getCurrentLimonade()  + ".png");
+    }
+
+    private void updateEffects(){
+        this.EFFECTS_TEXTURE = ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/effects/" + menu.getCurrentEffect()  + ".png");
     }
 
     @Override

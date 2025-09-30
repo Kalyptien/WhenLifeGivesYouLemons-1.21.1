@@ -1,0 +1,15 @@
+{
+  "type": "wlgyl:brewing_barrel",
+  "sugar": {
+    "item": "minecraft:redstone"
+  },
+  "agrume": {
+    "item": "wlgyl:grapefruit"
+  },
+  "water": {
+    "item": "wlgyl:grapefruit_lemonade"
+  },
+  "result": {
+    "id": "wlgyl:grapefruit_lemonade_long"
+  }
+}

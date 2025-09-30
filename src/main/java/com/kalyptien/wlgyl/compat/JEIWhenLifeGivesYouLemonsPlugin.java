@@ -50,6 +50,5 @@ public class JEIWhenLifeGivesYouLemonsPlugin implements IModPlugin {
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.BREWING_BARREL.asItem()));
-        registration.addRecipeCatalyst(new ItemStack(ModBlocks.INDUSTRIAL_BREWING_BARREL.asItem()));
     }
 }

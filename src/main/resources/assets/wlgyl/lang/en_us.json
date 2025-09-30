@@ -21,11 +21,22 @@
 
   "item.wlgyl.lemon_lemonade": "Lemonade",
   "item.wlgyl.orange_lemonade": "Orangade",
+  "item.wlgyl.lime_lemonade": "Limonade",
+
   "item.wlgyl.blood_orange_lemonade": "Blood Orangade",
   "item.wlgyl.grapefruit_lemonade": "Sour Orangade",
   "item.wlgyl.caviar_lemon_lemonade": "Caviar Lemonade",
-  "item.wlgyl.lime_lemonade": "Limonade",
   "item.wlgyl.buddha_hand_lemonade": "Buddha's Lemonade",
+
+  "item.wlgyl.blood_orange_lemonade_strong": "Blood Orangade",
+  "item.wlgyl.grapefruit_lemonade_strong": "Sour Orangade",
+  "item.wlgyl.caviar_lemon_lemonade_strong": "Caviar Lemonade",
+  "item.wlgyl.buddha_hand_lemonade_strong": "Buddha's Lemonade",
+
+  "item.wlgyl.blood_orange_lemonade_long": "Blood Orangade",
+  "item.wlgyl.grapefruit_lemonade_long": "Sour Orangade",
+  "item.wlgyl.caviar_lemon_lemonade_long": "Caviar Lemonade",
+  "item.wlgyl.buddha_hand_lemonade_long": "Buddha's Lemonade",
 
   "block.wlgyl.lemon_leaves": "Lemon Leaves",
   "block.wlgyl.orange_leaves": "Orange Leaves",
@@ -45,7 +56,6 @@
 
   "block.wlgyl.squeezer": "Squeezer",
   "block.wlgyl.brewing_barrel": "Brewing Barrel",
-  "block.wlgyl.industrial_brewing_barrel": "Industrial Brewing Barrel",
 
   "effect.wlgyl.benediction": "Benediction",
   "effect.wlgyl.immutable": "Immutable",
@@ -76,5 +86,20 @@
   "tooltip.wlgyl.grapefruit_lemonade.tooltip": "§9Acid I (1:00)§r",
   "tooltip.wlgyl.buddha_hand_juice.tooltip": "§Immutable (1:00)§r",
   "tooltip.wlgyl.glow_berries_juice.tooltip": "§9Glow (0:30)§r",
-  "tooltip.wlgyl.caviar_lemon_lemonade.tooltip": "§9Bubbly I (1:00)§r"
+  "tooltip.wlgyl.caviar_lemon_lemonade.tooltip": "§9Bubbly I (1:00)§r",
+
+  "tooltip.wlgyl.blood_orange_lemonade_strong.tooltip": "§9Leech II (1:00)§r",
+  "tooltip.wlgyl.grapefruit_lemonade_strong.tooltip": "§9Acid II (1:00)§r",
+  "tooltip.wlgyl.buddha_hand_lemonade_strong.tooltip": "§9Benediction III (0:30)§r",
+  "tooltip.wlgyl.caviar_lemon_lemonade_strong.tooltip": "§9Bubbly II (1:00)§r",
+
+  "tooltip.wlgyl.blood_orange_lemonade_long.tooltip": "§9Leech I (2:00)§r",
+  "tooltip.wlgyl.grapefruit_lemonade_long.tooltip": "§9Acid I (2:00)§r",
+  "tooltip.wlgyl.buddha_hand_lemonade_long.tooltip": "§9Benediction II (1:00)§r",
+  "tooltip.wlgyl.caviar_lemon_lemonade_long.tooltip": "§9Bubbly I (2:00)§r",
+
+  "tag.wlgyl.fruits" : "Fruits",
+  "tag.wlgyl.agrumes" : "Agrumes",
+  "tag.wlgyl.lemonades" : "Lemonades",
+  "tag.wlgyl.berrys" : "Berrys"
 }

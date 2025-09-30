@@ -15,7 +15,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 
-public record BrewingBarrelRecipe(Ingredient sugarItem, Ingredient agrumeItem, ItemStack output) implements Recipe<BrewingBarrelRecipeInput> {
+public record BrewingBarrelRecipe(Ingredient sugarItem, Ingredient agrumeItem, Ingredient waterItem, ItemStack output) implements Recipe<BrewingBarrelRecipeInput> {
     // inputItem & output ==> Read From JSON File!
     // brewingBarrelRecipeInput --> INVENTORY of the Block Entity
 
@@ -24,6 +24,7 @@ public record BrewingBarrelRecipe(Ingredient sugarItem, Ingredient agrumeItem, I
         NonNullList<Ingredient> list = NonNullList.create();
         list.add(sugarItem);
         list.add(agrumeItem);
+        list.add(waterItem);
         return list;
     }
 
@@ -33,7 +34,9 @@ public record BrewingBarrelRecipe(Ingredient sugarItem, Ingredient agrumeItem, I
             return false;
         }
 
-        return agrumeItem.test(brewingBarrelRecipeInput.getItem(0)) && sugarItem.test(brewingBarrelRecipeInput.getItem(1));
+        return agrumeItem.test(brewingBarrelRecipeInput.getItem(0))
+                && sugarItem.test(brewingBarrelRecipeInput.getItem(1))
+                && waterItem.test(brewingBarrelRecipeInput.getItem(2));
     }
 
     @Override
@@ -70,6 +73,7 @@ public record BrewingBarrelRecipe(Ingredient sugarItem, Ingredient agrumeItem, I
         public static final MapCodec<BrewingBarrelRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
                 Ingredient.CODEC_NONEMPTY.fieldOf("sugar").forGetter(BrewingBarrelRecipe::sugarItem),
                 Ingredient.CODEC_NONEMPTY.fieldOf("agrume").forGetter(BrewingBarrelRecipe::agrumeItem),
+                Ingredient.CODEC_NONEMPTY.fieldOf("water").forGetter(BrewingBarrelRecipe::waterItem),
                 ItemStack.CODEC.fieldOf("result").forGetter(BrewingBarrelRecipe::output)
         ).apply(inst, BrewingBarrelRecipe::new));
 
@@ -77,6 +81,7 @@ public record BrewingBarrelRecipe(Ingredient sugarItem, Ingredient agrumeItem, I
                 StreamCodec.composite(
                         Ingredient.CONTENTS_STREAM_CODEC, BrewingBarrelRecipe::sugarItem,
                         Ingredient.CONTENTS_STREAM_CODEC, BrewingBarrelRecipe::agrumeItem,
+                        Ingredient.CONTENTS_STREAM_CODEC, BrewingBarrelRecipe::waterItem,
                         ItemStack.STREAM_CODEC, BrewingBarrelRecipe::output,
                         BrewingBarrelRecipe::new);
 

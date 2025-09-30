@@ -3,6 +3,7 @@ package com.kalyptien.wlgyl.screen.custom;
 import com.kalyptien.wlgyl.block.ModBlocks;
 import com.kalyptien.wlgyl.block.entity.BrewingBarrelBlockEntity;
 import com.kalyptien.wlgyl.screen.ModMenuTypes;
+import com.kalyptien.wlgyl.util.AgrumesVariant;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -21,7 +22,7 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
     private int bubbleProgressMax = 48;
 
     public BrewingBarrelMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(5));
+        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
     }
 
     public BrewingBarrelMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -83,17 +84,25 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
     public String getCurrentLimonade() {
         int limonadeType = this.data.get(4);
 
-        switch (limonadeType){
-            case 0: return "water";
-            case 1: return "lemon";
-            case 2: return "orange";
-            case 3: return "blood_orange";
-            case 4: return "caviar_lemon";
-            case 5: return "buddha_hand";
-            case 6: return "grapefruit";
-            case 7: return "lime";
-            default: return "water";
+        if(limonadeType == 0){
+            return "water";
         }
+        else{
+            return AgrumesVariant.byId(limonadeType).toString().toLowerCase();
+
+        }
+    }
+
+    public String getCurrentEffect() {
+        int effectType = this.data.get(5);
+
+        if(effectType == 1){
+            return "long";
+        }
+        else if(effectType == 2){
+            return "strong";
+        }
+        return "none";
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons

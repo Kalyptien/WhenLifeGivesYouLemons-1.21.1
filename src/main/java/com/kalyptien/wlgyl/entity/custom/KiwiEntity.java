@@ -1,21 +1,17 @@
 package com.kalyptien.wlgyl.entity.custom;
 
 
-import com.kalyptien.wlgyl.entity.KiwiVariant;
+import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.entity.ModEntities;
 import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.sound.ModSounds;
 import net.minecraft.Util;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.nbt.NbtUtils;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
@@ -24,7 +20,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.Fox;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -36,9 +31,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.EnumSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.UUID;
 
 public class KiwiEntity extends Animal {
 
@@ -87,7 +79,7 @@ public class KiwiEntity extends Animal {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob otherParent) {
-        KiwiVariant variant = Util.getRandom(KiwiVariant.values(), this.random);
+        AgrumesVariant variant = Util.getRandom(AgrumesVariant.values(), this.random);
         KiwiEntity baby = ModEntities.KIWI_NORMAL.get().create(level);
         baby.setVariant(variant);
         return baby;
@@ -155,11 +147,11 @@ public class KiwiEntity extends Animal {
         return this.entityData.get(VARIANT);
     }
 
-    public KiwiVariant getVariant() {
-        return KiwiVariant.byId(this.getTypeVariant() & 255);
+    public AgrumesVariant getVariant() {
+        return AgrumesVariant.byId(this.getTypeVariant() & 255);
     }
 
-    public void setVariant(KiwiVariant variant) {
+    public void setVariant(AgrumesVariant variant) {
         this.entityData.set(VARIANT, variant.getId() & 255);
     }
 
@@ -183,7 +175,10 @@ public class KiwiEntity extends Animal {
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty,
                                         MobSpawnType spawnType, @Nullable SpawnGroupData spawnGroupData) {
         if(spawnType == MobSpawnType.SPAWN_EGG){
-            KiwiVariant variant = Util.getRandom(KiwiVariant.values(), this.random);
+            AgrumesVariant variant = Util.getRandom(AgrumesVariant.values(), this.random);
+            while (variant.getId() == 0){
+                variant = Util.getRandom(AgrumesVariant.values(), this.random);
+            }
             this.setVariant(variant);
         }
         else{

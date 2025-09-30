@@ -43,15 +43,5 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_iron", has(Items.IRON_INGOT))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INDUSTRIAL_BREWING_BARREL.get())
-                .pattern("XIX")
-                .pattern("IBI")
-                .pattern("XIX")
-                .define('B', ModBlocks.BREWING_BARREL)
-                .define('X', Items.IRON_INGOT)
-                .define('I', Blocks.IRON_BLOCK)
-                .unlockedBy("has_iron_block", has(Blocks.IRON_BLOCK))
-                .save(recipeOutput);
-
     }
 }

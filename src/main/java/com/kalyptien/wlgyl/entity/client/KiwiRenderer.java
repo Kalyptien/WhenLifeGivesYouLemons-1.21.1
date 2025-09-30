@@ -2,7 +2,7 @@ package com.kalyptien.wlgyl.entity.client;
 
 import com.google.common.collect.Maps;
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
-import com.kalyptien.wlgyl.entity.KiwiVariant;
+import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.entity.custom.KiwiEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.Util;
@@ -15,21 +15,21 @@ import java.util.Map;
 
 public class KiwiRenderer extends MobRenderer<KiwiEntity, KiwiModel<KiwiEntity>> {
 
-    private static final Map<KiwiVariant, ResourceLocation> LOCATION_BY_VARIANT =
-            Util.make(Maps.newEnumMap(KiwiVariant.class), map -> {
-                map.put(KiwiVariant.LEMON,
+    private static final Map<AgrumesVariant, ResourceLocation> LOCATION_BY_VARIANT =
+            Util.make(Maps.newEnumMap(AgrumesVariant.class), map -> {
+                map.put(AgrumesVariant.LEMON,
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_lemon.png"));
-                map.put(KiwiVariant.ORANGE,
+                map.put(AgrumesVariant.ORANGE,
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_orange.png"));
-                map.put(KiwiVariant.LIME,
+                map.put(AgrumesVariant.LIME,
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_lime.png"));
-                map.put(KiwiVariant.BLOOD_ORANGE,
+                map.put(AgrumesVariant.BLOOD_ORANGE,
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_blood_orange.png"));
-                map.put(KiwiVariant.GRAPEFRUIT,
+                map.put(AgrumesVariant.GRAPEFRUIT,
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_grapefruit.png"));
-                map.put(KiwiVariant.BUDDHA_HAND,
+                map.put(AgrumesVariant.BUDDHA_HAND,
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_buddha_hand.png"));
-                map.put(KiwiVariant.CAVIAR_LEMON,
+                map.put(AgrumesVariant.CAVIAR_LEMON,
                         ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "textures/entity/kiwi/kiwi_caviar_lemon.png"));
 
             });

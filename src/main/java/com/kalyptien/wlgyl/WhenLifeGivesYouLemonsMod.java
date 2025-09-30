@@ -1,7 +1,6 @@
 package com.kalyptien.wlgyl;
 
 import com.kalyptien.wlgyl.block.ModBlocks;
-import com.kalyptien.wlgyl.block.entity.BrewingBarrelBlockEntity;
 import com.kalyptien.wlgyl.block.entity.ModBlockEntities;
 import com.kalyptien.wlgyl.effect.ModEffects;
 import com.kalyptien.wlgyl.entity.ModEntities;
@@ -11,7 +10,6 @@ import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
 import com.kalyptien.wlgyl.screen.ModMenuTypes;
 import com.kalyptien.wlgyl.screen.custom.BrewingBarrelScreen;
-import com.kalyptien.wlgyl.screen.custom.IndustrialBrewingBarrelScreen;
 import com.kalyptien.wlgyl.sound.ModSounds;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -92,7 +90,6 @@ public class WhenLifeGivesYouLemonsMod {
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.BREWING_BARREL_MENU.get(), BrewingBarrelScreen::new);
-            event.register(ModMenuTypes.INDUSTRIAL_BREWING_BARREL_MENU.get(), IndustrialBrewingBarrelScreen::new);
         }
     }
 }

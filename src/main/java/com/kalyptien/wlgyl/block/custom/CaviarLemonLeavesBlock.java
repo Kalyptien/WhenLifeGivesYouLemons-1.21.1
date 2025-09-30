@@ -1,6 +1,6 @@
 package com.kalyptien.wlgyl.block.custom;
 
-import com.kalyptien.wlgyl.entity.KiwiVariant;
+import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.item.ModItems;
 import net.minecraft.world.level.ItemLike;
 
@@ -14,7 +14,7 @@ public class CaviarLemonLeavesBlock extends  AgrumeLeavesBlock{
         return ModItems.CAVIAR_LEMON;
     }
 
-    public KiwiVariant getVariant(){
-        return KiwiVariant.CAVIAR_LEMON;
+    public AgrumesVariant getVariant(){
+        return AgrumesVariant.CAVIAR_LEMON;
     }
 }

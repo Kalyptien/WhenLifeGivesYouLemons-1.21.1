@@ -11,10 +11,12 @@ public class BrewingBarrelRecipeInput implements RecipeInput {
 
     private final ItemStack agrume;
     private final ItemStack sugar;
+    private final ItemStack water;
 
-    public BrewingBarrelRecipeInput(ItemStack agrumeItem, ItemStack sugarItem) {
+    public BrewingBarrelRecipeInput(ItemStack agrumeItem, ItemStack sugarItem, ItemStack waterItem) {
         this.agrume = agrumeItem;
         this.sugar = sugarItem;
+        this.water = waterItem;
     }
 
     @Override
@@ -25,12 +27,15 @@ public class BrewingBarrelRecipeInput implements RecipeInput {
         else if(index == 1){
             return sugar;
         }
+        else if(index == 2){
+            return water;
+        }
 
         return null;
     }
 
     @Override
     public int size() {
-        return 2;
+        return 3;
     }
 }
