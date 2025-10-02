@@ -30,45 +30,45 @@ public class ModPlacedFeatures {
 
         register(context, LEMON_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LEMON_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(600),
+                        RarityFilter.onAverageOnceEvery(250),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
 
         register(context, ORANGE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORANGE_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(600),
+                        RarityFilter.onAverageOnceEvery(250),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()}).toList());
-
-        register(context, BLOOD_ORANGE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOOD_ORANGE_TREE_KEY),
-                Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(600),
-                        InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()}).toList());
-
-        register(context, GRAPEFRUIT_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GRAPEFRUIT_TREE_KEY),
-                Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(600),
-                        InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
 
         register(context, LIME_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIME_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(600),
+                        RarityFilter.onAverageOnceEvery(250),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
 
-        register(context, BUDDHA_HAND_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUDDHA_HAND_TREE_KEY),
+        register(context, BLOOD_ORANGE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOOD_ORANGE_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(200),
+                        RarityFilter.onAverageOnceEvery(100),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
+
+        register(context, GRAPEFRUIT_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GRAPEFRUIT_TREE_KEY),
+                Arrays.stream(new PlacementModifier[]{
+                        RarityFilter.onAverageOnceEvery(100),
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
 
         register(context, CAVIAR_LEMON_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CAVIAR_LEMON_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(500),
+                        RarityFilter.onAverageOnceEvery(100),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
+
+        register(context, BUDDHA_HAND_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUDDHA_HAND_TREE_KEY),
+                Arrays.stream(new PlacementModifier[]{
+                        RarityFilter.onAverageOnceEvery(100),
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
