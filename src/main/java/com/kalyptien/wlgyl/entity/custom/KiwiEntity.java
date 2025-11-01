@@ -45,7 +45,7 @@ public class KiwiEntity extends Animal {
 
     public KiwiEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
-        this.moveControl = new KiwiEntity.KiwiMoveControl();
+        this.moveControl = new KiwiEntity.KiwiMoveControl(this);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class KiwiEntity extends Animal {
 
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 6.0F));
-        this.goalSelector.addGoal(6, new SitGoal());
+        this.goalSelector.addGoal(6, new SitGoal(this));
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
     }
 
@@ -206,22 +206,24 @@ public class KiwiEntity extends Animal {
         private int countdown;
         private int animationDuration;
 
-        public SitGoal() {
+        private final KiwiEntity mob;
+
+        public SitGoal(Mob mob) {
             super();
-            this.countdown = KiwiEntity.this.random.nextInt(WAIT_TIME_BEFORE_SIT);
+            this.mob = (KiwiEntity) mob; 
+            this.countdown = this.mob.random.nextInt(WAIT_TIME_BEFORE_SIT);
             this.setFlags(EnumSet.of(Flag.MOVE, Flag.JUMP));
         }
 
         public boolean canUse() {
-            return KiwiEntity.this.xxa == 0.0F && KiwiEntity.this.yya == 0.0F && KiwiEntity.this.zza == 0.0F ? this.canSit() || KiwiEntity.this.isSitting() : false;
+            return this.canSit();
         }
 
         public boolean canContinueToUse() {
             --this.animationDuration;
 
             if(animationDuration > 0){
-                --this.animationDuration;
-                return canSit();
+                return !this.mob.isInPowderSnow && !this.mob.isInWater() && !this.mob.isInLava();
             }
             else{
                 return false;
@@ -233,34 +235,42 @@ public class KiwiEntity extends Animal {
                 --this.countdown;
                 return false;
             } else {
-                return !KiwiEntity.this.isInPowderSnow && !KiwiEntity.this.isInWater() && !KiwiEntity.this.isInLava();
+                return !this.mob.isInPowderSnow && !this.mob.isInWater() && !this.mob.isInLava();
             }
         }
 
         public void stop() {
-            this.countdown = KiwiEntity.this.random.nextInt(WAIT_TIME_BEFORE_SIT);
+            this.countdown = this.mob.random.nextInt(WAIT_TIME_BEFORE_SIT);
             this.animationDuration = 0;
-            KiwiEntity.this.clearStates();
+            this.mob.clearStates();
         }
 
         public void start() {
             this.animationDuration = 315;
-            KiwiEntity.this.setJumping(false);
-            KiwiEntity.this.setSitting(true);
-            KiwiEntity.this.getNavigation().stop();
-            KiwiEntity.this.getMoveControl().setWantedPosition(KiwiEntity.this.getX(), KiwiEntity.this.getY(), KiwiEntity.this.getZ(), 0.0);
+            this.mob.setJumping(false);
+            this.mob.setSitting(true);
+            this.mob.getNavigation().stop();
+            this.mob.getMoveControl().setWantedPosition(this.mob.getX(), this.mob.getY(), this.mob.getZ(), 0.0);
+        }
+
+        public boolean requiresUpdateEveryTick() {
+            return true;
         }
     }
 
     // CONTROLS
 
     class KiwiMoveControl extends MoveControl {
-        public KiwiMoveControl() {
-            super(KiwiEntity.this);
+
+        private final KiwiEntity mob;
+
+        public KiwiMoveControl(Mob mob) {
+            super(mob);
+            this.mob = (KiwiEntity) mob;
         }
 
         public void tick() {
-            if (KiwiEntity.this.canMove()) {
+            if (this.mob.canMove()) {
                 super.tick();
             }
 

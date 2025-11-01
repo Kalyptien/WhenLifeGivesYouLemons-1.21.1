@@ -32,43 +32,43 @@ public class ModPlacedFeatures {
                 Arrays.stream(new PlacementModifier[]{
                         RarityFilter.onAverageOnceEvery(250),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
 
         register(context, ORANGE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORANGE_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
                         RarityFilter.onAverageOnceEvery(250),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
 
         register(context, LIME_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIME_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
                         RarityFilter.onAverageOnceEvery(250),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
 
         register(context, BLOOD_ORANGE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOOD_ORANGE_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(100),
+                        RarityFilter.onAverageOnceEvery(50),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
 
         register(context, GRAPEFRUIT_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GRAPEFRUIT_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(100),
+                        RarityFilter.onAverageOnceEvery(50),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
 
         register(context, CAVIAR_LEMON_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CAVIAR_LEMON_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(100),
+                        RarityFilter.onAverageOnceEvery(50),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
 
         register(context, BUDDHA_HAND_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUDDHA_HAND_TREE_KEY),
                 Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(100),
+                        RarityFilter.onAverageOnceEvery(350),
                         InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()}).toList());
+                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

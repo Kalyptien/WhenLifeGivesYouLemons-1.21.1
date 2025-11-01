@@ -101,5 +101,10 @@
   "tag.wlgyl.fruits" : "Fruits",
   "tag.wlgyl.agrumes" : "Agrumes",
   "tag.wlgyl.lemonades" : "Lemonades",
-  "tag.wlgyl.berrys" : "Berrys"
+  "tag.wlgyl.berrys" : "Berrys",
+
+  "painting.wlgyl.jdc.title": "J.D.C.",
+  "painting.wlgyl.jdc.author": "Kalyptien",
+  "painting.wlgyl.familly.title": "Familly",
+  "painting.wlgyl.familly.author": "Kalyptien"
 }
