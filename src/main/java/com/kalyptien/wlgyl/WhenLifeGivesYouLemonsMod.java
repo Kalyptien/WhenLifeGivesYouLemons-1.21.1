@@ -84,7 +84,7 @@ public class WhenLifeGivesYouLemonsMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
-            EntityRenderers.register(ModEntities.KIWI_NORMAL.get(), KiwiRenderer::new);
+            EntityRenderers.register(ModEntities.KIWI.get(), KiwiRenderer::new);
         }
 
         @SubscribeEvent

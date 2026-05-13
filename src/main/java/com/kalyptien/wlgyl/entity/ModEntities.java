@@ -14,7 +14,7 @@ public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, WhenLifeGivesYouLemonsMod.MOD_ID);
 
-    public static final Supplier<EntityType<KiwiEntity>> KIWI_NORMAL =
+    public static final Supplier<EntityType<KiwiEntity>> KIWI =
             ENTITY_TYPES.register("kiwi", () -> {
                 return EntityType.Builder.of(KiwiEntity::new, MobCategory.CREATURE)
                         .sized(0.6f, 0.6f).build("kiwi");

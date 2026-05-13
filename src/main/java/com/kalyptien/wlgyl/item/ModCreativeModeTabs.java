@@ -15,12 +15,13 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WhenLifeGivesYouLemonsMod.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> BISMUTH_ITEMS_TAB = CREATIVE_MODE_TAB.register("bismuth_items_tab",
+    public static final Supplier<CreativeModeTab> WLGYL_ITEMS_TAB = CREATIVE_MODE_TAB.register("bismuth_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.LEMON.get()))
                     .title(Component.translatable("creativetab.wlgyl.mod_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        output.accept(ModItems.KIWI_NORMAL_SPAWN_EGG);
+                        output.accept(ModItems.KIWI_SPAWN_EGG);
+                        output.accept(ModItems.KIWI_BUCKET);
 
                         output.accept(ModBlocks.SQUEEZER);
                         output.accept(ModBlocks.BREWING_BARREL);

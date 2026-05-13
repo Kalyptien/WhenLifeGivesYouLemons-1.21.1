@@ -2,14 +2,21 @@ package com.kalyptien.wlgyl.item;
 
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
 import com.kalyptien.wlgyl.entity.ModEntities;
+import com.kalyptien.wlgyl.entity.custom.KiwiEntity;
 import com.kalyptien.wlgyl.item.custom.JuiceBottleItem;
 import com.kalyptien.wlgyl.item.custom.LemonadeBottleItem;
 import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.util.EffectsVariant;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.MobBucketItem;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.level.material.Fluids;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -179,9 +186,14 @@ public class ModItems {
                 }
             });
 
-    public static final DeferredItem<Item> KIWI_NORMAL_SPAWN_EGG = ITEMS.register("kiwi_normal_spawn_egg",
-            () -> new DeferredSpawnEggItem(ModEntities.KIWI_NORMAL, 0xdfff12, 0x6efc58,
+    public static final DeferredItem<Item> KIWI_SPAWN_EGG = ITEMS.register("kiwi_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.KIWI, 0xdfff12, 0x6efc58,
                     new Item.Properties()));
+
+    // MISC
+
+    public static final DeferredItem<Item> KIWI_BUCKET = ITEMS.register("kiwi_bucket",
+            () -> new MobBucketItem(ModEntities.KIWI.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_POWDER_SNOW, (new Item.Properties()).stacksTo(1).component(DataComponents.BUCKET_ENTITY_DATA, CustomData.EMPTY)));
 
 
     public static void register(IEventBus eventBus) {

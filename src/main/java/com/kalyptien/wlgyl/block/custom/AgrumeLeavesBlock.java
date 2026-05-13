@@ -42,7 +42,7 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
         if ((Integer)state.getValue(AGE) == MAX_AGE) {
 
             if(Math.random() > 0.99){
-                KiwiEntity kiwi = new KiwiEntity(ModEntities.KIWI_NORMAL.get(), level);
+                KiwiEntity kiwi = new KiwiEntity(ModEntities.KIWI.get(), level);
                 kiwi.setVariant(this.getVariant());
 
                 if(level.getBlockState(new BlockPos(pos.getX(), pos.getY()-1, pos.getZ())).getBlock() == Blocks.AIR){

@@ -19,6 +19,6 @@ public class ModEventBusEvents {
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
-        event.put(ModEntities.KIWI_NORMAL.get(), KiwiEntity.createAttributes().build());
+        event.put(ModEntities.KIWI.get(), KiwiEntity.createAttributes().build());
     }
 }
