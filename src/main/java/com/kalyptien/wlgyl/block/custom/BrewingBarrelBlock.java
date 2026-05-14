@@ -2,11 +2,13 @@ package com.kalyptien.wlgyl.block.custom;
 
 import com.kalyptien.wlgyl.block.entity.BrewingBarrelBlockEntity;
 import com.kalyptien.wlgyl.block.entity.ModBlockEntities;
+import com.kalyptien.wlgyl.sound.ModSounds;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.SimpleMenuProvider;
@@ -70,6 +72,7 @@ public class BrewingBarrelBlock extends BaseEntityBlock {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof BrewingBarrelBlockEntity BrewingBarrelBlockEntity) {
                 ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(BrewingBarrelBlockEntity, Component.literal("Brewing Barrel")), pPos);
+                pLevel.playSound(null, pPos, ModSounds.BARREL_OPEN.get(), SoundSource.BLOCKS, 1f, 0.8f);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }

@@ -1,7 +1,7 @@
 
 ![Logo](readme/title.png)
 
-# When Life Gives You Lemons - 1.21.1 - 1.0
+# When Life Gives You Lemons - 1.21.1 - 1.0.1
 
 ![GitHub all releases](https://img.shields.io/github/downloads/Kalyptien/WhenLifeGivesYouLemons-1.21.1/total)
 ![GitHub all stars](https://img.shields.io/github/stars/Kalyptien/WhenLifeGivesYouLemons-1.21.1)
@@ -9,15 +9,11 @@
 
 ## What this mod does ?
 
-You want a little mod to add new effects, new crops, and somes smalls features ?
-
-**There it is !**
-
-A good experience to add to you modpack.
+Add somes news fruits, a way to make juices and lemonades and somes misc.
 
 ## Where is the Wiki ?
 
-It will come after i finish the mod !
+When the V.1.0 is done, the Wiki will be on github !
 
 
 

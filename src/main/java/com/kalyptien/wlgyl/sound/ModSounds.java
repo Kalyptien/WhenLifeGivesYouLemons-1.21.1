@@ -19,6 +19,8 @@ public class ModSounds {
 
     public static final Supplier<SoundEvent> LEAVES_FORAGE = registerSoundEvent("leaves_forage");
 
+    public static final Supplier<SoundEvent> BARREL_OPEN = registerSoundEvent("barrel_open");
+    public static final Supplier<SoundEvent> BARREL_CLOSE = registerSoundEvent("barrel_close");
     public static final Supplier<SoundEvent> BARREL_BUBBLE = registerSoundEvent("barrel_bubble");
     public static final Supplier<SoundEvent> BARREL_FINISH = registerSoundEvent("barrel_finish");
 

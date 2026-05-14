@@ -1,25 +1,67 @@
 {
   "values": {
     "wlgyl:blood_orange": {
+      "chance": 0.3
+    },
+    "wlgyl:blood_orange_leaves": {
       "chance": 0.5
+    },
+    "wlgyl:blood_orange_sapling": {
+      "chance": 0.3
     },
     "wlgyl:buddha_hand": {
+      "chance": 0.3
+    },
+    "wlgyl:buddha_hand_leaves": {
       "chance": 0.5
+    },
+    "wlgyl:buddha_hand_sapling": {
+      "chance": 0.3
     },
     "wlgyl:caviar_lemon": {
+      "chance": 0.3
+    },
+    "wlgyl:caviar_lemon_leaves": {
       "chance": 0.5
+    },
+    "wlgyl:caviar_lemon_sapling": {
+      "chance": 0.3
     },
     "wlgyl:grapefruit": {
+      "chance": 0.3
+    },
+    "wlgyl:grapefruit_leaves": {
       "chance": 0.5
+    },
+    "wlgyl:grapefruit_sapling": {
+      "chance": 0.3
     },
     "wlgyl:lemon": {
+      "chance": 0.3
+    },
+    "wlgyl:lemon_leaves": {
       "chance": 0.5
+    },
+    "wlgyl:lemon_sapling": {
+      "chance": 0.3
     },
     "wlgyl:lime": {
+      "chance": 0.3
+    },
+    "wlgyl:lime_leaves": {
       "chance": 0.5
     },
+    "wlgyl:lime_sapling": {
+      "chance": 0.3
+    },
     "wlgyl:orange": {
+      "chance": 0.3
+    },
+    "wlgyl:orange_leaves": {
       "chance": 0.5
+    },
+    "wlgyl:orange_sapling": {
+      "chance": 0.3
     }
   }
 }

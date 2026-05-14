@@ -16,6 +16,7 @@
   "item.wlgyl.buddha_hand_juice": "Buddha's Juice",
 
   "item.wlgyl.apple_juice": "Apple Juice",
+  "item.wlgyl.melon_juice": "Melon Juice",
   "item.wlgyl.glow_berries_juice": "Glow Berries Juice",
   "item.wlgyl.sweet_berries_juice": "Sweet Berries Juice",
 
@@ -64,6 +65,7 @@
   "effect.wlgyl.bubbly": "Bubbly",
 
   "item.wlgyl.kiwi_spawn_egg": "Agrume Bird Spawn Egg",
+  "item.wlgyl.kiwi_bucket": "Bucket of Agrume Bird",
 
   "entity.mccourse.kiwi": "Agrume Bird",
 
@@ -73,6 +75,8 @@
 
   "sounds.wlgyl.leaves_forage" : "Leaves Foraging",
 
+  "sounds.wlgyl.barrel_open" : "Brewing Barrel Open",
+  "sounds.wlgyl.barrel_close" : "Brewing Barrel Close",
   "sounds.wlgyl.barrel_bubble" : "Brewing Barrel Bubble",
   "sounds.wlgyl.barrel_finish" : "Brewing Barrel Brew",
 
@@ -84,7 +88,7 @@
   "tooltip.wlgyl.buddha_hand_lemonade.tooltip": "§9Benediction II (0:30)§r",
   "tooltip.wlgyl.blood_orange_lemonade.tooltip": "§9Leech I (1:00)§r",
   "tooltip.wlgyl.grapefruit_lemonade.tooltip": "§9Acid I (1:00)§r",
-  "tooltip.wlgyl.buddha_hand_juice.tooltip": "§Immutable (1:00)§r",
+  "tooltip.wlgyl.buddha_hand_juice.tooltip": "§9Immutable (1:00)§r",
   "tooltip.wlgyl.glow_berries_juice.tooltip": "§9Glow (0:30)§r",
   "tooltip.wlgyl.caviar_lemon_lemonade.tooltip": "§9Bubbly I (1:00)§r",
 

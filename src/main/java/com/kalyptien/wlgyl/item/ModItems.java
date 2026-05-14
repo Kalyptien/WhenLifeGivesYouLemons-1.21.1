@@ -22,11 +22,11 @@ import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WhenLifeGivesYouLemonsMod.MOD_ID);
-
 
     // AGRUMES
     public static final DeferredItem<Item> LEMON = ITEMS.register("lemon",
@@ -66,6 +66,8 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> APPLE_JUICE = ITEMS.register("apple_juice",
+            () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
+    public static final DeferredItem<Item> MELON_JUICE = ITEMS.register("melon_juice",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE).stacksTo(16)));
     public static final DeferredItem<Item> GLOW_BERRIES_JUICE = ITEMS.register("glow_berries_juice",
             () -> new JuiceBottleItem(new Item.Properties().food(ModFoodProperties.JUICE_GLOW).stacksTo(16)){
@@ -186,15 +188,14 @@ public class ModItems {
                 }
             });
 
+    // MISC
+
     public static final DeferredItem<Item> KIWI_SPAWN_EGG = ITEMS.register("kiwi_spawn_egg",
             () -> new DeferredSpawnEggItem(ModEntities.KIWI, 0xdfff12, 0x6efc58,
                     new Item.Properties()));
 
-    // MISC
-
     public static final DeferredItem<Item> KIWI_BUCKET = ITEMS.register("kiwi_bucket",
             () -> new MobBucketItem(ModEntities.KIWI.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_POWDER_SNOW, (new Item.Properties()).stacksTo(1).component(DataComponents.BUCKET_ENTITY_DATA, CustomData.EMPTY)));
-
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

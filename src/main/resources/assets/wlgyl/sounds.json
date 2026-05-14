@@ -29,6 +29,19 @@
       "block/cave_vines/break5"
     ]
   },
+  "barrel_open": {
+    "subtitle": "sounds.wlgyl.barrel_open",
+    "sounds": [
+      "block/barrel/open1",
+      "block/barrel/open2"
+    ]
+  },
+  "barrel_close": {
+    "subtitle": "sounds.wlgyl.barrel_close",
+    "sounds": [
+      "block/barrel/close"
+    ]
+  },
   "barrel_bubble": {
     "subtitle": "sounds.wlgyl.barrel_bubble",
     "sounds": [

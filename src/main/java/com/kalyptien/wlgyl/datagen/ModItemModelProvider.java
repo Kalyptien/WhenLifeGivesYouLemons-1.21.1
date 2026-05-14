@@ -28,6 +28,7 @@ public class ModItemModelProvider  extends ItemModelProvider {
         basicItem(ModItems.BLOOD_ORANGE.get());
         basicItem(ModItems.CAVIAR_LEMON.get());
         basicItem(ModItems.GRAPEFRUIT.get());
+        basicItem(ModItems.KIWI_BUCKET.get());
 
         bottleItem(ModItems.LEMON_JUICE.get());
         bottleItem(ModItems.ORANGE_JUICE.get());
@@ -36,7 +37,9 @@ public class ModItemModelProvider  extends ItemModelProvider {
         bottleItem(ModItems.CAVIAR_LEMON_JUICE.get());
         bottleItem(ModItems.LIME_JUICE.get());
         bottleItem(ModItems.GRAPEFRUIT_JUICE.get());
+
         bottleItem(ModItems.APPLE_JUICE.get());
+        bottleItem(ModItems.MELON_JUICE.get());
         bottleItem(ModItems.SWEET_BERRIES_JUICE.get());
         bottleItem(ModItems.GLOW_BERRIES_JUICE.get());
 

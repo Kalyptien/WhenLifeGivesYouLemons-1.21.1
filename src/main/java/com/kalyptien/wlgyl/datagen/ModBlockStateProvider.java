@@ -40,18 +40,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.BUDDHA_HAND_LEAVES.get()), "buddha_hand_leaves_stage", "buddha_hand_leaves_stage");
     }
 
-    private void blockWithItem(DeferredBlock<?> deferredBlock) {
-        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
-    }
-
-    private void blockItem(DeferredBlock<?> deferredBlock) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("wlgyl:block/" + deferredBlock.getId().getPath()));
-    }
-
-    private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("wlgyl:block/" + deferredBlock.getId().getPath() + appendix));
-    }
-
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(

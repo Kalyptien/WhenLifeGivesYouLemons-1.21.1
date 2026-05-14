@@ -25,9 +25,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SQUEEZER.get())
-                .pattern(" I ")
-                .pattern("XIX")
-                .pattern("BIB")
+                .pattern(" X ")
+                .pattern("IXI")
+                .pattern("IBI")
                 .define('X', Blocks.IRON_BARS)
                 .define('B', Items.BUCKET)
                 .define('I', Items.IRON_INGOT)

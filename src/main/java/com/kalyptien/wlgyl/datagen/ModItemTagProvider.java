@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nullable;
@@ -35,6 +36,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.APPLE)
                 .add(Items.GLOW_BERRIES)
                 .add(Items.SWEET_BERRIES)
+                .add(Items.MELON_SLICE)
                 .add(ModItems.LEMON.get())
                 .add(ModItems.LIME.get())
                 .add(ModItems.ORANGE.get())
