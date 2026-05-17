@@ -53,11 +53,6 @@ public class BrewingBarrelRecipeCategory  implements IRecipeCategory<BrewingBarr
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
-    }
-
-    @Override
     public void setRecipe(IRecipeLayoutBuilder builder, BrewingBarrelRecipe recipe, IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 6, 40).addIngredients(recipe.getIngredients().get(0));
         builder.addSlot(RecipeIngredientRole.INPUT, 6, 4).addIngredients(recipe.getIngredients().get(1));

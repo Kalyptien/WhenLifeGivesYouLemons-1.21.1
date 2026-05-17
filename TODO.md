@@ -5,7 +5,6 @@
     - JEI todo
     - Particules quand flush
   - Leaves :
-    - Changement de texture pour une texture en blanc + coloration
     - Texture feuille redo
     - Texture fruit redo
   - Barrel :
@@ -24,7 +23,6 @@
     - Redo le spawn
   - Misc :
     - AgrumeVariant redo en KiwiVariant
-    - All juices / lemonades / potion en texture blanc + coloration
     - Cacher les TAGS sur JEI (ou juste retirer les tags)
     - lang FR
 
@@ -34,12 +32,15 @@
     - Animation de "Sit" des Kiwis : OK
     - Animation de "Shake" des Kiwis quand "wet"
     - Kiwi bucketable
+  - Leaves :
+    - Changement de texture pour une texture en blanc + coloration
   - Squeezer :
     - Model 3D redo
     - Texture redo
     - Fonctionnement intern redo
   - Misc :
     - PA des effets redo
+    - All juices / lemonades / potion en texture blanc + coloration
     - Fruit variant redo (qui va remplacer le agrume variant)
     - Sons a l'ouverture du barrel
     - J'ai oublié le reste

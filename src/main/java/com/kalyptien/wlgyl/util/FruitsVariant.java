@@ -8,27 +8,29 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public enum FruitsVariant {
-    NONE(0, "none"),
-    LEMON(1, "item.wlgyl.lemon"),
-    ORANGE(2, "item.wlgyl.orange"),
-    LIME(3, "item.wlgyl.lime"),
-    GRAPEFRUIT(4, "item.wlgyl.grapefruit"),
-    BLOOD_ORANGE(5, "item.wlgyl.blood_orange"),
-    CAVIAR_LEMON(6, "item.wlgyl.caviar_lemon"),
-    BUDDHA_HAND(7, "item.wlgyl.buddha_hand"),
-    APPLE(8, "item.minecraft.apple"),
-    GLOW_BERRIES(9, "item.minecraft.glow_berries"),
-    SWEET_BERRIES(10, "item.minecraft.sweet_berries"),
-    MELON_SLICE(11, "item.minecraft.melon_slice");
+    NONE(0, "none", -1),
+    LEMON(1, "item.wlgyl.lemon", 0xFFEAF04D),
+    ORANGE(2, "item.wlgyl.orange", 0xFFED9D1A),
+    LIME(3, "item.wlgyl.lime", 0xFFA0E64C),
+    GRAPEFRUIT(4, "item.wlgyl.grapefruit", 0xFFBD5109),
+    BLOOD_ORANGE(5, "item.wlgyl.blood_orange", 0xFFBD2109),
+    CAVIAR_LEMON(6, "item.wlgyl.caviar_lemon", 0xFF315C3B),
+    BUDDHA_HAND(7, "item.wlgyl.buddha_hand", 0xFFDBD7BF),
+    APPLE(8, "item.minecraft.apple", 0xFFE8DB8E),
+    GLOW_BERRIES(9, "item.minecraft.glow_berries", 0xFFE3F24E),
+    SWEET_BERRIES(10, "item.minecraft.sweet_berries", 0xFF8C0808),
+    MELON_SLICE(11, "item.minecraft.melon_slice", 0xFFED3434);
 
     private static final FruitsVariant[] BY_ID = Arrays.stream(values()).sorted(
             Comparator.comparingInt(FruitsVariant::getId)).toArray(FruitsVariant[]::new);
     private final int id;
     private final String name;
+    private final int color;
 
-    FruitsVariant(int id, String name) {
+    FruitsVariant(int id, String name, int color) {
         this.id = id;
         this.name = name;
+        this.color = color;
     }
 
     public int getId() {
@@ -37,6 +39,10 @@ public enum FruitsVariant {
 
     public String getName() {
         return this.name;
+    }
+
+    public int getColor() {
+        return this.color;
     }
 
     public static int getMin(){

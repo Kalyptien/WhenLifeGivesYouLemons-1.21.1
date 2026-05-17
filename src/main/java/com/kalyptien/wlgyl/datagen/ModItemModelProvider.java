@@ -30,36 +30,36 @@ public class ModItemModelProvider  extends ItemModelProvider {
         basicItem(ModItems.GRAPEFRUIT.get());
         basicItem(ModItems.KIWI_BUCKET.get());
 
-        bottleItem(ModItems.LEMON_JUICE.get());
-        bottleItem(ModItems.ORANGE_JUICE.get());
-        bottleItem(ModItems.BLOOD_ORANGE_JUICE.get());
-        bottleItem(ModItems.BUDDHA_HAND_JUICE.get());
-        bottleItem(ModItems.CAVIAR_LEMON_JUICE.get());
-        bottleItem(ModItems.LIME_JUICE.get());
-        bottleItem(ModItems.GRAPEFRUIT_JUICE.get());
+        bottleJuice(ModItems.LEMON_JUICE.get());
+        bottleJuice(ModItems.ORANGE_JUICE.get());
+        bottleJuice(ModItems.BLOOD_ORANGE_JUICE.get());
+        bottleJuice(ModItems.BUDDHA_HAND_JUICE.get());
+        bottleJuice(ModItems.CAVIAR_LEMON_JUICE.get());
+        bottleJuice(ModItems.LIME_JUICE.get());
+        bottleJuice(ModItems.GRAPEFRUIT_JUICE.get());
 
-        bottleItem(ModItems.APPLE_JUICE.get());
-        bottleItem(ModItems.MELON_JUICE.get());
-        bottleItem(ModItems.SWEET_BERRIES_JUICE.get());
-        bottleItem(ModItems.GLOW_BERRIES_JUICE.get());
+        bottleJuice(ModItems.APPLE_JUICE.get());
+        bottleJuice(ModItems.MELON_JUICE.get());
+        bottleJuice(ModItems.SWEET_BERRIES_JUICE.get());
+        bottleJuice(ModItems.GLOW_BERRIES_JUICE.get());
 
-        bottleItem(ModItems.LEMON_LEMONADE.get());
-        bottleItem(ModItems.ORANGE_LEMONADE.get());
-        bottleItem(ModItems.LIME_LEMONADE.get());
-        bottleItem(ModItems.BLOOD_ORANGE_LEMONADE.get());
-        bottleItem(ModItems.BUDDHA_HAND_LEMONADE.get());
-        bottleItem(ModItems.GRAPEFRUIT_LEMONADE.get());
-        bottleItem(ModItems.CAVIAR_LEMON_LEMONADE.get());
+        bottleLimonade(ModItems.LEMON_LEMONADE.get());
+        bottleLimonade(ModItems.ORANGE_LEMONADE.get());
+        bottleLimonade(ModItems.LIME_LEMONADE.get());
+        bottleLimonade(ModItems.BLOOD_ORANGE_LEMONADE.get());
+        bottleLimonade(ModItems.BUDDHA_HAND_LEMONADE.get());
+        bottleLimonade(ModItems.GRAPEFRUIT_LEMONADE.get());
+        bottleLimonade(ModItems.CAVIAR_LEMON_LEMONADE.get());
 
-        bottleItem(ModItems.BLOOD_ORANGE_LEMONADE_STRONG.get());
-        bottleItem(ModItems.BUDDHA_HAND_LEMONADE_STRONG.get());
-        bottleItem(ModItems.GRAPEFRUIT_LEMONADE_STRONG.get());
-        bottleItem(ModItems.CAVIAR_LEMON_LEMONADE_STRONG.get());
+        bottleLimonade(ModItems.BLOOD_ORANGE_LEMONADE_STRONG.get());
+        bottleLimonade(ModItems.BUDDHA_HAND_LEMONADE_STRONG.get());
+        bottleLimonade(ModItems.GRAPEFRUIT_LEMONADE_STRONG.get());
+        bottleLimonade(ModItems.CAVIAR_LEMON_LEMONADE_STRONG.get());
 
-        bottleItem(ModItems.BLOOD_ORANGE_LEMONADE_LONG.get());
-        bottleItem(ModItems.BUDDHA_HAND_LEMONADE_LONG.get());
-        bottleItem(ModItems.GRAPEFRUIT_LEMONADE_LONG.get());
-        bottleItem(ModItems.CAVIAR_LEMON_LEMONADE_LONG.get());
+        bottleLimonade(ModItems.BLOOD_ORANGE_LEMONADE_LONG.get());
+        bottleLimonade(ModItems.BUDDHA_HAND_LEMONADE_LONG.get());
+        bottleLimonade(ModItems.GRAPEFRUIT_LEMONADE_LONG.get());
+        bottleLimonade(ModItems.CAVIAR_LEMON_LEMONADE_LONG.get());
 
         saplingItem(ModBlocks.LEMON_SAPLING);
         saplingItem(ModBlocks.ORANGE_SAPLING);
@@ -88,15 +88,22 @@ public class ModItemModelProvider  extends ItemModelProvider {
 
     private ItemModelBuilder leavesItem(DeferredBlock<Block> item) {
         return withExistingParent(item.getId().getPath(),
-                ResourceLocation.parse(WhenLifeGivesYouLemonsMod.MOD_ID + ":block/" + item.getId().getPath() + "_stage3"));
+                ResourceLocation.parse(WhenLifeGivesYouLemonsMod.MOD_ID + ":block/" + item.getId().getPath() + "_age_3"));
     }
 
-    private ItemModelBuilder bottleItem(Item item) {
+    private ItemModelBuilder bottleJuice(Item item) {
         return (ItemModelBuilder)((ItemModelBuilder)((ItemModelBuilder)
                 this.getBuilder(item.toString())).parent(
                         new ModelFile.UncheckedModelFile("item/generated")))
                             .texture("layer0", ResourceLocation.fromNamespaceAndPath("minecraft", "item/potion"))
-                            .texture("layer1", ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "item/" + BuiltInRegistries.ITEM.getKey(item).toString().replace(WhenLifeGivesYouLemonsMod.MOD_ID + ":", "").replace("_long", "").replace("_strong", ""))
-                        );
+                            .texture("layer1", ResourceLocation.fromNamespaceAndPath("minecraft", "item/potion_overlay"));
+    }
+
+    private ItemModelBuilder bottleLimonade(Item item) {
+        return (ItemModelBuilder)((ItemModelBuilder)((ItemModelBuilder)
+                this.getBuilder(item.toString())).parent(
+                new ModelFile.UncheckedModelFile("item/generated")))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath("minecraft", "item/potion"))
+                .texture("layer1", ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "item/lemonade_overlay"));
     }
 }

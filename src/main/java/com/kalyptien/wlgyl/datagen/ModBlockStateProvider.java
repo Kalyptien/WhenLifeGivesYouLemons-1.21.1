@@ -31,13 +31,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         saplingBlock(ModBlocks.GRAPEFRUIT_SAPLING);
         saplingBlock(ModBlocks.CAVIAR_LEMON_SAPLING);
 
-        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.LEMON_LEAVES.get()), "lemon_leaves_stage", "lemon_leaves_stage");
-        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.ORANGE_LEAVES.get()), "orange_leaves_stage", "orange_leaves_stage");
-        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.GRAPEFRUIT_LEAVES.get()), "grapefruit_leaves_stage", "grapefruit_leaves_stage");
-        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.BLOOD_ORANGE_LEAVES.get()), "blood_orange_leaves_stage", "blood_orange_leaves_stage");
-        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.LIME_LEAVES.get()), "lime_leaves_stage", "lime_leaves_stage");
-        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.CAVIAR_LEMON_LEAVES.get()), "caviar_lemon_leaves_stage", "caviar_lemon_leaves_stage");
-        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.BUDDHA_HAND_LEAVES.get()), "buddha_hand_leaves_stage", "buddha_hand_leaves_stage");
+        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.LEMON_LEAVES.get()), "lemon_leaves_age_");
+        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.ORANGE_LEAVES.get()), "orange_leaves_age_");
+        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.GRAPEFRUIT_LEAVES.get()), "grapefruit_leaves_age_");
+        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.BLOOD_ORANGE_LEAVES.get()), "blood_orange_leaves_age_");
+        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.LIME_LEAVES.get()), "lime_leaves_age_");
+        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.CAVIAR_LEMON_LEAVES.get()), "caviar_lemon_leaves_age_");
+        makeGrowLeaves(((AgrumeLeavesBlock) ModBlocks.BUDDHA_HAND_LEAVES.get()), "buddha_hand_leaves_age_");
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
@@ -49,13 +49,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         );
     }
 
-    public void makeGrowLeaves(AgrumeLeavesBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> generateCrops(state, block, modelName, textureName);
+    public void makeGrowLeaves(AgrumeLeavesBlock block, String modelName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> generateCrops(state, block, modelName);
 
         getVariantBuilder(block).forAllStates(function);
     }
 
-    private ConfiguredModel[] generateCrops(BlockState state, AgrumeLeavesBlock block, String modelName, String textureName) {
+    private ConfiguredModel[] generateCrops(BlockState state, AgrumeLeavesBlock block, String modelName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
 
         ResourceLocation baseTexture = ResourceLocation.fromNamespaceAndPath(
@@ -63,15 +63,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         ResourceLocation upperTexture;
 
-        if(state.getValue(((AgrumeLeavesBlock) block).getAgeProperty()) == 0){
-            upperTexture = baseTexture;
+        if(state.getValue(((AgrumeLeavesBlock) block).getAgeProperty()) == 3){
+            upperTexture = ResourceLocation.fromNamespaceAndPath(
+                    WhenLifeGivesYouLemonsMod.MOD_ID, "block/" +  modelName + "3");
         }
         else{
-            upperTexture = ResourceLocation.fromNamespaceAndPath(
-                    WhenLifeGivesYouLemonsMod.MOD_ID, "block/" + textureName + state.getValue(((AgrumeLeavesBlock) block).getAgeProperty()));
+             upperTexture = ResourceLocation.fromNamespaceAndPath(
+                    WhenLifeGivesYouLemonsMod.MOD_ID, "block/leaves_age_" + state.getValue(((AgrumeLeavesBlock) block).getAgeProperty()));
         }
 
-        models[0] = new ConfiguredModel(ModModelProvider.growLeaves(
+        models[0] = new ConfiguredModel(ModModelProvider.growLeaveBlock(
                 models(),
                 modelName + state.getValue(((AgrumeLeavesBlock) block).getAgeProperty()),
                 baseTexture,

@@ -1,6 +1,9 @@
 package com.kalyptien.wlgyl.item.custom;
 
+import com.kalyptien.wlgyl.util.AgrumesVariant;
+import com.kalyptien.wlgyl.util.FruitsVariant;
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -15,9 +18,11 @@ import net.neoforged.neoforge.common.EffectCures;
 
 public class JuiceBottleItem  extends Item {
     private static final int DRINK_DURATION = 30;
+    private int colorVariant;
 
-    public JuiceBottleItem(Item.Properties properties) {
+    public JuiceBottleItem(Item.Properties properties, FruitsVariant variant) {
         super(properties);
+        this.colorVariant = variant.getColor();
     }
 
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entityLiving) {
@@ -66,5 +71,14 @@ public class JuiceBottleItem  extends Item {
 
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         return ItemUtils.startUsingInstantly(level, player, hand);
+    }
+
+    public int getColor(){
+        return this.colorVariant;
+    }
+
+    public static int getLiquidColor(ItemStack stack, int index){
+        if (index != 1) return -1;
+        return ((JuiceBottleItem) stack.getItem()).getColor();
     }
 }

@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "minecraft:item/potion",
-    "layer1": "wlgyl:item/grapefruit_lemonade"
+    "layer1": "wlgyl:item/lemonade_overlay"
   }
 }

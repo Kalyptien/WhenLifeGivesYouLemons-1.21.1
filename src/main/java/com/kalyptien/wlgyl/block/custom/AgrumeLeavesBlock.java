@@ -1,9 +1,13 @@
 package com.kalyptien.wlgyl.block.custom;
 
+import com.kalyptien.wlgyl.item.custom.JuiceBottleItem;
 import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.entity.ModEntities;
 import com.kalyptien.wlgyl.entity.custom.KiwiEntity;
 import com.kalyptien.wlgyl.sound.ModSounds;
+import com.kalyptien.wlgyl.util.EffectsVariant;
+import com.kalyptien.wlgyl.util.FruitsVariant;
+import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
@@ -15,9 +19,7 @@ import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -32,8 +34,13 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
     public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE;
 
-    public AgrumeLeavesBlock(Properties properties) {
+    public AgrumesVariant agrume;
+    public ItemLike agrumeItem;
+
+    public AgrumeLeavesBlock(Properties properties, AgrumesVariant agrume, ItemLike agrumeItem) {
         super(properties);
+        this.agrume = agrume;
+        this.agrumeItem = agrumeItem;
         this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(this.getAgeProperty(), 0));
     }
 
@@ -94,7 +101,7 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
     }
 
     public ItemLike getAgrumeProperty() {
-        return null;
+        return this.agrumeItem;
     }
 
     public int getMaxAge() {
@@ -161,7 +168,17 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
     }
 
     public AgrumesVariant getVariant(){
-        return AgrumesVariant.LEMON;
+        return this.agrume;
+    }
+
+    public static int getLeavesColor(BlockState state, BlockAndTintGetter blockAndTintGetter, BlockPos pos, int index){
+        if(index != 0) return -1;
+        return BiomeColors.getAverageFoliageColor(blockAndTintGetter, pos);
+    }
+
+    public static int getLeavesColor(ItemStack stack, int index){
+        if(index != 0) return -1;
+        return FoliageColor.getDefaultColor();
     }
 
     static {

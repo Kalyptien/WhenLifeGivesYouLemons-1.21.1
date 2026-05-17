@@ -2,6 +2,7 @@ package com.kalyptien.wlgyl.item.custom;
 
 import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.util.EffectsVariant;
+import com.kalyptien.wlgyl.util.FruitsVariant;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
@@ -19,8 +20,8 @@ public class LemonadeBottleItem extends JuiceBottleItem {
     private AgrumesVariant agrume;
     private EffectsVariant effect;
 
-    public LemonadeBottleItem(Properties properties, AgrumesVariant agrume, EffectsVariant effect) {
-        super(properties);
+    public LemonadeBottleItem(Properties properties, AgrumesVariant agrume, EffectsVariant effect, FruitsVariant variant) {
+        super(properties, variant);
 
         this.agrume = agrume;
         this.effect = effect;
