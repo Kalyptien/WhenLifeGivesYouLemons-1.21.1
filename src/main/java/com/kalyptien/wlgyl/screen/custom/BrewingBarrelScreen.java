@@ -1,6 +1,7 @@
 package com.kalyptien.wlgyl.screen.custom;
 
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
+import com.kalyptien.wlgyl.util.FruitsVariant;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -8,18 +9,17 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.ItemStack;
 
 public class BrewingBarrelScreen extends AbstractContainerScreen<BrewingBarrelMenu> {
     private static final ResourceLocation GUI_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/brewing_barrel_gui.png");
+            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/brewing_barrel/brewing_barrel_gui.png");
     private static final ResourceLocation PROGRESS_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/progress_bar.png");
+            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/brewing_barrel/progress_bar.png");
     private static final ResourceLocation BUBBLE_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/bubble_progress.png");
-    private ResourceLocation LIMONADES_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/waters/water.png");
-    private ResourceLocation EFFECTS_TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/effects/none.png");
+            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/brewing_barrel/bubble_progress.png");
+    private ResourceLocation LIQUID_TEXTURE =
+            ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/brewing_barrel/liquids/water_bucket.png");
 
     public BrewingBarrelScreen(BrewingBarrelMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
@@ -37,9 +37,7 @@ public class BrewingBarrelScreen extends AbstractContainerScreen<BrewingBarrelMe
         guiGraphics.blit(GUI_TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         updateLimonade();
-        updateEffects();
         renderLimonade(guiGraphics, x, y);
-        renderEffects(guiGraphics, x, y);
         renderProgressArrow(guiGraphics, x, y);
         renderProgressBubble(guiGraphics, x, y);
     }
@@ -57,19 +55,24 @@ public class BrewingBarrelScreen extends AbstractContainerScreen<BrewingBarrelMe
     }
 
     private void renderLimonade(GuiGraphics guiGraphics, int x, int y) {
-        guiGraphics.blit(LIMONADES_TEXTURE,x + 62, y + 17 + (52 - menu.getLimonadeProgress()), 0, (52 - menu.getLimonadeProgress()), 52, menu.getLimonadeProgress(), 52, 52);
-    }
-
-    private void renderEffects(GuiGraphics guiGraphics, int x, int y) {
-        guiGraphics.blit(EFFECTS_TEXTURE,x + 62, y + 17 + (52 - menu.getLimonadeProgress()), 0, (52 - menu.getLimonadeProgress()), 52, menu.getLimonadeProgress(), 52, 52);
+        guiGraphics.blit(LIQUID_TEXTURE,x + 62, y + 17 + (52 - menu.getCraftProgress()), 0, (52 - menu.getCraftProgress()), 52, menu.getCraftProgress(), 52, 52);
     }
 
     private void updateLimonade(){
-        this.LIMONADES_TEXTURE = ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/waters/" + menu.getCurrentLimonade()  + ".png");
+        this.LIQUID_TEXTURE = ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/brewing_barrel/liquids/" + menu.getCurrentLemonadeTypeName()  + ".png");
     }
 
-    private void updateEffects(){
-        this.EFFECTS_TEXTURE = ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,"textures/gui/effects/" + menu.getCurrentEffect()  + ".png");
+    @Override
+    protected void renderTooltip(GuiGraphics guiGraphics, int x, int y) {
+        super.renderTooltip(guiGraphics,x,y);
+
+        int xBase = (width - imageWidth) / 2;
+        int yBase = (height - imageHeight) / 2;
+
+        if (this.menu.getCarried().isEmpty() && ((62 + xBase) < x && x < (114 + xBase)) && ((17 + yBase) < y && y < (69 + yBase)) ) {
+            ItemStack itemstack = new ItemStack(FruitsVariant.getLemonadeFromId(menu.getCurrentVariantId(), menu.getCurrentEffectId()) , 1);
+            guiGraphics.renderTooltip(this.font, this.getTooltipFromContainerItem(itemstack), itemstack.getTooltipImage(), itemstack, x, y);
+        }
     }
 
     @Override

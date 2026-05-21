@@ -66,19 +66,19 @@ public class BrewingBarrelBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack pStack, BlockState pState, Level pLevel, BlockPos pPos,
-                                              Player pPlayer, InteractionHand pHand, BlockHitResult pHitResult) {
-        if (!pLevel.isClientSide()) {
-            BlockEntity entity = pLevel.getBlockEntity(pPos);
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos,
+                                              Player player, InteractionHand hand, BlockHitResult hitResult) {
+        if (!level.isClientSide()) {
+            BlockEntity entity = level.getBlockEntity(pos);
             if(entity instanceof BrewingBarrelBlockEntity BrewingBarrelBlockEntity) {
-                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(BrewingBarrelBlockEntity, Component.literal("Brewing Barrel")), pPos);
-                pLevel.playSound(null, pPos, ModSounds.BARREL_OPEN.get(), SoundSource.BLOCKS, 1f, 0.8f);
+                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(BrewingBarrelBlockEntity, Component.literal("Brewing Barrel")), pos);
+                level.playSound(null, pos, ModSounds.BARREL_OPEN.get(), SoundSource.BLOCKS, 0.8f, 2f);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
         }
 
-        return ItemInteractionResult.sidedSuccess(pLevel.isClientSide());
+        return ItemInteractionResult.sidedSuccess(level.isClientSide());
     }
 
     @Nullable

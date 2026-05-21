@@ -1,0 +1,12 @@
+{
+  "type": "wlgyl:squeezer",
+  "agrume": {
+    "item": "minecraft:glow_berries"
+  },
+  "squeezer": {
+    "item": "wlgyl:squeezer"
+  },
+  "result": {
+    "id": "wlgyl:glow_berries_juice"
+  }
+}

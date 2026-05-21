@@ -1,0 +1,12 @@
+{
+  "type": "wlgyl:squeezer",
+  "agrume": {
+    "item": "wlgyl:lime"
+  },
+  "squeezer": {
+    "item": "wlgyl:squeezer"
+  },
+  "result": {
+    "id": "wlgyl:lime_juice"
+  }
+}

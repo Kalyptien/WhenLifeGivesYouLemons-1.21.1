@@ -1,44 +1,47 @@
 package com.kalyptien.wlgyl.block.entity;
 
-import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.item.custom.LemonadeBottleItem;
 import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipe;
 import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipeInput;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
 import com.kalyptien.wlgyl.screen.custom.BrewingBarrelMenu;
 import com.kalyptien.wlgyl.sound.ModSounds;
-import com.kalyptien.wlgyl.util.AgrumesVariant;
-import com.kalyptien.wlgyl.util.EffectsVariant;
+import com.kalyptien.wlgyl.util.FruitsVariant;
 import com.kalyptien.wlgyl.util.ModTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BarrelBlock;
+import net.minecraft.world.level.block.entity.BarrelBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.common.crafting.ICustomIngredient;
 import net.neoforged.neoforge.items.ItemStackHandler;
 
 import javax.annotation.Nullable;
-import java.util.Arrays;
 import java.util.Optional;
 
 import static net.minecraft.world.level.block.Block.popResource;
@@ -88,8 +91,8 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
     private int maxProgress = 6000;
     private int water = 0;
     private int maxWater = 4;
-    private int lemonadeType = 0;
-    private int effectType = 0;
+    private int agrumeVariant = 0;
+    private int effectModifier = 0;
 
     public BrewingBarrelBlockEntity(BlockPos pos, BlockState blockState) {
         super(ModBlockEntities.BREWING_BARREL_BE.get(), pos, blockState);
@@ -101,8 +104,8 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
                     case 1 -> BrewingBarrelBlockEntity.this.maxProgress;
                     case 2 -> BrewingBarrelBlockEntity.this.water;
                     case 3 -> BrewingBarrelBlockEntity.this.maxWater;
-                    case 4 -> BrewingBarrelBlockEntity.this.lemonadeType;
-                    case 5 -> BrewingBarrelBlockEntity.this.effectType;
+                    case 4 -> BrewingBarrelBlockEntity.this.agrumeVariant;
+                    case 5 -> BrewingBarrelBlockEntity.this.effectModifier;
                     default -> 0;
                 };
             }
@@ -114,8 +117,8 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
                     case 1: BrewingBarrelBlockEntity.this.maxProgress = value;
                     case 2: BrewingBarrelBlockEntity.this.water = value;
                     case 3: BrewingBarrelBlockEntity.this.maxWater = value;
-                    case 4: BrewingBarrelBlockEntity.this.lemonadeType = value;
-                    case 5 : BrewingBarrelBlockEntity.this.effectType = value;
+                    case 4: BrewingBarrelBlockEntity.this.agrumeVariant = value;
+                    case 5 : BrewingBarrelBlockEntity.this.effectModifier = value;
                 }
             }
 
@@ -153,8 +156,8 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
         pTag.putInt("brewing_barrel.max_progress", maxProgress);
         pTag.putInt("brewing_barrel.water", water);
         pTag.putInt("brewing_barrel.max_water", maxWater);
-        pTag.putInt("brewing_barrel.lemonade_type", lemonadeType);
-        pTag.putInt("brewing_barrel.effect_type", effectType);
+        pTag.putInt("brewing_barrel.agrume_variant", agrumeVariant);
+        pTag.putInt("brewing_barrel.effect_modifier", effectModifier);
 
         super.saveAdditional(pTag, pRegistries);
     }
@@ -168,55 +171,58 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
         maxProgress = pTag.getInt("brewing_barrel.max_progress");
         water = pTag.getInt("brewing_barrel.water");
         maxWater = pTag.getInt("brewing_barrel.max_water");
-        lemonadeType = pTag.getInt("brewing_barrel.lemonade_type");
-        effectType = pTag.getInt("brewing_barrel.effect_type");
+        agrumeVariant = pTag.getInt("brewing_barrel.agrume_variant");
+        effectModifier = pTag.getInt("brewing_barrel.effect_modifier");
     }
 
     public void tick(Level level, BlockPos blockPos, BlockState blockState) {
 
-        if(itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem() == Items.WATER_BUCKET && this.water != this.maxWater && lemonadeType == 0 && effectType == 0){
+        if(itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem() == Items.WATER_BUCKET && this.water != this.maxWater && agrumeVariant == 0 && effectModifier == 0){
             this.water = this.water + 4;
             itemHandler.setStackInSlot(INPUT_SLOT_WATER, new ItemStack(Items.BUCKET, 1));
             level.playSound(null, blockPos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1f, 1f);
         }
 
-        if(itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem() == Items.POTION && this.water != this.maxWater && lemonadeType == 0 && effectType == 0){
+        if(itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem() == Items.POTION && this.water != this.maxWater && agrumeVariant == 0 && effectModifier == 0){
             this.water = this.water + 1;
             itemHandler.setStackInSlot(INPUT_SLOT_WATER, new ItemStack(Items.GLASS_BOTTLE, 1));
             level.playSound(null, blockPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
         }
 
-        if(itemHandler.getStackInSlot(INPUT_SLOT_WATER).is(ModTags.Items.LEMONADES)
-                &&
-                ((this.water != this.maxWater
-                && lemonadeType == ((LemonadeBottleItem)itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem()).getAgrume().getId()
-                && effectType == ((LemonadeBottleItem)itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem()).getEffect().getId())
-                ||
-                (this.water == 0
-                        && lemonadeType == 0
-                        && effectType == 0
-                ))
+        if(itemHandler.getStackInSlot(INPUT_SLOT_WATER).is(ModTags.Items.LEMONADES) &&
+                (
+                    (
+                        this.water != this.maxWater
+                        && agrumeVariant == ((LemonadeBottleItem)itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem()).getFruit().getId()
+                        && effectModifier == ((LemonadeBottleItem)itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem()).getEffect().getId())
+                    ||
+                    (
+                        this.water == 0
+                        && agrumeVariant == 0
+                        && effectModifier == 0
+                    )
+                )
         ){
             this.water = this.water + 1;
-            if(lemonadeType == 0 && effectType == 0){
-                lemonadeType = ((LemonadeBottleItem)itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem()).getAgrume().getId();
-                effectType = ((LemonadeBottleItem)itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem()).getEffect().getId();
+            if(agrumeVariant == 0 && effectModifier == 0){
+                agrumeVariant = ((LemonadeBottleItem)itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem()).getFruit().getId();
+                effectModifier = ((LemonadeBottleItem)itemHandler.getStackInSlot(INPUT_SLOT_WATER).getItem()).getEffect().getId();
             }
             itemHandler.extractItem(INPUT_SLOT_WATER, 1, false);
             popResource(level, blockPos, new ItemStack(Items.GLASS_BOTTLE));
             level.playSound(null, blockPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
         }
 
-        if(itemHandler.getStackInSlot(INPUT_SLOT_BOTTLE).getItem() == Items.GLASS_BOTTLE && water > 0 && lemonadeType != 0){
-            Item itemToGive = this.getLemonadeItem();
+        if(itemHandler.getStackInSlot(INPUT_SLOT_BOTTLE).getItem() == Items.GLASS_BOTTLE && water > 0 && agrumeVariant != 0){
+            Item itemToGive = FruitsVariant.getLemonadeFromId(this.agrumeVariant, this.effectModifier);
             itemHandler.insertItem(OUTPUT_SLOT_BOTTLE, new ItemStack(itemToGive, 1), false);
             itemHandler.extractItem(INPUT_SLOT_BOTTLE, 1, false);
             this.water--;
             level.playSound(null, blockPos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1f, 1f);
 
             if(water == 0){
-                this.lemonadeType = 0;
-                this.effectType = 0;
+                this.agrumeVariant = 0;
+                this.effectModifier = 0;
             }
         }
 
@@ -245,66 +251,9 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
         itemHandler.extractItem(INPUT_SLOT_SUGAR, 1, false);
         itemHandler.extractItem(INPUT_SLOT_AGRUMES, 1, false);
 
-        this.lemonadeType = ((LemonadeBottleItem) output.getItem()).getAgrume().getId();
-        this.effectType = ((LemonadeBottleItem) output.getItem()).getEffect().getId();
+        this.agrumeVariant = ((LemonadeBottleItem) output.getItem()).getFruit().getId();
+        this.effectModifier = ((LemonadeBottleItem) output.getItem()).getEffect().getId();
 
-    }
-
-    private Item getLemonadeItem(){
-        int currentLemonadeType = this.lemonadeType;
-        int currentEffectType = this.effectType;
-
-        if(currentLemonadeType == AgrumesVariant.LEMON.getId()){
-            return ModItems.LEMON_LEMONADE.get();
-        }
-        else if(currentLemonadeType == AgrumesVariant.LIME.getId()){
-            return ModItems.LIME_LEMONADE.get();
-        }
-        else if(currentLemonadeType == AgrumesVariant.ORANGE.getId()){
-            return ModItems.ORANGE_LEMONADE.get();
-        }
-        else if(currentLemonadeType == AgrumesVariant.GRAPEFRUIT.getId()){
-            if(currentEffectType == EffectsVariant.STRONG.getId()){
-                return ModItems.GRAPEFRUIT_LEMONADE_STRONG.get();
-            } else if (currentEffectType == EffectsVariant.LONG.getId()) {
-                return ModItems.GRAPEFRUIT_LEMONADE_LONG.get();
-            }
-            else{
-                return ModItems.GRAPEFRUIT_LEMONADE.get();
-            }
-        }
-        else if(currentLemonadeType == AgrumesVariant.CAVIAR_LEMON.getId()){
-            if(currentEffectType == EffectsVariant.STRONG.getId()){
-                return ModItems.CAVIAR_LEMON_LEMONADE_STRONG.get();
-            } else if (currentEffectType == EffectsVariant.LONG.getId()) {
-                return ModItems.CAVIAR_LEMON_LEMONADE_LONG.get();
-            }
-            else{
-                return ModItems.CAVIAR_LEMON_LEMONADE.get();
-            }
-        }
-        else if(currentLemonadeType == AgrumesVariant.BLOOD_ORANGE.getId()){
-            if(currentEffectType == EffectsVariant.STRONG.getId()){
-                return ModItems.BLOOD_ORANGE_LEMONADE_STRONG.get();
-            } else if (currentEffectType == EffectsVariant.LONG.getId()) {
-                return ModItems.BLOOD_ORANGE_LEMONADE_LONG.get();
-            }
-            else{
-                return ModItems.BLOOD_ORANGE_LEMONADE.get();
-            }
-        }
-        else if(currentLemonadeType == AgrumesVariant.BUDDHA_HAND.getId()){
-            if(currentEffectType == EffectsVariant.STRONG.getId()){
-                return ModItems.BUDDHA_HAND_LEMONADE_STRONG.get();
-            } else if (currentEffectType == EffectsVariant.LONG.getId()) {
-                return ModItems.BUDDHA_HAND_LEMONADE_LONG.get();
-            }
-            else{
-                return ModItems.BUDDHA_HAND_LEMONADE.get();
-            }
-        }
-
-        return Items.WATER_BUCKET;
     }
 
     private void resetProgress() {
@@ -334,7 +283,13 @@ public class BrewingBarrelBlockEntity extends BlockEntity implements MenuProvide
 
     private Optional<RecipeHolder<BrewingBarrelRecipe>> getCurrentRecipe() {
         return this.level.getRecipeManager()
-                .getRecipeFor(ModRecipes.BREWING_BARREL_TYPE.get(), new BrewingBarrelRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT_AGRUMES), itemHandler.getStackInSlot(INPUT_SLOT_SUGAR), new ItemStack(this.getLemonadeItem())), level);
+                .getRecipeFor(ModRecipes.BREWING_BARREL_TYPE.get(),
+                        new BrewingBarrelRecipeInput(
+                                itemHandler.getStackInSlot(INPUT_SLOT_AGRUMES),
+                                itemHandler.getStackInSlot(INPUT_SLOT_SUGAR),
+                                new ItemStack(FruitsVariant.getLemonadeFromId(this.agrumeVariant, this.effectModifier)
+                                )
+                        ), level);
     }
 
     @Override

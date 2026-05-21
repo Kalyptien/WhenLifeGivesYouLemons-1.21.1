@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.common.CommonHooks;
 
@@ -48,7 +49,7 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if ((Integer)state.getValue(AGE) == MAX_AGE) {
 
-            if(Math.random() > 0.99){
+            if(Math.random() > 0.95){
                 KiwiEntity kiwi = new KiwiEntity(ModEntities.KIWI.get(), level);
                 kiwi.setVariant(this.getVariant());
 
@@ -120,11 +121,13 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
         return this.getAge(state) >= this.getMaxAge();
     }
 
+    @Override
     protected boolean isRandomlyTicking(BlockState state) {
-        return !this.isMaxAge(state);
+        return !this.isMaxAge(state) && super.isRandomlyTicking(state);
     }
 
     protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        super.randomTick(state, level, pos, random);
         if (level.isAreaLoaded(pos, 1)) {
             int i = this.getAge(state);
             if (i < this.getMaxAge()) {

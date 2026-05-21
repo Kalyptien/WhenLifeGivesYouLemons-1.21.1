@@ -83,13 +83,13 @@ public class ModItems {
 
     //LEMONADE (TIER 1)
     public static final DeferredItem<Item> LEMON_LEMONADE = ITEMS.register("lemon_lemonade",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16), AgrumesVariant.LEMON, EffectsVariant.NONE, FruitsVariant.LEMON));
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16) , EffectsVariant.NONE, FruitsVariant.LEMON));
     public static final DeferredItem<Item> ORANGE_LEMONADE = ITEMS.register("orange_lemonade",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16), AgrumesVariant.ORANGE, EffectsVariant.NONE, FruitsVariant.ORANGE));
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16), EffectsVariant.NONE, FruitsVariant.ORANGE));
     public static final DeferredItem<Item> LIME_LEMONADE = ITEMS.register("lime_lemonade",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16), AgrumesVariant.LIME, EffectsVariant.NONE, FruitsVariant.LIME));
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE).stacksTo(16), EffectsVariant.NONE, FruitsVariant.LIME));
     public static final DeferredItem<Item> BLOOD_ORANGE_LEMONADE = ITEMS.register("blood_orange_lemonade",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_LEECH).stacksTo(16), AgrumesVariant.BLOOD_ORANGE, EffectsVariant.NONE, FruitsVariant.BLOOD_ORANGE){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_LEECH).stacksTo(16), EffectsVariant.NONE, FruitsVariant.BLOOD_ORANGE){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.blood_orange_lemonade.tooltip"));
@@ -97,7 +97,7 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> GRAPEFRUIT_LEMONADE = ITEMS.register("grapefruit_lemonade",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_ACID).stacksTo(16), AgrumesVariant.GRAPEFRUIT, EffectsVariant.NONE, FruitsVariant.GRAPEFRUIT){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_ACID).stacksTo(16), EffectsVariant.NONE, FruitsVariant.GRAPEFRUIT){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.grapefruit_lemonade.tooltip"));
@@ -105,7 +105,7 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> CAVIAR_LEMON_LEMONADE = ITEMS.register("caviar_lemon_lemonade",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BUBBLY).stacksTo(16), AgrumesVariant.CAVIAR_LEMON, EffectsVariant.NONE, FruitsVariant.CAVIAR_LEMON){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BUBBLY).stacksTo(16), EffectsVariant.NONE, FruitsVariant.CAVIAR_LEMON){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.caviar_lemon_lemonade.tooltip"));
@@ -113,7 +113,7 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> BUDDHA_HAND_LEMONADE = ITEMS.register("buddha_hand_lemonade",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BENEDICTION).stacksTo(16), AgrumesVariant.BUDDHA_HAND, EffectsVariant.NONE, FruitsVariant.BUDDHA_HAND){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BENEDICTION).stacksTo(16), EffectsVariant.NONE, FruitsVariant.BUDDHA_HAND){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.buddha_hand_lemonade.tooltip"));
@@ -123,7 +123,7 @@ public class ModItems {
 
     // LEMONADE (TIER 2)
     public static final DeferredItem<Item> BLOOD_ORANGE_LEMONADE_STRONG = ITEMS.register("blood_orange_lemonade_strong",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_LEECH_STRONG).stacksTo(16), AgrumesVariant.BLOOD_ORANGE, EffectsVariant.STRONG, FruitsVariant.BLOOD_ORANGE){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_LEECH_STRONG).stacksTo(16), EffectsVariant.STRONG, FruitsVariant.BLOOD_ORANGE){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.blood_orange_lemonade_strong.tooltip"));
@@ -131,7 +131,7 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> GRAPEFRUIT_LEMONADE_STRONG = ITEMS.register("grapefruit_lemonade_strong",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_ACID_STRONG).stacksTo(16), AgrumesVariant.GRAPEFRUIT, EffectsVariant.STRONG, FruitsVariant.GRAPEFRUIT){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_ACID_STRONG).stacksTo(16), EffectsVariant.STRONG, FruitsVariant.GRAPEFRUIT){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.grapefruit_lemonade_strong.tooltip"));
@@ -139,7 +139,7 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> CAVIAR_LEMON_LEMONADE_STRONG = ITEMS.register("caviar_lemon_lemonade_strong",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BUBBLY_STRONG).stacksTo(16), AgrumesVariant.CAVIAR_LEMON, EffectsVariant.STRONG, FruitsVariant.CAVIAR_LEMON){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BUBBLY_STRONG).stacksTo(16), EffectsVariant.STRONG, FruitsVariant.CAVIAR_LEMON){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.caviar_lemon_lemonade_strong.tooltip"));
@@ -147,7 +147,7 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> BUDDHA_HAND_LEMONADE_STRONG = ITEMS.register("buddha_hand_lemonade_strong",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BENEDICTION_STRONG).stacksTo(16), AgrumesVariant.BUDDHA_HAND, EffectsVariant.STRONG, FruitsVariant.BUDDHA_HAND){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BENEDICTION_STRONG).stacksTo(16), EffectsVariant.STRONG, FruitsVariant.BUDDHA_HAND){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.buddha_hand_lemonade_strong.tooltip"));
@@ -157,7 +157,7 @@ public class ModItems {
 
     // LEMONADE (TIER 1 LONG)
     public static final DeferredItem<Item> BLOOD_ORANGE_LEMONADE_LONG = ITEMS.register("blood_orange_lemonade_long",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_LEECH_LONG).stacksTo(16), AgrumesVariant.BLOOD_ORANGE, EffectsVariant.LONG, FruitsVariant.BLOOD_ORANGE){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_LEECH_LONG).stacksTo(16), EffectsVariant.LONG, FruitsVariant.BLOOD_ORANGE){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.blood_orange_lemonade_long.tooltip"));
@@ -165,7 +165,7 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> GRAPEFRUIT_LEMONADE_LONG = ITEMS.register("grapefruit_lemonade_long",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_ACID_LONG).stacksTo(16), AgrumesVariant.GRAPEFRUIT, EffectsVariant.LONG, FruitsVariant.GRAPEFRUIT){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_ACID_LONG).stacksTo(16), EffectsVariant.LONG, FruitsVariant.GRAPEFRUIT){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.grapefruit_lemonade_long.tooltip"));
@@ -173,7 +173,7 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> CAVIAR_LEMON_LEMONADE_LONG = ITEMS.register("caviar_lemon_lemonade_long",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BUBBLY_LONG).stacksTo(16), AgrumesVariant.CAVIAR_LEMON, EffectsVariant.LONG, FruitsVariant.CAVIAR_LEMON){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BUBBLY_LONG).stacksTo(16), EffectsVariant.LONG, FruitsVariant.CAVIAR_LEMON){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.caviar_lemon_lemonade_long.tooltip"));
@@ -181,7 +181,7 @@ public class ModItems {
                 }
             });
     public static final DeferredItem<Item> BUDDHA_HAND_LEMONADE_LONG = ITEMS.register("buddha_hand_lemonade_long",
-            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BENEDICTION_LONG).stacksTo(16), AgrumesVariant.BUDDHA_HAND, EffectsVariant.LONG, FruitsVariant.BUDDHA_HAND){
+            () -> new LemonadeBottleItem(new Item.Properties().food(ModFoodProperties.LEMONADE_BENEDICTION_LONG).stacksTo(16), EffectsVariant.LONG, FruitsVariant.BUDDHA_HAND){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.wlgyl.buddha_hand_lemonade_long.tooltip"));

@@ -17,18 +17,18 @@ import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.EffectCures;
 
 public class LemonadeBottleItem extends JuiceBottleItem {
-    private AgrumesVariant agrume;
+    private FruitsVariant fruitvariant;
     private EffectsVariant effect;
 
-    public LemonadeBottleItem(Properties properties, AgrumesVariant agrume, EffectsVariant effect, FruitsVariant variant) {
+    public LemonadeBottleItem(Properties properties, EffectsVariant effect, FruitsVariant variant) {
         super(properties, variant);
 
-        this.agrume = agrume;
+        this.fruitvariant = variant;
         this.effect = effect;
     }
 
-    public AgrumesVariant getAgrume() {
-        return agrume;
+    public FruitsVariant getFruit() {
+        return fruitvariant;
     }
 
     public EffectsVariant getEffect() {

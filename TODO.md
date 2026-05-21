@@ -1,20 +1,20 @@
 - TODO list V1.1
   - Squeezer :
-    - Changement de texture en fonction du "Fill_lvl"
-    - Chngement de texture en fonction du "Fill_variant" (texture blanche + coloration)
-    - JEI todo
-    - Particules quand flush
+    - Corriger le bug de non coloration de la texture
+    - Animation quand flush (?)
   - Leaves :
     - Texture feuille redo
     - Texture fruit redo
   - Barrel :
-    - GUI redo
-    - Craft redo
-    - JEI redo
-    - Sons a la fermeture du barrel
+    - Lemonade & Effect PA redo
+    - Sons a la fermeture (?)
+  - Effects :
+    - Animation Bubbly
+    - Test des effets
   - Kiwi :
     - Anim redo
     - Model redo
+    - Texture redo
     - Sound redo (?)
     - Kiwi long et kiwi gros (?)
     - Possiblité de mettre des tapis sur le kiwi
@@ -22,8 +22,7 @@
     - Redo le visuel
     - Redo le spawn
   - Misc :
-    - AgrumeVariant redo en KiwiVariant
-    - Cacher les TAGS sur JEI (ou juste retirer les tags)
+    - AgrumeVariant a détruire
     - lang FR
 
 
@@ -34,13 +33,20 @@
     - Kiwi bucketable
   - Leaves :
     - Changement de texture pour une texture en blanc + coloration
+  - Barrel :
+    - GUI redo
+    - JEI redo
+    - ouverture du barrel
   - Squeezer :
     - Model 3D redo
+    - JEI todo
+    - Craft redo
     - Texture redo
     - Fonctionnement intern redo
+    - Changement de texture en fonction du "Fill_lvl"
+    - Chngement de texture en fonction du "Fill_variant" (texture blanche + coloration)
   - Misc :
     - PA des effets redo
     - All juices / lemonades / potion en texture blanc + coloration
     - Fruit variant redo (qui va remplacer le agrume variant)
-    - Sons a l'ouverture du barrel
     - J'ai oublié le reste

@@ -1,6 +1,7 @@
 package com.kalyptien.wlgyl.block.custom;
 
 import com.kalyptien.wlgyl.item.ModItems;
+import com.kalyptien.wlgyl.item.custom.JuiceBottleItem;
 import com.kalyptien.wlgyl.sound.ModSounds;
 import com.kalyptien.wlgyl.util.FruitsVariant;
 import com.kalyptien.wlgyl.util.ModTags;
@@ -17,6 +18,7 @@ import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -34,9 +36,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 
 
-public class SqueezerBlock extends BaseEntityBlock {
+public class SqueezerBlock extends Block {
 
-    public static final MapCodec<SqueezerBlock> CODEC = simpleCodec(SqueezerBlock::new);
     private static final VoxelShape SHAPE = Block.box(3.0, 0.0, 3.0, 13.0, 4.0, 13.0);
 
     public static final IntegerProperty FILL_LVL = IntegerProperty.create("fill_level", 0, 3);
@@ -52,22 +53,11 @@ public class SqueezerBlock extends BaseEntityBlock {
         return SHAPE;
     }
 
-    @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
-        return CODEC;
-    }
-
     /* BLOCK ENTITY */
 
     @Override
     protected RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
-    }
-
-    @Nullable
-    @Override
-    public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return null;
     }
 
     @Override
@@ -132,7 +122,12 @@ public class SqueezerBlock extends BaseEntityBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FILL_LVL);
-        builder.add(FILL_VARIANT);
+        builder.add(FILL_LVL, FILL_VARIANT);
+    }
+
+    public static int getLiquidColor(BlockState state, BlockAndTintGetter blockAndTintGetter, BlockPos pos, int index){
+        if(index != 0) return -1;
+        FruitsVariant variant = FruitsVariant.byId(state.getValue(FILL_VARIANT));
+        return variant.getColor();
     }
 }

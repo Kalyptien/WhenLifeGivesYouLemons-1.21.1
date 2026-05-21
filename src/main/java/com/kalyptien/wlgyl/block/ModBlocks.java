@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -54,10 +55,10 @@ public class ModBlocks {
             () -> new SaplingBlock(ModTreeGrowers.CAVIAR_LEMON_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
     public static final DeferredBlock<Block> SQUEEZER = registerBlock("squeezer",
-            () -> new SqueezerBlock(BlockBehaviour.Properties.of().noOcclusion()));
+            () -> new SqueezerBlock(BlockBehaviour.Properties.of().noOcclusion().randomTicks().strength(0.5F)));
 
     public static final DeferredBlock<Block> BREWING_BARREL = registerBlock("brewing_barrel",
-            () -> new BrewingBarrelBlock(BlockBehaviour.Properties.of()));
+            () -> new BrewingBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -4,7 +4,7 @@ import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
 import com.kalyptien.wlgyl.block.ModBlocks;
 import com.kalyptien.wlgyl.recipe.BrewingBarrelRecipe;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
-import com.kalyptien.wlgyl.screen.custom.BrewingBarrelScreen;
+import com.kalyptien.wlgyl.recipe.SqueezerRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IGuiHandlerRegistration;
@@ -30,6 +30,9 @@ public class JEIWhenLifeGivesYouLemonsPlugin implements IModPlugin {
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(new BrewingBarrelRecipeCategory(
                 registration.getJeiHelpers().getGuiHelper()));
+
+        registration.addRecipeCategories(new SqueezerRecipeCategory(
+                registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -38,17 +41,21 @@ public class JEIWhenLifeGivesYouLemonsPlugin implements IModPlugin {
 
         List<BrewingBarrelRecipe> brewingBarrelRecipes = recipeManager
                 .getAllRecipesFor(ModRecipes.BREWING_BARREL_TYPE.get()).stream().map(RecipeHolder::value).toList();
-        registration.addRecipes(BrewingBarrelRecipeCategory.BREWING_BARREL_RECIPE_RECIPE_TYPE, brewingBarrelRecipes);
-    }
 
-    @Override
-    public void registerGuiHandlers(IGuiHandlerRegistration registration) {
-        registration.addRecipeClickArea(BrewingBarrelScreen.class, 62, 17, 52, 52,
-                BrewingBarrelRecipeCategory.BREWING_BARREL_RECIPE_RECIPE_TYPE);
+        registration.addRecipes(BrewingBarrelRecipeCategory.BREWING_BARREL_RECIPE_TYPE, brewingBarrelRecipes);
+
+        List<SqueezerRecipe> squeezerRecipes = recipeManager
+                .getAllRecipesFor(ModRecipes.SQUEEZER_TYPE.get()).stream().map(RecipeHolder::value).toList();
+
+        registration.addRecipes(SqueezerRecipeCategory.SQUEEZER_RECIPE_TYPE, squeezerRecipes);
     }
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
-        registration.addRecipeCatalyst(new ItemStack(ModBlocks.BREWING_BARREL.asItem()));
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.BREWING_BARREL.asItem()),
+                BrewingBarrelRecipeCategory.BREWING_BARREL_RECIPE_TYPE);
+
+        registration.addRecipeCatalyst(new ItemStack(ModBlocks.SQUEEZER.asItem()),
+                SqueezerRecipeCategory.SQUEEZER_RECIPE_TYPE);
     }
 }

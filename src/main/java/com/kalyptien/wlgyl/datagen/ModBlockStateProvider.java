@@ -52,7 +52,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     public void makeGrowLeaves(AgrumeLeavesBlock block, String modelName) {
         Function<BlockState, ConfiguredModel[]> function = state -> generateCrops(state, block, modelName);
 
-        getVariantBuilder(block).forAllStates(function);
+        getVariantBuilder(block).forAllStatesExcept(function, AgrumeLeavesBlock.DISTANCE, AgrumeLeavesBlock.PERSISTENT, AgrumeLeavesBlock.WATERLOGGED);
     }
 
     private ConfiguredModel[] generateCrops(BlockState state, AgrumeLeavesBlock block, String modelName) {

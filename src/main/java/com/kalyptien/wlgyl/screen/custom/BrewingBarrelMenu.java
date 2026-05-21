@@ -3,12 +3,14 @@ package com.kalyptien.wlgyl.screen.custom;
 import com.kalyptien.wlgyl.block.ModBlocks;
 import com.kalyptien.wlgyl.block.entity.BrewingBarrelBlockEntity;
 import com.kalyptien.wlgyl.screen.ModMenuTypes;
-import com.kalyptien.wlgyl.util.AgrumesVariant;
+import com.kalyptien.wlgyl.util.EffectsVariant;
+import com.kalyptien.wlgyl.util.FruitsVariant;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.items.SlotItemHandler;
@@ -36,8 +38,8 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
 
         this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 0, 26, 17));
         this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 1, 26, 53));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 2, 134, 17));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 4, 134, 35));
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 2, 116, 17));
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 4, 116, 53));
         this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 3, 134, 53));
 
         addDataSlots(data);
@@ -73,7 +75,7 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
         }
     }
 
-    public int getLimonadeProgress() {
+    public int getCraftProgress() {
         int water = this.data.get(2);
         int maxWater = this.data.get(3);
         int arrowPixelSize = 52;
@@ -81,28 +83,24 @@ public class BrewingBarrelMenu extends AbstractContainerMenu {
         return maxWater != 0 && water != 0 ? water * arrowPixelSize / maxWater : 0;
     }
 
-    public String getCurrentLimonade() {
-        int limonadeType = this.data.get(4);
-
-        if(limonadeType == 0){
-            return "water";
-        }
-        else{
-            return AgrumesVariant.byId(limonadeType).toString().toLowerCase();
-
-        }
+    public int getCurrentVariantId(){
+        return this.data.get(4);
     }
 
-    public String getCurrentEffect() {
-        int effectType = this.data.get(5);
+    public int getCurrentEffectId(){
+        return this.data.get(5);
+    }
 
-        if(effectType == 1){
-            return "long";
+    public String getCurrentLemonadeTypeName() {
+        int variantId = this.data.get(4);
+
+        if(variantId == 0){
+            return Items.WATER_BUCKET.getDescriptionId().replace("item.minecraft.", "");
         }
-        else if(effectType == 2){
-            return "strong";
+        else {
+            return FruitsVariant.byId(this.data.get(4)).getName().replace("item.wlgyl.", "");
+
         }
-        return "none";
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons

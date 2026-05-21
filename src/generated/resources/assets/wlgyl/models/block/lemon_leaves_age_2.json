@@ -1,0 +1,8 @@
+{
+  "parent": "wlgyl:block/agrume_leaves_base",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "all": "wlgyl:block/agrumes_leaves",
+    "upper": "wlgyl:block/leaves_age_2"
+  }
+}

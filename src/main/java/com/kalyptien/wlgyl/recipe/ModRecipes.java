@@ -24,6 +24,16 @@ public class ModRecipes {
                 }
             });
 
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<SqueezerRecipe>> SQUEEZER_SERIALIZER =
+            SERIALIZERS.register("squeezer", SqueezerRecipe.Serializer::new);
+    public static final DeferredHolder<RecipeType<?>, RecipeType<SqueezerRecipe>> SQUEEZER_TYPE =
+            TYPES.register("squeezer", () -> new RecipeType<SqueezerRecipe>() {
+                @Override
+                public String toString() {
+                    return "squeezer";
+                }
+            });
+
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
