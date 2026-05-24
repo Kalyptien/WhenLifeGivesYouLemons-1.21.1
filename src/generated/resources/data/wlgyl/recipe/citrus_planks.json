@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "wlgyl:citrus_log"
+    },
+    {
+      "item": "wlgyl:citrus_wood"
+    },
+    {
+      "item": "wlgyl:stripped_citrus_log"
+    },
+    {
+      "item": "wlgyl:stripped_citrus_wood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "wlgyl:citrus_planks"
+  }
+}

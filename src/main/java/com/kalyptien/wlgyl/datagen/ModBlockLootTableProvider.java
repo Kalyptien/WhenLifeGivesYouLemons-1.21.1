@@ -49,6 +49,26 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         add(ModBlocks.CAVIAR_LEMON_LEAVES.get(),
                 block -> createLeavesDrops(ModBlocks.CAVIAR_LEMON_LEAVES.get(), ModBlocks.CAVIAR_LEMON_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.CITRUS_LOG.get());
+        this.dropSelf(ModBlocks.CITRUS_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_CITRUS_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_CITRUS_WOOD.get());
+        this.dropSelf(ModBlocks.CITRUS_PLANKS.get());
+
+        dropSelf(ModBlocks.CITRUS_STAIRS.get());
+        add(ModBlocks.CITRUS_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CITRUS_SLAB.get()));
+
+        dropSelf(ModBlocks.CITRUS_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.CITRUS_BUTTON.get());
+
+        dropSelf(ModBlocks.CITRUS_FENCE.get());
+        dropSelf(ModBlocks.CITRUS_FENCE_GATE.get());
+        dropSelf(ModBlocks.CITRUS_TRAPDOOR.get());
+
+        add(ModBlocks.CITRUS_DOOR.get(),
+                block -> createDoorTable(ModBlocks.CITRUS_DOOR.get()));
     }
 
     @Override

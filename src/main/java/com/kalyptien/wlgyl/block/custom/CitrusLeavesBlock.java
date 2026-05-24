@@ -1,12 +1,9 @@
 package com.kalyptien.wlgyl.block.custom;
 
-import com.kalyptien.wlgyl.item.custom.JuiceBottleItem;
 import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.entity.ModEntities;
 import com.kalyptien.wlgyl.entity.custom.KiwiEntity;
 import com.kalyptien.wlgyl.sound.ModSounds;
-import com.kalyptien.wlgyl.util.EffectsVariant;
-import com.kalyptien.wlgyl.util.FruitsVariant;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -26,11 +23,10 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.common.CommonHooks;
 
-public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock {
+public class CitrusLeavesBlock extends LeavesBlock implements BonemealableBlock {
 
     public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE;
@@ -38,7 +34,7 @@ public class AgrumeLeavesBlock extends LeavesBlock implements BonemealableBlock 
     public AgrumesVariant agrume;
     public ItemLike agrumeItem;
 
-    public AgrumeLeavesBlock(Properties properties, AgrumesVariant agrume, ItemLike agrumeItem) {
+    public CitrusLeavesBlock(Properties properties, AgrumesVariant agrume, ItemLike agrumeItem) {
         super(properties);
         this.agrume = agrume;
         this.agrumeItem = agrumeItem;

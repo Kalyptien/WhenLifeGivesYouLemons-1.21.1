@@ -3,7 +3,7 @@ package com.kalyptien.wlgyl.event;
 
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
 import com.kalyptien.wlgyl.block.ModBlocks;
-import com.kalyptien.wlgyl.block.custom.AgrumeLeavesBlock;
+import com.kalyptien.wlgyl.block.custom.CitrusLeavesBlock;
 import com.kalyptien.wlgyl.block.custom.SqueezerBlock;
 import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.item.custom.JuiceBottleItem;
@@ -48,7 +48,7 @@ public class ModClientBusEvents {
                 ModItems.CAVIAR_LEMON_LEMONADE_STRONG.get());
 
         //LEAVES ITEMS
-        event.register(AgrumeLeavesBlock::getLeavesColor,
+        event.register(CitrusLeavesBlock::getLeavesColor,
                 ModBlocks.LEMON_LEAVES.asItem(),
                 ModBlocks.ORANGE_LEAVES.asItem(),
                 ModBlocks.LIME_LEAVES.asItem(),
@@ -61,7 +61,7 @@ public class ModClientBusEvents {
     @SubscribeEvent
     public static void registerBlockColors(RegisterColorHandlersEvent.Block event){
         // LEAVES BLOCKS
-        event.register(AgrumeLeavesBlock::getLeavesColor,
+        event.register(CitrusLeavesBlock::getLeavesColor,
                 ModBlocks.LEMON_LEAVES.get(),
                 ModBlocks.ORANGE_LEAVES.get(),
                 ModBlocks.LIME_LEAVES.get(),

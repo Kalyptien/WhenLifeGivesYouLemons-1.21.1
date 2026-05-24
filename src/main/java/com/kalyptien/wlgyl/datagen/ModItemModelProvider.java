@@ -77,6 +77,11 @@ public class ModItemModelProvider  extends ItemModelProvider {
         leavesItem(ModBlocks.LIME_LEAVES);
         leavesItem(ModBlocks.CAVIAR_LEMON_LEAVES);
 
+        buttonItem(ModBlocks.CITRUS_BUTTON, ModBlocks.CITRUS_PLANKS);
+        fenceItem(ModBlocks.CITRUS_FENCE, ModBlocks.CITRUS_PLANKS);
+
+        basicItem(ModBlocks.CITRUS_DOOR.asItem());
+
         withExistingParent(ModItems.KIWI_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
@@ -105,5 +110,17 @@ public class ModItemModelProvider  extends ItemModelProvider {
                 new ModelFile.UncheckedModelFile("item/generated")))
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath("minecraft", "item/potion"))
                 .texture("layer1", ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID, "item/lemonade_overlay"));
+    }
+
+    public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void fenceItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(WhenLifeGivesYouLemonsMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
     }
 }

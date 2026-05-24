@@ -2,11 +2,7 @@
   - Squeezer :
     - Corriger le bug de non coloration de la texture
     - Animation quand flush (?)
-  - Leaves :
-    - Texture feuille redo
-    - Texture fruit redo
   - Barrel :
-    - Lemonade & Effect PA redo
     - Sons a la fermeture (?)
   - Effects :
     - Animation Bubbly
@@ -19,11 +15,11 @@
     - Kiwi long et kiwi gros (?)
     - Possiblité de mettre des tapis sur le kiwi
   - Arbres :
-    - Redo le visuel
-    - Redo le spawn
+    - Redo le spawn ( a test )
   - Misc :
     - AgrumeVariant a détruire
     - lang FR
+    - global PA redo
 
 
 - Déjà réalisé :
@@ -33,6 +29,8 @@
     - Kiwi bucketable
   - Leaves :
     - Changement de texture pour une texture en blanc + coloration
+    - Texture feuille redo
+    - Colorgradiant more yellow
   - Barrel :
     - GUI redo
     - JEI redo
@@ -45,6 +43,9 @@
     - Fonctionnement intern redo
     - Changement de texture en fonction du "Fill_lvl"
     - Chngement de texture en fonction du "Fill_variant" (texture blanche + coloration)
+  - Arbres : 
+    - Redo le visuel
+    - Add lemon wood
   - Misc :
     - PA des effets redo
     - All juices / lemonades / potion en texture blanc + coloration

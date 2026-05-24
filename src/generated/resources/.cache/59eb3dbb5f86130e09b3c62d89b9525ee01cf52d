@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-29T21:36:43.4816661	Loot Tables
+// 1.21.1	2026-05-24T17:14:04.1219788	Loot Tables
 f4a1f4c0994d1d7786340a236dc680908bdcf5f0 data/wlgyl/loot_table/blocks/blood_orange_leaves.json
 aba6f328ecbe81884610eae5187602256f48a401 data/wlgyl/loot_table/blocks/blood_orange_sapling.json
 928eba24456d4ae3f7c757873d7e0ef9d4807ffe data/wlgyl/loot_table/blocks/brewing_barrel.json
@@ -6,6 +6,17 @@ aba6f328ecbe81884610eae5187602256f48a401 data/wlgyl/loot_table/blocks/blood_oran
 a1c6cc136e0f67cac3d9534777194229fcf6bc16 data/wlgyl/loot_table/blocks/buddha_hand_sapling.json
 43544d95d62b2e576ceb6a83e302c1e1c3669af3 data/wlgyl/loot_table/blocks/caviar_lemon_leaves.json
 08ea70f382ea0462f3d322c5457ee75786f9cf22 data/wlgyl/loot_table/blocks/caviar_lemon_sapling.json
+ce945089b0482cdaff953982de36372ecc8aaae6 data/wlgyl/loot_table/blocks/citrus_button.json
+d1c3d1fbd5b1312bf16a16c502970f2bd42e75e0 data/wlgyl/loot_table/blocks/citrus_door.json
+6bfeaaedcdab0e02e0b60934d4d496b0d9fda311 data/wlgyl/loot_table/blocks/citrus_fence.json
+18decb84a526a036410981a9b3ffe8e6382fba44 data/wlgyl/loot_table/blocks/citrus_fence_gate.json
+8b61578398d99fe95727d6f3f390ad0dded00353 data/wlgyl/loot_table/blocks/citrus_log.json
+dda16d76ca1807b5040f7e6e9c8197f25bd67fbe data/wlgyl/loot_table/blocks/citrus_planks.json
+e0a3d6646f8e8974d25d1bba8e6d6a4f04b2bc61 data/wlgyl/loot_table/blocks/citrus_pressure_plate.json
+24dfceb5d0d173389791f4cf1359026be6ea5161 data/wlgyl/loot_table/blocks/citrus_slab.json
+29cb85b4187f7937800d1e9b63068b12a4f4b5a4 data/wlgyl/loot_table/blocks/citrus_stairs.json
+c273cea88542896aced763c3022a9efcabe4073e data/wlgyl/loot_table/blocks/citrus_trapdoor.json
+1c1cbbf5a3af0e1af37e3b71f3ed962f2aef2257 data/wlgyl/loot_table/blocks/citrus_wood.json
 7a666061fba6b095e9cc91de22c63659a0f32c06 data/wlgyl/loot_table/blocks/grapefruit_leaves.json
 123f35a114a24b9ee0ab4f32ae5732fbe327f220 data/wlgyl/loot_table/blocks/grapefruit_sapling.json
 cde477bb932eff857bee9009a1bc48ec6a7161a6 data/wlgyl/loot_table/blocks/lemon_leaves.json
@@ -15,3 +26,5 @@ aa85f5e0e16828464592379ea034178959246cb2 data/wlgyl/loot_table/blocks/lime_leave
 ca2e320c8256d238553cf05cee340105098268cb data/wlgyl/loot_table/blocks/orange_leaves.json
 d954dec89690e700adca9974f3fd39a8a029fd6b data/wlgyl/loot_table/blocks/orange_sapling.json
 793f1ee30e4dfc8edb1d8c95a640b22378834045 data/wlgyl/loot_table/blocks/squeezer.json
+9afd3c641517659cf9ba726e3aa7124b3eebb493 data/wlgyl/loot_table/blocks/stripped_citrus_log.json
+1d92e1ae4100a5f5f54605a8b417f16740267041 data/wlgyl/loot_table/blocks/stripped_citrus_wood.json

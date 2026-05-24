@@ -1,0 +1,31 @@
+{
+  "values": {
+    "wlgyl:citrus_button": {
+      "burn_time": 15
+    },
+    "wlgyl:citrus_door": {
+      "burn_time": 15
+    },
+    "wlgyl:citrus_fence": {
+      "burn_time": 15
+    },
+    "wlgyl:citrus_fence_gate": {
+      "burn_time": 15
+    },
+    "wlgyl:citrus_planks": {
+      "burn_time": 15
+    },
+    "wlgyl:citrus_pressure_plate": {
+      "burn_time": 15
+    },
+    "wlgyl:citrus_slab": {
+      "burn_time": 15
+    },
+    "wlgyl:citrus_stairs": {
+      "burn_time": 15
+    },
+    "wlgyl:citrus_trapdoor": {
+      "burn_time": 15
+    }
+  }
+}

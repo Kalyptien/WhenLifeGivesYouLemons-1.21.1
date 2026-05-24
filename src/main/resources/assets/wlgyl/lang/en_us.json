@@ -39,6 +39,22 @@
   "item.wlgyl.caviar_lemon_lemonade_long": "Caviar Lemonade",
   "item.wlgyl.buddha_hand_lemonade_long": "Buddha's Lemonade",
 
+  "block.wlgyl.citrus_log": "Citrus Log",
+  "block.wlgyl.citrus_planks": "Citrus Planks",
+  "block.wlgyl.citrus_wood": "Citrus Wood",
+  "block.wlgyl.stripped_citrus_log": "Stripped Citrus Log",
+  "block.wlgyl.stripped_citrus_wood": "Stripped Citrus Wood",
+  "block.wlgyl.citrus_leaves": "Citrus Leaves",
+  "block.wlgyl.citrus_stairs": "Citrus Stairs",
+  "block.wlgyl.citrus_slab": "Citrus Slab",
+  "block.wlgyl.citrus_button": "Citrus Button",
+  "block.wlgyl.citrus_pressure_plate": "Citrus Pressure Plate",
+  "block.wlgyl.citrus_fence": "Citrus Fence",
+  "block.wlgyl.citrus_fence_gate": "Citrus Fence Gate",
+  "block.wlgyl.citrus_door": "Citrus Door",
+  "block.wlgyl.citrus_trapdoor": "Citrus Trapdoor",
+  "block.wlgyl.citrus_sapling": "Citrus Sapling",
+
   "block.wlgyl.lemon_leaves": "Lemon Leaves",
   "block.wlgyl.orange_leaves": "Orange Leaves",
   "block.wlgyl.blood_orange_leaves": "Blood Orange Leaves",
@@ -64,14 +80,14 @@
   "effect.wlgyl.acid": "Acid",
   "effect.wlgyl.bubbly": "Bubbly",
 
-  "item.wlgyl.kiwi_spawn_egg": "Agrume Bird Spawn Egg",
-  "item.wlgyl.kiwi_bucket": "Bucket of Agrume Bird",
+  "item.wlgyl.kiwi_spawn_egg": "Citrus Spawn Egg",
+  "item.wlgyl.kiwi_bucket": "Bucket of Citrus",
 
-  "entity.mccourse.kiwi": "Agrume Bird",
+  "entity.mccourse.kiwi": "Citrus",
 
-  "sounds.wlgyl.kiwi_death" : "Agrume Bird Death",
-  "sounds.wlgyl.kiwi_hurt" : "Agrume Bird Hurt",
-  "sounds.wlgyl.kiwi_ambient" : "Agrume Bird Ambient",
+  "sounds.wlgyl.kiwi_death" : "Citrus Death",
+  "sounds.wlgyl.kiwi_hurt" : "Citrus Hurt",
+  "sounds.wlgyl.kiwi_ambient" : "Citrus Ambient",
 
   "sounds.wlgyl.leaves_forage" : "Leaves Foraging",
 

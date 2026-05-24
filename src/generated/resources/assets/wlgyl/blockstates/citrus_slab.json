@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wlgyl:block/citrus_slab"
+    },
+    "type=double": {
+      "model": "wlgyl:block/citrus_planks"
+    },
+    "type=top": {
+      "model": "wlgyl:block/citrus_slab_top"
+    }
+  }
+}

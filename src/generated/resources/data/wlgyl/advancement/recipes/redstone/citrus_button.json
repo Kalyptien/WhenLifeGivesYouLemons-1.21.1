@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_citrus": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wlgyl:citrus_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "wlgyl:citrus_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_citrus"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "wlgyl:citrus_button"
+    ]
+  }
+}

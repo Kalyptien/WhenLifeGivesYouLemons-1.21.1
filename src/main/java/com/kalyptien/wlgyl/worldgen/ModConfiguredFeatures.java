@@ -17,6 +17,8 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlac
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 
+import javax.swing.plaf.nimbus.State;
+
 public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON_TREE_KEY = registerKey("lemon_tree");
@@ -31,8 +33,8 @@ public class ModConfiguredFeatures {
 
 
         register(context, LEMON_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(Blocks.OAK_LOG),
-                new ForkingTrunkPlacer(1, 2, 2),
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
+                new ForkingTrunkPlacer(0, 1, 1),
 
                 BlockStateProvider.simple(ModBlocks.LEMON_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 3),
@@ -40,8 +42,8 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, ORANGE_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(Blocks.OAK_LOG),
-                new ForkingTrunkPlacer(1, 2, 2),
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
+                new ForkingTrunkPlacer(0, 1, 1),
 
                 BlockStateProvider.simple(ModBlocks.ORANGE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 3),
@@ -49,8 +51,8 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, BLOOD_ORANGE_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(Blocks.OAK_LOG),
-                new ForkingTrunkPlacer(1, 2, 2),
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
+                new ForkingTrunkPlacer(0, 1, 1),
 
                 BlockStateProvider.simple(ModBlocks.BLOOD_ORANGE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 3),
@@ -58,8 +60,8 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, CAVIAR_LEMON_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(Blocks.OAK_LOG),
-                new ForkingTrunkPlacer(1, 2, 2),
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
+                new ForkingTrunkPlacer(0, 1, 1),
 
                 BlockStateProvider.simple(ModBlocks.CAVIAR_LEMON_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 3),
@@ -67,8 +69,8 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, BUDDHA_HAND_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(Blocks.OAK_LOG),
-                new ForkingTrunkPlacer(1, 2, 2),
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
+                new ForkingTrunkPlacer(0, 1, 1),
 
                 BlockStateProvider.simple(ModBlocks.BUDDHA_HAND_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 3),
@@ -76,8 +78,8 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, LIME_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(Blocks.OAK_LOG),
-                new ForkingTrunkPlacer(1, 2, 2),
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
+                new ForkingTrunkPlacer(0, 1, 1),
 
                 BlockStateProvider.simple(ModBlocks.LIME_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 3),
@@ -85,8 +87,8 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, GRAPEFRUIT_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(Blocks.OAK_LOG),
-                new ForkingTrunkPlacer(1, 2, 2),
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
+                new ForkingTrunkPlacer(0, 1, 1),
 
                 BlockStateProvider.simple(ModBlocks.GRAPEFRUIT_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 3),

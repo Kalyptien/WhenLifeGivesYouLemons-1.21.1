@@ -1,3 +1,6 @@
-// 1.21.1	2025-09-23T21:39:39.3095667	Tags for minecraft:block mod id wlgyl
+// 1.21.1	2026-05-24T17:14:04.1179754	Tags for minecraft:block mod id wlgyl
+459973d28091ffd8ef36688e9a3414bf8aa71cdc data/minecraft/tags/block/fences.json
+58fef7eb30ab1efb80bc35e41eed75abe00f26b3 data/minecraft/tags/block/fence_gates.json
 f041a707de1e9c6341f3b13261d8c09349d6246d data/minecraft/tags/block/leaves.json
+1c910191f6b91aa5b362cf9a60f15c81789e6cdb data/minecraft/tags/block/logs_that_burn.json
 d7adfc14f25ff7271077b7b291c85669a6012bde data/minecraft/tags/block/saplings.json

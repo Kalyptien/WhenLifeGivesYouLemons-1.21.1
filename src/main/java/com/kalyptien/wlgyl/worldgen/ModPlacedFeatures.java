@@ -29,46 +29,46 @@ public class ModPlacedFeatures {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, LEMON_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LEMON_TREE_KEY),
-                Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(250),
-                        InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
+                VegetationPlacements.treePlacement(
+                        RarityFilter.onAverageOnceEvery(25),
+                        ModBlocks.LEMON_SAPLING.get()
+                ));
 
         register(context, ORANGE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORANGE_TREE_KEY),
-                Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(250),
-                        InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
+                VegetationPlacements.treePlacement(
+                        RarityFilter.onAverageOnceEvery(25),
+                        ModBlocks.ORANGE_SAPLING.get()
+                ));
 
         register(context, LIME_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIME_TREE_KEY),
-                Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(250),
-                        InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
+                VegetationPlacements.treePlacement(
+                        RarityFilter.onAverageOnceEvery(25),
+                        ModBlocks.LIME_SAPLING.get()
+                ));
 
         register(context, BLOOD_ORANGE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOOD_ORANGE_TREE_KEY),
-                Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(50),
-                        InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
+                VegetationPlacements.treePlacement(
+                        RarityFilter.onAverageOnceEvery(25),
+                        ModBlocks.BLOOD_ORANGE_SAPLING.get()
+                ));
 
         register(context, GRAPEFRUIT_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GRAPEFRUIT_TREE_KEY),
-                Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(50),
-                        InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
+                VegetationPlacements.treePlacement(
+                        RarityFilter.onAverageOnceEvery(25),
+                        ModBlocks.GRAPEFRUIT_SAPLING.get()
+                ));
 
         register(context, CAVIAR_LEMON_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CAVIAR_LEMON_TREE_KEY),
-                Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(50),
-                        InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
+                VegetationPlacements.treePlacement(
+                        RarityFilter.onAverageOnceEvery(25),
+                        ModBlocks.CAVIAR_LEMON_SAPLING.get()
+                ));
 
         register(context, BUDDHA_HAND_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUDDHA_HAND_TREE_KEY),
-                Arrays.stream(new PlacementModifier[]{
-                        RarityFilter.onAverageOnceEvery(350),
-                        InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}).toList());
+                VegetationPlacements.treePlacement(
+                        RarityFilter.onAverageOnceEvery(25),
+                        ModBlocks.BUDDHA_HAND_SAPLING.get()
+                ));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "wlgyl:block/citrus_log",
+    "side": "wlgyl:block/citrus_log"
+  }
+}

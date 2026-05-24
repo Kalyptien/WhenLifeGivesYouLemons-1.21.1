@@ -20,6 +20,21 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.wlgyl.mod_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+                        output.accept(ModBlocks.CITRUS_LOG.get());
+                        output.accept(ModBlocks.CITRUS_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_CITRUS_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_CITRUS_WOOD.get());
+
+                        output.accept(ModBlocks.CITRUS_PLANKS.get());
+                        output.accept(ModBlocks.CITRUS_STAIRS);
+                        output.accept(ModBlocks.CITRUS_SLAB);
+                        output.accept(ModBlocks.CITRUS_PRESSURE_PLATE);
+                        output.accept(ModBlocks.CITRUS_BUTTON);
+                        output.accept(ModBlocks.CITRUS_FENCE);
+                        output.accept(ModBlocks.CITRUS_FENCE_GATE);
+                        output.accept(ModBlocks.CITRUS_DOOR);
+                        output.accept(ModBlocks.CITRUS_TRAPDOOR);
+
                         output.accept(ModItems.KIWI_SPAWN_EGG);
                         output.accept(ModItems.KIWI_BUCKET);
 

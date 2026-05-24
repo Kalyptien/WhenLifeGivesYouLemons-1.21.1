@@ -1,5 +1,23 @@
-// 1.21.1	2026-05-14T20:08:43.0765215	Recipes
+// 1.21.1	2026-05-24T17:32:04.4943463	Recipes
+ed73fa5a0ee535cb10378a502545f49c46f7f5d8 data/wlgyl/advancement/recipes/building_blocks/citrus_slab.json
+a2378c58afd1c67e8f3a39ff5c936e5c277cb05d data/wlgyl/advancement/recipes/building_blocks/citrus_stairs.json
+9a368a60a7d3687ce761add7a01c4923acb97514 data/wlgyl/advancement/recipes/decorations/citrus_fence.json
 ad8fe6fef8301f7d22235d71e3144584528880ed data/wlgyl/advancement/recipes/misc/brewing_barrel.json
+4bc428b7af10ba1fca8eb022493d01290cea35fe data/wlgyl/advancement/recipes/misc/citrus_planks.json
 c23a6d08a53b7a3e654de34265dd144638448281 data/wlgyl/advancement/recipes/misc/squeezer.json
+7a81e24282c46beeb820b8376df5b9856b6f47a7 data/wlgyl/advancement/recipes/redstone/citrus_button.json
+33a3d3eaa0ca21321c25058d0cfefc2cdab2d1f1 data/wlgyl/advancement/recipes/redstone/citrus_door.json
+0bd7498108d385f1725e0f50b482d73d1f2023be data/wlgyl/advancement/recipes/redstone/citrus_fence_gate.json
+4359402c4b4a4e24c26e905cdfa5a1886c72ffc8 data/wlgyl/advancement/recipes/redstone/citrus_pressure_plate.json
+f626a1d508f34f1a6a4a7b8753b78b53f9b2a350 data/wlgyl/advancement/recipes/redstone/citrus_trapdoor.json
 781dc052daafe6c2a98d738712cc00a5db35079d data/wlgyl/recipe/brewing_barrel.json
+9a34ac6b6fab70a9bfca15d13ba2e8e97191615a data/wlgyl/recipe/citrus_button.json
+d09df92614b25551e74016dfda87387d6adbec18 data/wlgyl/recipe/citrus_door.json
+a5da068bc3f3d10e2e9d2ece8377e64377066788 data/wlgyl/recipe/citrus_fence.json
+e9ad2677add1210edf1ae80ca7c5ff5739672f59 data/wlgyl/recipe/citrus_fence_gate.json
+82d651af8c54ec0dc20552224ef89cba49a57f4c data/wlgyl/recipe/citrus_planks.json
+0dbd1b2eeb7e32b6de32ac54e74e9d59f0f80e1d data/wlgyl/recipe/citrus_pressure_plate.json
+018e3c2132712f9fb9f22035c06a5444e44cfa76 data/wlgyl/recipe/citrus_slab.json
+840e306b6f21dd1ff82061ad0c18bccfcbc6bc3d data/wlgyl/recipe/citrus_stairs.json
+91819d2a3fa300d08880ebd593ff5d7efb9596d0 data/wlgyl/recipe/citrus_trapdoor.json
 afe6f3f22242febeec1e68b688424f4c748aaf0b data/wlgyl/recipe/squeezer.json

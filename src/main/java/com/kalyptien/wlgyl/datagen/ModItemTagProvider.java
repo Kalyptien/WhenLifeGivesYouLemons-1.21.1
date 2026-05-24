@@ -1,11 +1,13 @@
 package com.kalyptien.wlgyl.datagen;
 
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
+import com.kalyptien.wlgyl.block.ModBlocks;
 import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
@@ -65,5 +67,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ModTags.Items.BERRYS)
                 .add(Items.GLOW_BERRIES)
                 .add(Items.SWEET_BERRIES);
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CITRUS_LOG.get().asItem())
+                .add(ModBlocks.CITRUS_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_CITRUS_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_CITRUS_WOOD.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.CITRUS_PLANKS.asItem());
     }
 }

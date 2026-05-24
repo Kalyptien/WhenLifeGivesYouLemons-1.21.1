@@ -1,7 +1,14 @@
 {
   "type": "neoforge:add_features",
   "biomes": [
-    "minecraft:badlands",
+    "minecraft:forest",
+    "minecraft:birch_forest",
+    "minecraft:flower_forest",
+    "minecraft:windswept_forest",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:savanna",
+    "minecraft:mangrove_swamp",
+    "minecraft:swamp",
     "minecraft:dark_forest"
   ],
   "features": "wlgyl:blood_orange_tree_placed",

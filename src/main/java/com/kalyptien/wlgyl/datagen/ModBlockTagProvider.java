@@ -37,5 +37,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CAVIAR_LEMON_SAPLING.get())
                 .add(ModBlocks.GRAPEFRUIT_SAPLING.get());
 
+        tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CITRUS_LOG.get())
+                .add(ModBlocks.CITRUS_WOOD.get())
+                .add(ModBlocks.STRIPPED_CITRUS_LOG.get())
+                .add(ModBlocks.STRIPPED_CITRUS_WOOD.get());
+
+        tag(BlockTags.FENCES).add(ModBlocks.CITRUS_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.CITRUS_FENCE_GATE.get());
+
     }
 }
