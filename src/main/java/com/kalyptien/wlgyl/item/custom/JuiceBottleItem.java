@@ -1,9 +1,7 @@
 package com.kalyptien.wlgyl.item.custom;
 
-import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.util.FruitsVariant;
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;

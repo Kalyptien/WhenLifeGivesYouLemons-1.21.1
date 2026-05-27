@@ -1,9 +1,9 @@
 package com.kalyptien.wlgyl.block.custom;
 
-import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.entity.ModEntities;
 import com.kalyptien.wlgyl.entity.custom.KiwiEntity;
 import com.kalyptien.wlgyl.sound.ModSounds;
+import com.kalyptien.wlgyl.util.FruitsVariant;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -31,10 +31,10 @@ public class CitrusLeavesBlock extends LeavesBlock implements BonemealableBlock 
     public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE;
 
-    public AgrumesVariant agrume;
+    public FruitsVariant agrume;
     public ItemLike agrumeItem;
 
-    public CitrusLeavesBlock(Properties properties, AgrumesVariant agrume, ItemLike agrumeItem) {
+    public CitrusLeavesBlock(Properties properties, FruitsVariant agrume, ItemLike agrumeItem) {
         super(properties);
         this.agrume = agrume;
         this.agrumeItem = agrumeItem;
@@ -166,7 +166,7 @@ public class CitrusLeavesBlock extends LeavesBlock implements BonemealableBlock 
         builder.add(AGE, DISTANCE, PERSISTENT, WATERLOGGED);
     }
 
-    public AgrumesVariant getVariant(){
+    public FruitsVariant getVariant(){
         return this.agrume;
     }
 

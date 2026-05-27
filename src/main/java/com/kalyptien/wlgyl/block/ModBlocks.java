@@ -3,7 +3,7 @@ package com.kalyptien.wlgyl.block;
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
 import com.kalyptien.wlgyl.block.custom.*;
 import com.kalyptien.wlgyl.item.ModItems;
-import com.kalyptien.wlgyl.util.AgrumesVariant;
+import com.kalyptien.wlgyl.util.FruitsVariant;
 import com.kalyptien.wlgyl.worldgen.tree.ModTreeGrowers;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -23,19 +23,19 @@ public class ModBlocks {
 
     // LEAVES
     public static final DeferredBlock<Block> LEMON_LEAVES = registerBlock("lemon_leaves",
-            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), AgrumesVariant.LEMON, ModItems.LEMON));
+            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), FruitsVariant.LEMON, ModItems.LEMON));
     public static final DeferredBlock<Block> ORANGE_LEAVES = registerBlock("orange_leaves",
-            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), AgrumesVariant.ORANGE, ModItems.ORANGE));
+            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), FruitsVariant.ORANGE, ModItems.ORANGE));
     public static final DeferredBlock<Block> LIME_LEAVES = registerBlock("lime_leaves",
-            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), AgrumesVariant.LIME, ModItems.LIME));
+            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), FruitsVariant.LIME, ModItems.LIME));
     public static final DeferredBlock<Block> GRAPEFRUIT_LEAVES = registerBlock("grapefruit_leaves",
-            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), AgrumesVariant.GRAPEFRUIT, ModItems.GRAPEFRUIT));
+            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), FruitsVariant.GRAPEFRUIT, ModItems.GRAPEFRUIT));
     public static final DeferredBlock<Block> CAVIAR_LEMON_LEAVES = registerBlock("caviar_lemon_leaves",
-            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), AgrumesVariant.CAVIAR_LEMON, ModItems.CAVIAR_LEMON));
+            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), FruitsVariant.CAVIAR_LEMON, ModItems.CAVIAR_LEMON));
     public static final DeferredBlock<Block> BUDDHA_HAND_LEAVES = registerBlock("buddha_hand_leaves",
-            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), AgrumesVariant.BUDDHA_HAND, ModItems.BUDDHA_HAND));
+            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), FruitsVariant.BUDDHA_HAND, ModItems.BUDDHA_HAND));
     public static final DeferredBlock<Block> BLOOD_ORANGE_LEAVES = registerBlock("blood_orange_leaves",
-            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), AgrumesVariant.BLOOD_ORANGE, ModItems.BLOOD_ORANGE));
+            () -> new CitrusLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), FruitsVariant.BLOOD_ORANGE, ModItems.BLOOD_ORANGE));
 
     //SAPLINGS
     public static final DeferredBlock<Block> LEMON_SAPLING = registerBlock("lemon_sapling",

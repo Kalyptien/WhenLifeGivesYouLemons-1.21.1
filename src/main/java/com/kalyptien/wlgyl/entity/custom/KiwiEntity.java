@@ -1,8 +1,7 @@
 package com.kalyptien.wlgyl.entity.custom;
 
 
-import com.kalyptien.wlgyl.util.AgrumesVariant;
-import com.kalyptien.wlgyl.entity.ModEntities;
+import com.kalyptien.wlgyl.util.FruitsVariant;
 import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.sound.ModSounds;
 import net.minecraft.Util;
@@ -15,35 +14,37 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
-import net.minecraft.world.entity.ai.Brain;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.ai.memory.MemoryModuleType;
-import net.minecraft.world.entity.animal.AbstractFish;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.Bucketable;
-import net.minecraft.world.entity.animal.axolotl.Axolotl;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.WoolCarpetBlock;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.registries.DeferredItem;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.EnumSet;
+
+import static net.minecraft.world.level.block.Block.popResource;
 
 public class KiwiEntity extends Animal implements Bucketable {
 
@@ -56,6 +57,8 @@ public class KiwiEntity extends Animal implements Bucketable {
     private float shakeAnim = 0.0F;
 
     private static final EntityDataAccessor<Integer> VARIANT =
+            SynchedEntityData.defineId(KiwiEntity.class, EntityDataSerializers.INT);
+    private static final EntityDataAccessor<Integer> CARPET_DYE =
             SynchedEntityData.defineId(KiwiEntity.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Boolean> FROM_BUCKET =
             SynchedEntityData.defineId(KiwiEntity.class, EntityDataSerializers.BOOLEAN);;
@@ -108,7 +111,33 @@ public class KiwiEntity extends Animal implements Bucketable {
     }
 
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
-        return (InteractionResult)Bucketable.bucketMobPickup(player, hand, this).orElse(super.mobInteract(player, hand));
+
+        if(player.getItemInHand(hand).is(ItemTags.WOOL_CARPETS) ){
+            Block block = Block.byItem(player.getItemInHand(hand).getItem());
+            DyeColor color = ((WoolCarpetBlock)block).getColor();
+
+            if(this.getCarpetDye() != -1){
+                ItemStack carpet = new ItemStack(this.getCarpetBlock(), 1);
+                popResource(this.level(), this.blockPosition(), carpet);
+            }
+
+            ItemStack stack = player.getItemInHand(hand);
+            stack.shrink(1);
+            player.setItemInHand(hand, stack);
+            this.setCarpetDye(color);
+
+            return InteractionResult.SUCCESS;
+        } else if (player.getItemInHand(hand).isEmpty() && player.isCrouching()) {
+
+            ItemStack carpet = new ItemStack(this.getCarpetBlock(), 1);
+            popResource(this.level(), this.blockPosition(), carpet);
+            this.setCarpetDye(-1);
+
+            return InteractionResult.SUCCESS;
+        }
+        else{
+            return (InteractionResult)Bucketable.bucketMobPickup(player, hand, this).orElse(super.mobInteract(player, hand));
+        }
     }
 
     // ANIM
@@ -177,6 +206,7 @@ public class KiwiEntity extends Animal implements Bucketable {
         super.addAdditionalSaveData(compound);
         compound.putInt("Variant", this.getTypeVariant());
         compound.putBoolean("FromBucket", this.fromBucket());
+        compound.putInt("Carpet_Dye", this.getCarpetDye());
     }
 
     @Override
@@ -184,6 +214,7 @@ public class KiwiEntity extends Animal implements Bucketable {
         super.readAdditionalSaveData(compound);
         this.entityData.set(VARIANT, compound.getInt("Variant"));
         this.setFromBucket(compound.getBoolean("FromBucket"));
+        this.entityData.set(CARPET_DYE, compound.getInt("Carpet_Dye"));
     }
 
     // TICK
@@ -227,20 +258,84 @@ public class KiwiEntity extends Animal implements Bucketable {
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder) {
         super.defineSynchedData(builder);
-        builder.define(VARIANT, AgrumesVariant.LEMON.getId());
+        builder.define(VARIANT, FruitsVariant.LEMON.getId());
         builder.define(FROM_BUCKET, false);
+        builder.define(CARPET_DYE, -1);
     }
 
     private int getTypeVariant() {
         return this.entityData.get(VARIANT);
     }
 
-    public AgrumesVariant getVariant() {
-        return AgrumesVariant.byId(this.getTypeVariant() & 255);
+    public FruitsVariant getVariant() {
+        return FruitsVariant.byId(this.getTypeVariant());
     }
 
-    public void setVariant(AgrumesVariant variant) {
-        this.entityData.set(VARIANT, variant.getId() & 255);
+    public void setVariant(FruitsVariant variant) {
+        this.entityData.set(VARIANT, variant.getId());
+    }
+
+    // DECOR
+
+    private int getCarpetDye() {
+        return this.entityData.get(CARPET_DYE);
+    }
+
+    public void setCarpetDye(DyeColor variant) {
+        this.entityData.set(CARPET_DYE, variant.getId());
+    }
+
+    public void setCarpetDye(int i) {
+        this.entityData.set(CARPET_DYE, i);
+    }
+
+    @Nullable
+    public DyeColor getSwag() {
+        if(this.getCarpetDye() != -1){
+            return DyeColor.byId(this.getCarpetDye());
+        }
+
+        return null;
+    }
+
+    public Item getCarpetBlock(){
+        int variant = this.getCarpetDye();
+
+        if(variant == DyeColor.RED.getId()){
+            return Blocks.RED_CARPET.asItem();
+        } else if (variant == DyeColor.BLACK.getId()){
+            return Blocks.BLACK_CARPET.asItem();
+        } else if (variant == DyeColor.BLUE.getId()){
+            return Blocks.BLUE_CARPET.asItem();
+        } else if (variant == DyeColor.BROWN.getId()){
+            return Blocks.BROWN_CARPET.asItem();
+        } else if (variant == DyeColor.CYAN.getId()){
+            return Blocks.CYAN_CARPET.asItem();
+        } else if (variant == DyeColor.GRAY.getId()){
+            return Blocks.GRAY_CARPET.asItem();
+        } else if (variant == DyeColor.GREEN.getId()){
+            return Blocks.GREEN_CARPET.asItem();
+        } else if (variant == DyeColor.LIGHT_BLUE.getId()){
+            return Blocks.LIGHT_BLUE_CARPET.asItem();
+        } else if (variant == DyeColor.LIGHT_GRAY.getId()){
+            return Blocks.LIGHT_GRAY_CARPET.asItem();
+        } else if (variant == DyeColor.LIME.getId()){
+            return Blocks.LIME_CARPET.asItem();
+        } else if (variant == DyeColor.MAGENTA.getId()){
+            return Blocks.MAGENTA_CARPET.asItem();
+        } else if (variant == DyeColor.ORANGE.getId()){
+            return Blocks.ORANGE_CARPET.asItem();
+        } else if (variant == DyeColor.PINK.getId()){
+            return Blocks.PINK_CARPET.asItem();
+        } else if (variant == DyeColor.PURPLE.getId()){
+            return Blocks.PURPLE_CARPET.asItem();
+        } else if (variant == DyeColor.WHITE.getId()){
+            return Blocks.WHITE_CARPET.asItem();
+        } else if (variant == DyeColor.YELLOW.getId()){
+            return Blocks.YELLOW_CARPET.asItem();
+        }
+
+        return null;
     }
 
     // SPAWN
@@ -249,9 +344,9 @@ public class KiwiEntity extends Animal implements Bucketable {
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty,
                                         MobSpawnType spawnType, @Nullable SpawnGroupData spawnGroupData) {
         if(spawnType == MobSpawnType.SPAWN_EGG){
-            AgrumesVariant variant = Util.getRandom(AgrumesVariant.values(), this.random);
-            while (variant.getId() == 0){
-                variant = Util.getRandom(AgrumesVariant.values(), this.random);
+            FruitsVariant variant = Util.getRandom(FruitsVariant.values(), this.random);
+            while (!variant.getIsAgrume()){
+                variant = Util.getRandom(FruitsVariant.values(), this.random);
             }
             this.setVariant(variant);
         } else if (spawnType == MobSpawnType.BUCKET) {
@@ -292,13 +387,15 @@ public class KiwiEntity extends Animal implements Bucketable {
         Bucketable.saveDefaultDataToBucketTag(this, itemStack);
         CustomData.update(DataComponents.BUCKET_ENTITY_DATA, itemStack, (p_330644_) -> {
             p_330644_.putInt("Variant", this.getVariant().getId());
+            p_330644_.putInt("Carpet_Dye", this.getCarpetDye());
         });
     }
 
     @Override
     public void loadFromBucketTag(CompoundTag compoundTag) {
         Bucketable.loadDefaultDataFromBucketTag(this, compoundTag);
-        this.setVariant(AgrumesVariant.byId(compoundTag.getInt("Variant")));
+        this.setVariant(FruitsVariant.byId(compoundTag.getInt("Variant")));
+        this.setCarpetDye(compoundTag.getInt("Carpet_Dye"));
     }
 
     @Override

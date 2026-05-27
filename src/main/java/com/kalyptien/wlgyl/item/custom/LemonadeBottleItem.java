@@ -1,6 +1,5 @@
 package com.kalyptien.wlgyl.item.custom;
 
-import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.util.EffectsVariant;
 import com.kalyptien.wlgyl.util.FruitsVariant;
 import net.minecraft.advancements.CriteriaTriggers;

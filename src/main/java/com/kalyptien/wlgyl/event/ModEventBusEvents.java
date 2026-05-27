@@ -15,6 +15,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(KiwiModel.LAYER_LOCATION, KiwiModel::createBodyLayer);
+        event.registerLayerDefinition(KiwiModel.LAYER_LOCATION_DECOR, KiwiModel::createBodyLayer);
     }
 
     @SubscribeEvent

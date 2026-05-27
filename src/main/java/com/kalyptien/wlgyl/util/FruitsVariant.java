@@ -10,13 +10,13 @@ import java.util.Comparator;
 
 public enum FruitsVariant {
     NONE(0, "none", -1, false),
-    LEMON(1, "item.wlgyl.lemon", 0xFFEAF04D, true),
-    ORANGE(2, "item.wlgyl.orange", 0xFFED9D1A, true),
-    LIME(3, "item.wlgyl.lime", 0xFFA0E64C, true),
-    GRAPEFRUIT(4, "item.wlgyl.grapefruit", 0xFFBD5109, true),
-    BLOOD_ORANGE(5, "item.wlgyl.blood_orange", 0xFFBD2109, true),
-    CAVIAR_LEMON(6, "item.wlgyl.caviar_lemon", 0xFF315C3B, true),
-    BUDDHA_HAND(7, "item.wlgyl.buddha_hand", 0xFFDBD7BF, true),
+    LEMON(1, "item.wlgyl.lemon", 0xFFf0f05a, true),
+    ORANGE(2, "item.wlgyl.orange", 0xFFffa944, true),
+    LIME(3, "item.wlgyl.lime", 0xFF93f764, true),
+    GRAPEFRUIT(4, "item.wlgyl.grapefruit", 0xFFcf6049, true),
+    BLOOD_ORANGE(5, "item.wlgyl.blood_orange", 0xFFcc4727, true),
+    CAVIAR_LEMON(6, "item.wlgyl.caviar_lemon", 0xFF486e66, true),
+    BUDDHA_HAND(7, "item.wlgyl.buddha_hand", 0xFFc8c8c8, true),
     APPLE(8, "item.minecraft.apple", 0xFFE8DB8E, false),
     GLOW_BERRIES(9, "item.minecraft.glow_berries", 0xFFE3F24E, false),
     SWEET_BERRIES(10, "item.minecraft.sweet_berries", 0xFF8C0808, false),
@@ -46,6 +46,10 @@ public enum FruitsVariant {
 
     public int getColor() {
         return this.color;
+    }
+
+    public boolean getIsAgrume(){
+        return this.isAgrume;
     }
 
     public static int getMin(){

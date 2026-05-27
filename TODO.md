@@ -1,25 +1,17 @@
 - TODO list V1.1
   - Squeezer :
     - Corriger le bug de non coloration de la texture
-    - Animation quand flush (?)
-  - Barrel :
-    - Sons a la fermeture (?)
+    - Animation quand flush
   - Effects :
     - Animation Bubbly
     - Test des effets
   - Kiwi :
-    - Anim redo
-    - Model redo
-    - Texture redo
-    - Sound redo (?)
-    - Kiwi long et kiwi gros (?)
-    - Possiblité de mettre des tapis sur le kiwi
+    - Finir les PA des tapis
   - Arbres :
     - Redo le spawn ( a test )
   - Misc :
-    - AgrumeVariant a détruire
-    - lang FR
     - global PA redo
+    - REFAIRE LE PA DU KIWI DANS BUCKET
 
 
 - Déjà réalisé :
@@ -27,6 +19,10 @@
     - Animation de "Sit" des Kiwis : OK
     - Animation de "Shake" des Kiwis quand "wet"
     - Kiwi bucketable
+    - Texture redo
+    - Model redo
+    - Anim redo
+    - Possiblité de mettre des tapis sur le kiwi
   - Leaves :
     - Changement de texture pour une texture en blanc + coloration
     - Texture feuille redo
@@ -48,6 +44,7 @@
     - Add lemon wood
   - Misc :
     - PA des effets redo
+    - AgrumeVariant a détruire
     - All juices / lemonades / potion en texture blanc + coloration
     - Fruit variant redo (qui va remplacer le agrume variant)
     - J'ai oublié le reste

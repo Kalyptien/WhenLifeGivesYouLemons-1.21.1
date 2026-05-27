@@ -36,7 +36,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CITRUS_TRAPDOOR);
 
                         output.accept(ModItems.KIWI_SPAWN_EGG);
-                        output.accept(ModItems.KIWI_BUCKET);
+
+                        //TODO Bucket from Creative Tab make crash the game (and hardlock the current world).
+                        //output.accept(ModItems.KIWI_BUCKET);
 
                         output.accept(ModBlocks.SQUEEZER);
                         output.accept(ModBlocks.BREWING_BARREL);

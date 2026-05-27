@@ -5,7 +5,6 @@ import com.kalyptien.wlgyl.entity.ModEntities;
 import com.kalyptien.wlgyl.entity.custom.KiwiEntity;
 import com.kalyptien.wlgyl.item.custom.JuiceBottleItem;
 import com.kalyptien.wlgyl.item.custom.LemonadeBottleItem;
-import com.kalyptien.wlgyl.util.AgrumesVariant;
 import com.kalyptien.wlgyl.util.EffectsVariant;
 import com.kalyptien.wlgyl.util.FruitsVariant;
 import net.minecraft.core.component.DataComponents;
