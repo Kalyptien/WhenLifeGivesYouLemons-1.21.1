@@ -91,7 +91,7 @@ public class ModBlocks {
 
     //CRAFT BLOCK
     public static final DeferredBlock<Block> SQUEEZER = registerBlock("squeezer",
-            () -> new SqueezerBlock(BlockBehaviour.Properties.of().noOcclusion().randomTicks().strength(0.5F)));
+            () -> new SqueezerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noOcclusion()));
 
     public static final DeferredBlock<Block> BREWING_BARREL = registerBlock("brewing_barrel",
             () -> new BrewingBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));

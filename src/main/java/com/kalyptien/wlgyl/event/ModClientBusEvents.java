@@ -69,9 +69,5 @@ public class ModClientBusEvents {
                 ModBlocks.GRAPEFRUIT_LEAVES.get(),
                 ModBlocks.BUDDHA_HAND_LEAVES.get(),
                 ModBlocks.CAVIAR_LEMON_LEAVES.get());
-
-        //SQUEEZER
-        event.register(SqueezerBlock::getLiquidColor,
-                ModBlocks.SQUEEZER.get());
     }
 }

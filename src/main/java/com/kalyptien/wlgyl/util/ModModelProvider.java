@@ -24,6 +24,10 @@ public class ModModelProvider extends ModelProvider {
         return twoTextureBlock(provider, name, ResourceLocation.parse("wlgyl:block/agrume_leaves_base"), texture0, texture1);
     }
 
+    public static ModelBuilder squeezerBlock(BlockModelProvider provider, String name, ResourceLocation texture0, ResourceLocation texture1) {
+        return twoTextureBlock(provider, name, ResourceLocation.parse("wlgyl:block/squeezer"), texture0, texture1);
+    }
+
     public static ModelBuilder twoTextureBlock(BlockModelProvider provider, String name, ResourceLocation parent, ResourceLocation texture0, ResourceLocation texture1) {
         return provider.withExistingParent(name, parent)
                 .texture("all", texture0)

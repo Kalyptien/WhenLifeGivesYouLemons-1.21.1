@@ -3,6 +3,8 @@ package com.kalyptien.wlgyl.datagen;
 import com.kalyptien.wlgyl.WhenLifeGivesYouLemonsMod;
 import com.kalyptien.wlgyl.block.ModBlocks;
 import com.kalyptien.wlgyl.block.custom.CitrusLeavesBlock;
+import com.kalyptien.wlgyl.block.custom.SqueezerBlock;
+import com.kalyptien.wlgyl.util.FruitsVariant;
 import com.kalyptien.wlgyl.util.ModModelProvider;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -39,6 +41,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeGrowLeaves(((CitrusLeavesBlock) ModBlocks.LIME_LEAVES.get()), "lime_leaves_age_");
         makeGrowLeaves(((CitrusLeavesBlock) ModBlocks.CAVIAR_LEMON_LEAVES.get()), "caviar_lemon_leaves_age_");
         makeGrowLeaves(((CitrusLeavesBlock) ModBlocks.BUDDHA_HAND_LEAVES.get()), "buddha_hand_leaves_age_");
+
+        makeSqueezer(((SqueezerBlock) ModBlocks.SQUEEZER.get()), "_squeezer_fill_");
 
         logBlock(((RotatedPillarBlock) ModBlocks.CITRUS_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.CITRUS_WOOD.get()), blockTexture(ModBlocks.CITRUS_LOG.get()), blockTexture(ModBlocks.CITRUS_LOG.get()));
@@ -81,22 +85,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     public void makeGrowLeaves(CitrusLeavesBlock block, String modelName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> generateCrops(state, block, modelName);
+        Function<BlockState, ConfiguredModel[]> function = state -> GrowLeavesBlock(state, block, modelName);
 
         getVariantBuilder(block).forAllStatesExcept(function, CitrusLeavesBlock.DISTANCE, CitrusLeavesBlock.PERSISTENT, CitrusLeavesBlock.WATERLOGGED);
     }
 
-    private ConfiguredModel[] generateCrops(BlockState state, CitrusLeavesBlock block, String modelName) {
+    private ConfiguredModel[] GrowLeavesBlock(BlockState state, CitrusLeavesBlock block, String modelName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
 
         ResourceLocation baseTexture = ResourceLocation.fromNamespaceAndPath(
-                WhenLifeGivesYouLemonsMod.MOD_ID, "block/agrumes_leaves");
+                WhenLifeGivesYouLemonsMod.MOD_ID, "block/citrus_leaves");
 
         ResourceLocation upperTexture;
 
         if(state.getValue(((CitrusLeavesBlock) block).getAgeProperty()) == 3){
             upperTexture = ResourceLocation.fromNamespaceAndPath(
-                    WhenLifeGivesYouLemonsMod.MOD_ID, "block/" +  modelName + "3");
+                    WhenLifeGivesYouLemonsMod.MOD_ID, "block/" + modelName + "3");
         }
         else{
              upperTexture = ResourceLocation.fromNamespaceAndPath(
@@ -106,6 +110,46 @@ public class ModBlockStateProvider extends BlockStateProvider {
         models[0] = new ConfiguredModel(ModModelProvider.growLeaveBlock(
                 models(),
                 modelName + state.getValue(((CitrusLeavesBlock) block).getAgeProperty()),
+                baseTexture,
+                upperTexture
+        ).renderType("cutout"));
+
+        return models;
+    }
+
+    public void makeSqueezer(SqueezerBlock block, String modelName) {
+        Function<BlockState, ConfiguredModel[]> function = state ->
+            SqueezerBlock(state, block, modelName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] SqueezerBlock(BlockState state, SqueezerBlock block, String modelName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+
+        ResourceLocation baseTexture = ResourceLocation.fromNamespaceAndPath(
+                WhenLifeGivesYouLemonsMod.MOD_ID, "block/squeezer");
+
+        ResourceLocation upperTexture;
+
+        if(state.getValue(((SqueezerBlock) block).getLevelProperty()) == 3 && state.getValue(((SqueezerBlock) block).getVariantProperty()) != 0){
+            upperTexture = ResourceLocation.fromNamespaceAndPath(
+                    WhenLifeGivesYouLemonsMod.MOD_ID, "block/" +
+                            FruitsVariant.byId(state.getValue(((SqueezerBlock) block).getVariantProperty())).getName()
+                                    .replace("item.wlgyl.", "").replace("item.minecraft.", "") +
+                            modelName + "3");
+        }
+        else{
+            upperTexture = ResourceLocation.fromNamespaceAndPath(
+                    WhenLifeGivesYouLemonsMod.MOD_ID, "block/squeezer_fill_" + state.getValue(((SqueezerBlock) block).getLevelProperty()));
+        }
+
+        models[0] = new ConfiguredModel(ModModelProvider.squeezerBlock(
+                models(),
+                FruitsVariant.byId(state.getValue(((SqueezerBlock) block).getVariantProperty())).getName()
+                        .replace("item.wlgyl.", "").replace("item.minecraft.", "") +
+                        modelName +
+                        state.getValue(((SqueezerBlock) block).getLevelProperty()),
                 baseTexture,
                 upperTexture
         ).renderType("cutout"));

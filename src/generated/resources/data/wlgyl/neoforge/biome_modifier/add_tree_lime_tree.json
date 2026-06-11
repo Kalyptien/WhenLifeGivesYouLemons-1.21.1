@@ -4,12 +4,8 @@
     "minecraft:forest",
     "minecraft:birch_forest",
     "minecraft:flower_forest",
-    "minecraft:windswept_forest",
     "minecraft:old_growth_birch_forest",
-    "minecraft:savanna",
-    "minecraft:mangrove_swamp",
-    "minecraft:swamp",
-    "minecraft:dark_forest"
+    "minecraft:plains"
   ],
   "features": "wlgyl:lime_tree_placed",
   "step": "vegetal_decoration"

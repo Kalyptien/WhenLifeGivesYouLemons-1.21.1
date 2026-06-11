@@ -30,43 +30,43 @@ public class ModPlacedFeatures {
 
         register(context, LEMON_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LEMON_TREE_KEY),
                 VegetationPlacements.treePlacement(
-                        RarityFilter.onAverageOnceEvery(25),
+                        RarityFilter.onAverageOnceEvery(150),
                         ModBlocks.LEMON_SAPLING.get()
                 ));
 
         register(context, ORANGE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORANGE_TREE_KEY),
                 VegetationPlacements.treePlacement(
-                        RarityFilter.onAverageOnceEvery(25),
+                        RarityFilter.onAverageOnceEvery(150),
                         ModBlocks.ORANGE_SAPLING.get()
                 ));
 
         register(context, LIME_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LIME_TREE_KEY),
                 VegetationPlacements.treePlacement(
-                        RarityFilter.onAverageOnceEvery(25),
+                        RarityFilter.onAverageOnceEvery(150),
                         ModBlocks.LIME_SAPLING.get()
                 ));
 
         register(context, BLOOD_ORANGE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOOD_ORANGE_TREE_KEY),
                 VegetationPlacements.treePlacement(
-                        RarityFilter.onAverageOnceEvery(25),
+                        RarityFilter.onAverageOnceEvery(250),
                         ModBlocks.BLOOD_ORANGE_SAPLING.get()
                 ));
 
         register(context, GRAPEFRUIT_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GRAPEFRUIT_TREE_KEY),
                 VegetationPlacements.treePlacement(
-                        RarityFilter.onAverageOnceEvery(25),
+                        RarityFilter.onAverageOnceEvery(250),
                         ModBlocks.GRAPEFRUIT_SAPLING.get()
                 ));
 
         register(context, CAVIAR_LEMON_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CAVIAR_LEMON_TREE_KEY),
                 VegetationPlacements.treePlacement(
-                        RarityFilter.onAverageOnceEvery(25),
+                        RarityFilter.onAverageOnceEvery(250),
                         ModBlocks.CAVIAR_LEMON_SAPLING.get()
                 ));
 
         register(context, BUDDHA_HAND_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUDDHA_HAND_TREE_KEY),
                 VegetationPlacements.treePlacement(
-                        RarityFilter.onAverageOnceEvery(25),
+                        RarityFilter.onAverageOnceEvery(350),
                         ModBlocks.BUDDHA_HAND_SAPLING.get()
                 ));
     }

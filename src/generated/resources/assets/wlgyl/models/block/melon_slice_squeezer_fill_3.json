@@ -1,0 +1,8 @@
+{
+  "parent": "wlgyl:block/squeezer",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "all": "wlgyl:block/squeezer",
+    "upper": "wlgyl:block/melon_slice_squeezer_fill_3"
+  }
+}

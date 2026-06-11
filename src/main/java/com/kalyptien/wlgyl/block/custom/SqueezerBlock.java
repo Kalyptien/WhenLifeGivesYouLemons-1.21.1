@@ -8,11 +8,14 @@ import com.kalyptien.wlgyl.util.ModTags;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -21,23 +24,29 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.common.CommonHooks;
 
 import javax.annotation.Nullable;
 
 
 public class SqueezerBlock extends Block {
 
+    public static final MapCodec<SqueezerBlock> CODEC = simpleCodec(SqueezerBlock::new);
     private static final VoxelShape SHAPE = Block.box(3.0, 0.0, 3.0, 13.0, 4.0, 13.0);
 
     public static final IntegerProperty FILL_LVL = IntegerProperty.create("fill_level", 0, 3);
@@ -48,12 +57,14 @@ public class SqueezerBlock extends Block {
         this.registerDefaultState(this.defaultBlockState().setValue(FILL_LVL, 0).setValue(FILL_VARIANT, 0));
     }
 
+    public MapCodec<? extends SqueezerBlock> codec() {
+        return CODEC;
+    }
+
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
-
-    /* BLOCK ENTITY */
 
     @Override
     protected RenderShape getRenderShape(BlockState state) {
@@ -114,20 +125,30 @@ public class SqueezerBlock extends Block {
                 level.playSound(null, pos, ModSounds.SQUEEZER_EMPTY.get(), SoundSource.BLOCKS, 0.8f, 2f);
             }
 
-            level.setBlockAndUpdate(pos, state.setValue(FILL_LVL, fillLVL).setValue(FILL_VARIANT, fillVariant));
+            level.setBlock(pos, state.setValue(FILL_LVL, fillLVL).setValue(FILL_VARIANT, fillVariant), 2);
         }
 
         return ItemInteractionResult.SUCCESS;
     }
 
+    public int getLevel(BlockState state) {
+        return (Integer)state.getValue(this.getLevelProperty());
+    }
+
+    public int getVariant(BlockState state) {
+        return (Integer)state.getValue(this.getVariantProperty());
+    }
+
+    public IntegerProperty getLevelProperty() {
+        return FILL_LVL;
+    }
+
+    public IntegerProperty getVariantProperty() {
+        return FILL_VARIANT;
+    }
+
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FILL_LVL, FILL_VARIANT);
-    }
-
-    public static int getLiquidColor(BlockState state, BlockAndTintGetter blockAndTintGetter, BlockPos pos, int index){
-        if(index != 0) return -1;
-        FruitsVariant variant = FruitsVariant.byId(state.getValue(FILL_VARIANT));
-        return variant.getColor();
     }
 }

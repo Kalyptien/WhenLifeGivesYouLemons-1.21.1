@@ -1,0 +1,148 @@
+{
+  "variants": {
+    "fill_level=0,fill_variant=0": {
+      "model": "wlgyl:block/none_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=1": {
+      "model": "wlgyl:block/lemon_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=10": {
+      "model": "wlgyl:block/sweet_berries_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=11": {
+      "model": "wlgyl:block/melon_slice_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=2": {
+      "model": "wlgyl:block/orange_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=3": {
+      "model": "wlgyl:block/lime_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=4": {
+      "model": "wlgyl:block/grapefruit_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=5": {
+      "model": "wlgyl:block/blood_orange_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=6": {
+      "model": "wlgyl:block/caviar_lemon_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=7": {
+      "model": "wlgyl:block/buddha_hand_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=8": {
+      "model": "wlgyl:block/apple_squeezer_fill_0"
+    },
+    "fill_level=0,fill_variant=9": {
+      "model": "wlgyl:block/glow_berries_squeezer_fill_0"
+    },
+    "fill_level=1,fill_variant=0": {
+      "model": "wlgyl:block/none_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=1": {
+      "model": "wlgyl:block/lemon_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=10": {
+      "model": "wlgyl:block/sweet_berries_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=11": {
+      "model": "wlgyl:block/melon_slice_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=2": {
+      "model": "wlgyl:block/orange_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=3": {
+      "model": "wlgyl:block/lime_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=4": {
+      "model": "wlgyl:block/grapefruit_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=5": {
+      "model": "wlgyl:block/blood_orange_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=6": {
+      "model": "wlgyl:block/caviar_lemon_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=7": {
+      "model": "wlgyl:block/buddha_hand_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=8": {
+      "model": "wlgyl:block/apple_squeezer_fill_1"
+    },
+    "fill_level=1,fill_variant=9": {
+      "model": "wlgyl:block/glow_berries_squeezer_fill_1"
+    },
+    "fill_level=2,fill_variant=0": {
+      "model": "wlgyl:block/none_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=1": {
+      "model": "wlgyl:block/lemon_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=10": {
+      "model": "wlgyl:block/sweet_berries_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=11": {
+      "model": "wlgyl:block/melon_slice_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=2": {
+      "model": "wlgyl:block/orange_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=3": {
+      "model": "wlgyl:block/lime_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=4": {
+      "model": "wlgyl:block/grapefruit_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=5": {
+      "model": "wlgyl:block/blood_orange_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=6": {
+      "model": "wlgyl:block/caviar_lemon_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=7": {
+      "model": "wlgyl:block/buddha_hand_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=8": {
+      "model": "wlgyl:block/apple_squeezer_fill_2"
+    },
+    "fill_level=2,fill_variant=9": {
+      "model": "wlgyl:block/glow_berries_squeezer_fill_2"
+    },
+    "fill_level=3,fill_variant=0": {
+      "model": "wlgyl:block/none_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=1": {
+      "model": "wlgyl:block/lemon_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=10": {
+      "model": "wlgyl:block/sweet_berries_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=11": {
+      "model": "wlgyl:block/melon_slice_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=2": {
+      "model": "wlgyl:block/orange_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=3": {
+      "model": "wlgyl:block/lime_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=4": {
+      "model": "wlgyl:block/grapefruit_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=5": {
+      "model": "wlgyl:block/blood_orange_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=6": {
+      "model": "wlgyl:block/caviar_lemon_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=7": {
+      "model": "wlgyl:block/buddha_hand_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=8": {
+      "model": "wlgyl:block/apple_squeezer_fill_3"
+    },
+    "fill_level=3,fill_variant=9": {
+      "model": "wlgyl:block/glow_berries_squeezer_fill_3"
+    }
+  }
+}

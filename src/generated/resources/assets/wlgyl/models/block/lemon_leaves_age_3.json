@@ -2,7 +2,7 @@
   "parent": "wlgyl:block/agrume_leaves_base",
   "render_type": "minecraft:cutout",
   "textures": {
-    "all": "wlgyl:block/agrumes_leaves",
+    "all": "wlgyl:block/citrus_leaves",
     "upper": "wlgyl:block/lemon_leaves_age_3"
   }
 }

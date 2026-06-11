@@ -24,7 +24,7 @@ public class BubblyEffect extends MobEffect {
         if(livingEntity.getAirSupply() == livingEntity.getMaxAirSupply()){
 
             List<MobEffectInstance> effectList = livingEntity.getActiveEffects().stream().toList();
-            float distance = 3 + Math.round((livingEntity.getAirSupply()/100) * (amplifier));
+            float distance = Math.round((livingEntity.getAirSupply()/100) * (amplifier + 1));
 
             List<LivingEntity> entityList = livingEntity.level()
                     .getNearbyEntities(LivingEntity.class,
