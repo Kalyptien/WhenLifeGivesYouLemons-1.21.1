@@ -16,6 +16,7 @@ public class ModSounds {
     public static final Supplier<SoundEvent> KIWI_DEATH = registerSoundEvent("kiwi_death");
     public static final Supplier<SoundEvent> KIWI_HURT = registerSoundEvent("kiwi_hurt");
     public static final Supplier<SoundEvent> KIWI_AMBIENT = registerSoundEvent("kiwi_ambient");
+    public static final Supplier<SoundEvent> KIWI_SHAKE = registerSoundEvent("kiwi_shake");
 
     public static final Supplier<SoundEvent> LEAVES_FORAGE = registerSoundEvent("leaves_forage");
 

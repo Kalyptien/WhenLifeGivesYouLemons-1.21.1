@@ -1,48 +1,10 @@
 - TODO list V1.1
-  - Effects :
-    - Animation Bubbly
-  - Misc :
-    - global PA redo
-    - REFAIRE LE PA DU KIWI DANS BUCKET
-
-
-- Déjà réalisé :
-  - Kiwi : 
-    - Animation de "Sit" des Kiwis : OK
-    - Animation de "Shake" des Kiwis quand "wet"
-    - Kiwi bucketable
-    - Texture redo
-    - Model redo
-    - Anim redo
-    - Possiblité de mettre des tapis sur le kiwi
-    - Finir les PA des tapis
-  - Leaves :
-    - Changement de texture pour une texture en blanc + coloration
-    - Texture feuille redo
-    - Colorgradiant more yellow
-  - Barrel :
-    - GUI redo
-    - JEI redo
-    - ouverture du barrel
-  - Squeezer :
-    - Model 3D redo
-    - JEI todo
-    - Craft redo
-    - Texture redo
-    - Fonctionnement intern redo
-    - Changement de texture en fonction du "Fill_lvl"
-    - Chngement de texture en fonction du "Fill_variant" (texture blanche + coloration)
-  - Arbres : 
-    - Redo le visuel
-    - Add lemon wood
-    - Redo le spawn ( a test )
-  - Misc :
-    - PA des effets redo
-    - AgrumeVariant a détruire
-    - All juices / lemonades / potion en texture blanc + coloration
-    - Fruit variant redo (qui va remplacer le agrume variant)
-    - J'ai oublié le reste
+  - Bubbly Hit Animation
+  - Citrus Shake Sound
+  - PA redo
   
 TODO V.1.2 :
-  - Correct CitrusLeaves Fruits auto-coloration
-  - Correct Squeezer auto-coloration
+  - Correction on CitrusLeaves Fruits auto-coloration
+  - Correction on Squeezer auto-coloration
+  - Correction on Citrus in a Bucket
+  - Barrel Close Sound

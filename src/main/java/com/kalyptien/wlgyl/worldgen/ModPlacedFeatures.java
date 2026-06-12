@@ -48,19 +48,19 @@ public class ModPlacedFeatures {
 
         register(context, BLOOD_ORANGE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOOD_ORANGE_TREE_KEY),
                 VegetationPlacements.treePlacement(
-                        RarityFilter.onAverageOnceEvery(250),
+                        RarityFilter.onAverageOnceEvery(10),
                         ModBlocks.BLOOD_ORANGE_SAPLING.get()
                 ));
 
         register(context, GRAPEFRUIT_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GRAPEFRUIT_TREE_KEY),
                 VegetationPlacements.treePlacement(
-                        RarityFilter.onAverageOnceEvery(250),
+                        RarityFilter.onAverageOnceEvery(10),
                         ModBlocks.GRAPEFRUIT_SAPLING.get()
                 ));
 
         register(context, CAVIAR_LEMON_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CAVIAR_LEMON_TREE_KEY),
                 VegetationPlacements.treePlacement(
-                        RarityFilter.onAverageOnceEvery(250),
+                        RarityFilter.onAverageOnceEvery(10),
                         ModBlocks.CAVIAR_LEMON_SAPLING.get()
                 ));
 

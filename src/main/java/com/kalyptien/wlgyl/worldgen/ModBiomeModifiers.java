@@ -67,9 +67,6 @@ public class ModBiomeModifiers {
 
         context.register(ADD_TREE_BLOOD_ORANGE_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(
-                        biomes.getOrThrow(Biomes.FOREST),
-                        biomes.getOrThrow(Biomes.BIRCH_FOREST),
-                        biomes.getOrThrow(Biomes.FLOWER_FOREST),
                         biomes.getOrThrow(Biomes.SAVANNA),
                         biomes.getOrThrow(Biomes.WINDSWEPT_SAVANNA),
                         biomes.getOrThrow(Biomes.SAVANNA_PLATEAU)),
@@ -78,20 +75,14 @@ public class ModBiomeModifiers {
 
         context.register(ADD_TREE_GRAPEFRUIT_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(
-                        biomes.getOrThrow(Biomes.FOREST),
-                        biomes.getOrThrow(Biomes.BIRCH_FOREST),
-                        biomes.getOrThrow(Biomes.FLOWER_FOREST),
                         biomes.getOrThrow(Biomes.DARK_FOREST)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GRAPEFRUIT_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_TREE_CAVIAR_LEMON_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(
-                        biomes.getOrThrow(Biomes.FOREST),
-                        biomes.getOrThrow(Biomes.BIRCH_FOREST),
                         biomes.getOrThrow(Biomes.SWAMP),
-                        biomes.getOrThrow(Biomes.MANGROVE_SWAMP),
-                        biomes.getOrThrow(Biomes.FLOWER_FOREST)),
+                        biomes.getOrThrow(Biomes.MANGROVE_SWAMP)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CAVIAR_LEMON_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     }

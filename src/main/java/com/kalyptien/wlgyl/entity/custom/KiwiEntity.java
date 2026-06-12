@@ -5,6 +5,7 @@ import com.kalyptien.wlgyl.util.FruitsVariant;
 import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.sound.ModSounds;
 import net.minecraft.Util;
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -14,6 +15,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.DifficultyInstance;
@@ -229,8 +231,14 @@ public class KiwiEntity extends Animal implements Bucketable {
             }
 
             if(this.idleAnimationState.isStarted() && this.isWet && (!this.isInWaterRainOrBubble() && !this.isInWater())){
-
                 this.shakeAnim += 0.05F;
+
+                //TODO : Dont work
+                if(this.shakeAnim == 0.15F){
+                    this.level().playSound(null, this.blockPosition(), ModSounds.KIWI_SHAKE.get(), SoundSource.NEUTRAL, 1f, 0.8f);
+                }
+                //TODO : Dont work
+
                 if (this.shakeAnim >= 2.0F) {
                     this.isWet = false;
                     this.shakeAnim = 0.0F;

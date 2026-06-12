@@ -19,6 +19,12 @@
       "wlgyl:kiwi_ambient_2"
     ]
   },
+  "kiwi_shake": {
+    "subtitle": "sounds.wlgyl.kiwi_shake",
+    "sounds": [
+      "mob/wolf/shake"
+    ]
+  },
   "leaves_forage": {
     "subtitle": "sounds.wlgyl.leaves_forage",
     "sounds": [
