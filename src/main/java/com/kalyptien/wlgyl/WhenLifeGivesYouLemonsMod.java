@@ -7,6 +7,8 @@ import com.kalyptien.wlgyl.entity.ModEntities;
 import com.kalyptien.wlgyl.entity.client.KiwiRenderer;
 import com.kalyptien.wlgyl.item.ModCreativeModeTabs;
 import com.kalyptien.wlgyl.item.ModItems;
+import com.kalyptien.wlgyl.particle.BubblyParticles;
+import com.kalyptien.wlgyl.particle.ModParticles;
 import com.kalyptien.wlgyl.recipe.ModRecipes;
 import com.kalyptien.wlgyl.screen.ModMenuTypes;
 import com.kalyptien.wlgyl.screen.custom.BrewingBarrelScreen;
@@ -17,6 +19,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -57,6 +60,8 @@ public class WhenLifeGivesYouLemonsMod {
 
         ModEffects.register(modEventBus);
 
+        ModParticles.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -83,13 +88,17 @@ public class WhenLifeGivesYouLemonsMod {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
             EntityRenderers.register(ModEntities.KIWI.get(), KiwiRenderer::new);
         }
 
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.BREWING_BARREL_MENU.get(), BrewingBarrelScreen::new);
+        }
+
+        @SubscribeEvent
+        public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ModParticles.BUBBLY_PARTICLES.get(), BubblyParticles.Provider::new);
         }
     }
 }

@@ -1,6 +1,8 @@
 package com.kalyptien.wlgyl.effect;
 
+import com.kalyptien.wlgyl.particle.ModParticles;
 import com.kalyptien.wlgyl.sound.ModSounds;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -29,24 +31,21 @@ public class BubblyEffect extends MobEffect {
 
         //Distance of effect
         float distance = Math.round((livingEntity.getAirSupply()/100) * (amplifier + 1));
+        float distanceByAirSupply = distance * (livingEntity.getAirSupply() / livingEntity.getMaxAirSupply());
 
         //Burp
         livingEntity.level().playSound(null, livingEntity.blockPosition(), SoundEvents.PLAYER_BURP, SoundSource.PLAYERS, 1f, 0.9f);
 
-        //Bubble ring animation
-        //TODO : Dont work
-        for(int i = 0; i < 25; ++i) {
-            double d0 = livingEntity.getRandom().nextGaussian() * 0.02;
-            double d1 = livingEntity.getRandom().nextGaussian() * 0.02;
-            double d2 = livingEntity.getRandom().nextGaussian() * 0.02;
-            ((ServerLevel) livingEntity.level()).addParticle(ParticleTypes.ANGRY_VILLAGER,
-                    livingEntity.getRandomX(1.0), livingEntity.getRandomY() + 0.5, livingEntity.getRandomZ(1.0),
-                    d0, d1, d2);
-        }
-        //TODO : Dont work
-
         // If enough air
-        if(livingEntity.getAirSupply() >= 100){
+        if(livingEntity.getAirSupply() >= 75){
+
+            //Bubble ring animation
+            for(int i = 0; i < (20 * amplifier); ++i) {
+                ((ServerLevel) livingEntity.level()).sendParticles(ModParticles.BUBBLY_PARTICLES.get(),
+                        livingEntity.getX(), livingEntity.getY(), livingEntity.getZ(), 1,
+                        1 + distanceByAirSupply, 1 + distanceByAirSupply/4, 1 + distanceByAirSupply,
+                        5f);
+            }
 
             // Get effectList of the player
             List<MobEffectInstance> effectList = livingEntity.getActiveEffects().stream().toList();

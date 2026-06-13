@@ -5,7 +5,6 @@ import com.kalyptien.wlgyl.util.FruitsVariant;
 import com.kalyptien.wlgyl.item.ModItems;
 import com.kalyptien.wlgyl.sound.ModSounds;
 import net.minecraft.Util;
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -15,7 +14,6 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.DifficultyInstance;
@@ -225,40 +223,37 @@ public class KiwiEntity extends Animal implements Bucketable {
     public void tick() {
         super.tick();
 
-        if(this.level().isClientSide()) {
-            if (this.isInWaterRainOrBubble() || this.isInWater()) {
-                this.isWet = true;
-            }
-
-            if(this.idleAnimationState.isStarted() && this.isWet && (!this.isInWaterRainOrBubble() && !this.isInWater())){
-                this.shakeAnim += 0.05F;
-
-                //TODO : Dont work
-                if(this.shakeAnim == 0.15F){
-                    this.level().playSound(null, this.blockPosition(), ModSounds.KIWI_SHAKE.get(), SoundSource.NEUTRAL, 1f, 0.8f);
-                }
-                //TODO : Dont work
-
-                if (this.shakeAnim >= 2.0F) {
-                    this.isWet = false;
-                    this.shakeAnim = 0.0F;
-                }
-
-                if (this.shakeAnim > 0.5F) {
-                    float f = (float)this.getY();
-                    int i = (int)(Mth.sin((this.shakeAnim - 0.4F) * 3.1415927F) * 7.0F);
-                    Vec3 vec3 = this.getDeltaMovement();
-
-                    for(int j = 0; j < i; ++j) {
-                        float f1 = (this.random.nextFloat() * 2.0F - 1.0F) * this.getBbWidth() * 0.5F;
-                        float f2 = (this.random.nextFloat() * 2.0F - 1.0F) * this.getBbWidth() * 0.5F;
-                        this.level().addParticle(ParticleTypes.SPLASH, this.getX() + (double)f1, (double)(f + 0.8F), this.getZ() + (double)f2, vec3.x, vec3.y, vec3.z);
-                    }
-                }
-            }
-
-            this.setupAnimationStates();
+        if (this.isInWaterRainOrBubble() || this.isInWater()) {
+            this.isWet = true;
         }
+
+        if (this.idleAnimationState.isStarted() && this.isWet && (!this.isInWaterRainOrBubble() && !this.isInWater())) {
+
+            if (this.shakeAnim == 0.0F) {
+                this.playSound(ModSounds.KIWI_SHAKE.get(), this.getSoundVolume(), (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 0.8F);
+                this.gameEvent(GameEvent.ENTITY_ACTION);
+            }
+
+            this.shakeAnim += 0.05F;
+            if (this.shakeAnim >= 3F) {
+                this.isWet = false;
+                this.shakeAnim = 0.0F;
+            }
+
+            if (this.shakeAnim > 0.5F) {
+                float f = (float) this.getY();
+                int i = (int) (Mth.sin((this.shakeAnim - 0.4F) * 3.1415927F) * 7.0F);
+                Vec3 vec3 = this.getDeltaMovement();
+
+                for (int j = 0; j < i; ++j) {
+                    float f1 = (this.random.nextFloat() * 2.0F - 1.0F) * this.getBbWidth() * 0.5F;
+                    float f2 = (this.random.nextFloat() * 2.0F - 1.0F) * this.getBbWidth() * 0.5F;
+                    this.level().addParticle(ParticleTypes.SPLASH, this.getX() + (double) f1, (double) (f + 0.8F), this.getZ() + (double) f2, vec3.x, vec3.y, vec3.z);
+                }
+            }
+        }
+
+        this.setupAnimationStates();
     }
 
     // VARIANT
@@ -366,6 +361,10 @@ public class KiwiEntity extends Animal implements Bucketable {
 
     // SOUND
 
+    protected float getSoundVolume() {
+        return 0.8F;
+    }
+
     protected SoundEvent getAmbientSound() {
         return ModSounds.KIWI_AMBIENT.get();
     }
@@ -451,7 +450,7 @@ public class KiwiEntity extends Animal implements Bucketable {
                 --this.countdown;
                 return false;
             } else {
-                return !this.mob.isInPowderSnow && !this.mob.isInWater() && !this.mob.isInLava();
+                return !this.mob.isInPowderSnow && !this.mob.isInWater() && !this.mob.isInLava() && !this.mob.isWet;
             }
         }
 

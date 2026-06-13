@@ -1,10 +1,9 @@
-- TODO list V1.1
-  - Bubbly Hit Animation
-  - Citrus Shake Sound
+- TODO list V1.1.0
   - PA redo
+  - Finish the WIKI
   
-TODO V.1.2 :
-  - Correction on CitrusLeaves Fruits auto-coloration
-  - Correction on Squeezer auto-coloration
-  - Correction on Citrus in a Bucket
+TODO V.1.1.1 :
+  - Fix CitrusLeaves Fruits auto-coloration
+  - Fix Squeezer auto-coloration
+  - Fix Citrus in a Bucket
   - Barrel Close Sound
