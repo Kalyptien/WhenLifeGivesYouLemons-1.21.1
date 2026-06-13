@@ -1,19 +1,22 @@
+![GitHub all releases](https://img.shields.io/github/downloads/Kalyptien/WhenLifeGivesYouLemons-1.21.1/total)
+![License](https://img.shields.io/github/license/Kalyptien/WhenLifeGivesYouLemons-1.21.1)
 
 ![Logo](readme/title.png)
 
-# When Life Gives You Lemons - 1.21.1 - 1.0.1
+## Overview
 
-![GitHub all releases](https://img.shields.io/github/downloads/Kalyptien/WhenLifeGivesYouLemons-1.21.1/total)
-![GitHub all stars](https://img.shields.io/github/stars/Kalyptien/WhenLifeGivesYouLemons-1.21.1)
-![License](https://img.shields.io/github/license/Kalyptien/WhenLifeGivesYouLemons-1.21.1)
+**When Life Gives You Lemons** (WLGYL) allow you to add :
 
-## What this mod does ?
+- New fruits
+- A new tree-type : The Citrus and his woodset
+- New drinks
+- Two new workstations
+- A new pet : The Citrus Bird
+- And more...
 
-Add somes news fruits, a way to make juices and lemonades and somes misc.
+## Wiki
 
-## Where is the Wiki ?
-
-When the V.1.0 is done, the Wiki will be on github !
+If you have any question about the mod, his mecanics and more : go check the **[Wiki](https://github.com/Kalyptien/WhenLifeGivesYouLemons-1.21.1/wiki)**
 
 
 
